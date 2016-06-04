@@ -1,0 +1,12 @@
+package tests;
+
+import java.util.Collection;
+import java.util.List;
+
+public class OrdenedList {
+    
+    public <E> getFirst(List<E> m) {
+        return m.get(0);
+    }
+    
+}

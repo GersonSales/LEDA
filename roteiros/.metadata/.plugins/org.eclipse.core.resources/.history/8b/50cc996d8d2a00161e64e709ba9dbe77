@@ -1,0 +1,11 @@
+package tests;
+
+import java.util.List;
+
+public class OrdenedList {
+    
+    public <E> E getFirst(List<Main> m) {
+        
+    }
+
+}

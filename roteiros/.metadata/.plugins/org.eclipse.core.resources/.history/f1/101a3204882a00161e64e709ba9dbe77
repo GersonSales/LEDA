@@ -1,0 +1,21 @@
+package tests;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        List<String> stringList;
+        stringList = new ArrayList<>();
+        put(stringList);
+        
+        Object[] objects = new Object[1];
+
+        objects[0] = 10;
+        System.out.println("End");
+    }
+    
+    public static void put(Object object) {
+        
+    }
+}

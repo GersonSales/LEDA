@@ -1,0 +1,11 @@
+package tests;
+
+import java.util.List;
+
+public class OrdenedList<E extends Comparable<E>> {
+    
+    public <T> T compare(T e, T ee) {
+        return e;
+    }
+
+}

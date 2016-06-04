@@ -1,0 +1,16 @@
+package tests;
+
+import java.util.Collection;
+import java.util.List;
+
+public class OrdenedList<T> {
+    
+    public <?> ? getFirst(List<?> m) {
+        return m.get(0);
+    }
+    
+    
+    public void m(? extends T sda) {
+        
+    }
+}
