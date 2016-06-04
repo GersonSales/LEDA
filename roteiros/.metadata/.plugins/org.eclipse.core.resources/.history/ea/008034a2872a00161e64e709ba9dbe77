@@ -1,5 +1,0 @@
-package tests;
-
-public class OrdenedList<E extends Comparable<E>> {
-
-}
