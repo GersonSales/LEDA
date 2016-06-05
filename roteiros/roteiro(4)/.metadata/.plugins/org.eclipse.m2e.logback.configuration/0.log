@@ -1,0 +1,8 @@
+2016-06-05 16:06:15,322 [Worker-16] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.edu.ufcg.computacao:submission:1.0 @ /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/pom.xml.
+2016-06-05 16:06:16,069 [Worker-16] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Roteiro-Revisao-JUnit-environment/src/main/java
+2016-06-05 16:06:16,070 [Worker-16] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Roteiro-Revisao-JUnit-environment/src/test/java
+2016-06-05 16:06:17,240 [Worker-16] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 4 sec
+2016-06-05 16:06:18,628 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-05 16:06:18,646 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/main/resources
+2016-06-05 16:06:18,649 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-05 16:06:18,649 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/test/resources

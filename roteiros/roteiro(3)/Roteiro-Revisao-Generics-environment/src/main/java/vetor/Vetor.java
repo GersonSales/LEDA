@@ -7,10 +7,10 @@ import java.util.Comparator;
  * @author Adalberto
  *
  */
-public class Vetor {
+public class Vetor<E> {
 	
 	//O array interno onde os objetos manipulados são guardados
-	private Object[] arrayInterno;
+	private E[] arrayInterno;
 	
 	//O tamanho que o array interno terá
 	private int tamanho;
@@ -19,8 +19,8 @@ public class Vetor {
 	private int indice;
 	
 	//O Comparators a serem utilizados
-	private Comparator comparadorMaximo;
-	private Comparator comparadorMinimo;
+	private Comparator<E> comparadorMaximo;
+	private Comparator<E> comparadorMinimo;
 	
 	
 	public Vetor(int tamanho) {
