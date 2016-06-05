@@ -1,0 +1,50 @@
+package recursao;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import junit.framework.Assert;
+
+public class MetodosRecursivosTest {
+    
+    private MetodosRecursivos metodosRecursivos;
+
+    @Before
+    public void setUp() throws Exception {
+        this.metodosRecursivos = new MetodosRecursivos();
+    }
+
+    @Test
+    public void testCalcularFatorial() {
+        Assert.assertEquals(1, 1);
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testCalcularFibonacci() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testCountNotNull() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testPotenciaDe2() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testProgressaoAritmetica() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testProgressaoGeometrica() {
+        fail("Not yet implemented");
+    }
+
+}
