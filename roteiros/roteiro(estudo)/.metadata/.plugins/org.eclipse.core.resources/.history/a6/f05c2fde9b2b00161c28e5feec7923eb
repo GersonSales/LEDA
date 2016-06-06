@@ -1,0 +1,24 @@
+package algoritmos;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class OrdenadorTest {
+    
+    private Ordenador<Integer> ordenador;
+    
+    @Before
+    public void setUp() throws Exception {
+        this.ordenador = new Ordenador<>();
+    }
+
+    @Test
+    public void bubbleSortTest() {
+        Comparable<Integer>[] lista = {1, 2, 3};
+        
+        fail("Not yet implemented");
+    }
+
+}

@@ -1,0 +1,66 @@
+package algoritmos;
+
+
+public class Ordenador<E> {
+
+    public Ordenador() {
+        // TODO Auto-generated constructor stub
+    }
+
+    @SuppressWarnings("unchecked")
+    public void bubbleSort(Comparable<E>[] array) {
+        boolean houveTroca;
+        int caso = 1;
+        do {
+            houveTroca = false;
+            for(int i = 0; i < array.length - 1; i++) {
+                if (array[i].compareTo((E)array[i + 1]) > 0) {
+                    Comparable<E> aux = array[i];
+                    array[i] = array[i + 1];
+                    array[i + 1] = aux;
+                    houveTroca = true;
+                    confereBubbleSort(array, caso);
+                    caso ++;
+                }
+            }
+
+        } while (houveTroca);
+    }
+
+    @SuppressWarnings("unchecked")
+    private void confereBubbleSort(Comparable<E>[] array, int caso) {
+        switch(caso) {
+        case 1:
+            Integer[] prova = {1, 5, 2, 3, 4};
+            if (!(comparaListas(array, (Comparable<E>[]) prova))) {
+                throw new RuntimeException("Não seguiu a ordem");
+            }
+            break;
+            
+        default: break;
+        }
+        
+    }
+
+    public void imprimeLista(Comparable<E>[] array) {
+        System.out.print("[");
+        for (Comparable<E> elemento : array) {
+            System.out.print(elemento + ", ");
+        }
+        System.out.println("]");
+    }
+    
+    @SuppressWarnings("unchecked")
+    public boolean comparaListas(Comparable<E>[] lista1, Comparable<E>[] lista2) {
+        if (lista1.length != lista2.length) {
+            return false;
+        }
+        for (int i = 0; i < lista1.length; i ++) {
+            if (lista1[i].compareTo((E)lista2[i]) != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+}

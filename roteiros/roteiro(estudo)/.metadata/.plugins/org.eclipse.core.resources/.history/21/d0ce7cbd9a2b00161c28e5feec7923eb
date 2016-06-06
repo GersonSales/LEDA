@@ -1,0 +1,22 @@
+package algoritmos;
+
+public class Ordenador<E> {
+    
+    public Ordenador() {
+        // TODO Auto-generated constructor stub
+    }
+    
+    
+    public void bubbleSort(Comparable<E>[] array) {
+        for(int i = 0; i < array.length - 1;) {
+            for (int j = 1; j < array.length;) {
+                if (array[i].compareTo(null)) {
+                    
+                }
+                    
+                
+            }
+        }
+    }
+
+}

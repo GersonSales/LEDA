@@ -1,0 +1,22 @@
+package algoritmos;
+
+public class Ordenador<E> {
+
+    public Ordenador() {
+        // TODO Auto-generated constructor stub
+    }
+
+    @SuppressWarnings("unchecked")
+    public void bubbleSort(Comparable<E>[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = 1; j < array.length; j++) {
+                if (array[i].compareTo((E) array[j]) > 0) {
+                    Comparable<E> aux = array[i];
+                    array[i] = array[j];
+                    array[j] = aux;
+                }
+            }
+        }
+    }
+
+}
