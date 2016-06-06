@@ -790,3 +790,12 @@
 2016-06-05 22:59:00,634 [Worker-142] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/main/resources
 2016-06-05 22:59:00,635 [Worker-142] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-06-05 22:59:00,635 [Worker-142] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/test/resources
+2016-06-05 23:03:01,595 [Worker-146] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.edu.ufcg.computacao:submission:1.0 @ /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/pom.xml.
+2016-06-05 23:03:02,319 [Worker-146] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-05 23:03:02,319 [Worker-146] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/main/resources
+2016-06-05 23:03:02,321 [Worker-146] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-05 23:03:02,321 [Worker-146] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/test/resources
+2016-06-05 23:05:54,268 [Worker-138] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-05 23:05:54,269 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/main/resources
+2016-06-05 23:05:54,269 [Worker-138] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-05 23:05:54,270 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(4)/Roteiro-Revisao-JUnit-environment/src/test/resources

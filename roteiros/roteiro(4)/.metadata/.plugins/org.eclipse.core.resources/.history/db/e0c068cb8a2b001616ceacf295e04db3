@@ -6,7 +6,7 @@
 	<artifactId>submission</artifactId>
 	<version>1.0</version>
 	<packaging>jar</packaging>
-	<name>Gerson Sales Araujo de Freitas Junior</name>
+	<name>Submissao de roteiro</name>
 	
 	<dependencies>
 		<dependency>
