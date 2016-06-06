@@ -1,8 +1,6 @@
 package recursao;
 
 
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -52,7 +50,24 @@ public class MetodosRecursivosTest {
 
     @Test
     public void testCountNotNull() {
-        fail("Not yet implemented");
+        Object[] array1 = {null, null};
+        Assert.assertEquals(0, metodosRecursivos.countNotNull(array1));
+        
+        Object[] array2 = {null, null, new Object()};
+        Assert.assertEquals(1, metodosRecursivos.countNotNull(array2));
+
+        Object[] array3 = {new Object(), new Object(), null};
+        Assert.assertEquals(2, metodosRecursivos.countNotNull(array3));
+
+        Object[] array4 = {new Object(), new Object(), new Object(), null};
+        Assert.assertEquals(3, metodosRecursivos.countNotNull(array4));
+
+        Object[] array5 = {new Object()};
+        Assert.assertEquals(1, metodosRecursivos.countNotNull(array5));
+
+        Object[] array6 = {null, null, null, null};
+        Assert.assertEquals(0, metodosRecursivos.countNotNull(array6));
+        
     }
 
     @Test

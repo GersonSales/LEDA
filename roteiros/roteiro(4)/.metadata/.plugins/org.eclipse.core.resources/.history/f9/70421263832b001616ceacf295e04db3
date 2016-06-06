@@ -1,0 +1,45 @@
+package vetor;
+
+import static org.junit.Assert.fail;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class VetorTest {
+
+    private Vetor<Integer> vetor;
+    @Before
+    public void setUp() throws Exception {
+        this.vetor = new Vetor<Integer>(10);
+    }
+
+    @Test
+    public void testInserir() {
+        vetor.inserir(10);
+        Assert.assertEquals(new Integer(10), vetor.procurar(10));
+        
+    }
+
+    @Test
+    public void testRemover() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testProcurar() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testIsVazio() {
+        fail("Not yet implemented");
+    }
+
+    @Test
+    public void testIsCheio() {
+        fail("Not yet implemented");
+    }
+
+}

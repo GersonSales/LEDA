@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MetodosRecursivosTest" project="Roteiro-Revisao-JUnit-environment" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="recursao.MetodosRecursivosTest" time="0.002">
+    <testcase name="testProgressaoAritmetica" classname="recursao.MetodosRecursivosTest" time="0.001"/>
+    <testcase name="testCalcularFatorial" classname="recursao.MetodosRecursivosTest" time="0.0"/>
+    <testcase name="testProgressaoGeometrica" classname="recursao.MetodosRecursivosTest" time="0.0"/>
+    <testcase name="testCalcularFibonacci" classname="recursao.MetodosRecursivosTest" time="0.0"/>
+    <testcase name="testCountNotNull" classname="recursao.MetodosRecursivosTest" time="0.0"/>
+    <testcase name="testPotenciaDe2" classname="recursao.MetodosRecursivosTest" time="0.001"/>
+  </testsuite>
+</testrun>

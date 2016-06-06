@@ -1,0 +1,97 @@
+package vetor;
+
+import java.lang.reflect.Array;
+import java.util.Comparator;
+
+import org.hamcrest.core.CombinableMatcher;
+
+/**
+ * Implementação de um vetor de objetos simples para exercitar os conceitos de
+ * Generics.
+ * 
+ * @author Adalberto
+ *
+ */
+public class Vetor<E> {
+
+    // O array interno onde os objetos manipulados são guardados
+    private E[] arrayInterno;
+
+    // O tamanho que o array interno terá
+    private int tamanho;
+
+    // Indice que guarda a proxima posição vazia do array interno
+    private int indice;
+
+    // O Comparators a serem utilizados
+    private Comparator<E> comparadorMaximo;
+    private Comparator<E> comparadorMinimo;
+
+    @SuppressWarnings("unchecked")
+    public Vetor(int tamanho) {
+        super();
+        this.tamanho = tamanho;
+        this.indice = 0;
+        this.arrayInterno = (E[]) new Comparable[1];
+    }
+
+    public void setComparadorMaximo(Comparator<E> comparadorMaximo) {
+        this.comparadorMaximo = comparadorMaximo;
+    }
+
+    public void setComparadorMinimo(Comparator<E> comparadorMinimo) {
+        this.comparadorMinimo = comparadorMinimo;
+    }
+
+    // Insere um objeto no vetor
+    public void inserir(E elemento) {
+        this.arrayInterno[this.indice] = elemento;
+        this.indice++;
+        aumentaArray();
+
+    }
+
+    private void aumentaArray() {
+        @SuppressWarnings("unchecked")
+        E[] novoArray = (E[]) new Comparable[this.arrayInterno.length + 1];
+        for (int i = 0; i < this.arrayInterno.length;) {
+            novoArray[i] = this.arrayInterno[i];
+        }
+
+        this.arrayInterno = novoArray;
+    }
+    
+    private void diminuiArray() {
+        @SuppressWarnings("unchecked")
+        E[] novoArray = (E[]) new Comparable[this.arrayInterno.length - 1];
+        for (int i = 1; i < this.arrayInterno.length;) {
+            novoArray[i - 1] = this.arrayInterno[i];
+        }
+
+        this.arrayInterno = novoArray;
+    }
+    
+
+    // Remove um objeto do vetor
+    public E remover() {
+        E elemento = this.arrayInterno[0];
+        diminuiArray();
+        return elemento;
+    }
+
+    // Procura um elemento no vetor
+    public E procurar(E o) {
+        return null;
+    }
+
+    // Diz se o vetor está vazio
+    public boolean isVazio() {
+        return false;
+    }
+
+    // Diz se o vetor está cheio
+    public boolean isCheio() {
+        return false;
+    }
+
+}

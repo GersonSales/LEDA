@@ -9,11 +9,6 @@ public class MetodosRecursivos {
         }
         result = n * calcularFatorial(n - 1);
         return result;
-        // TODO ESCREVA AQUI O CÓDIGO (USANDO RECURSAO) PARA CALCULAR E IMPRIMIR
-        // O FATORIAL DO PARAMETRO
-        // DE ACORDO COM O QUE FOI MOSTRADO NO EXERCCICIO. OBSERVE QUE SENDO O
-        // METODO
-        // RECURSIVO, O FATORIAL DOS NUMEROS ANTERIORES TAMBEM VAO SER IMPRESSOS
     }
 
     public int calcularFibonacci(int n) {
@@ -22,25 +17,29 @@ public class MetodosRecursivos {
             return result;
         }
         result = calcularFibonacci(n - 1) + calcularFibonacci(n - 2);
-        // TODO ESCREVA AQUI O CÓDIGO (USANDO RECURSAO) PARA CALCULAR E IMPRIMIR
-        // O N-ESIMO TERMO
-        // DA SEQUENCIA DE FIBONACCI, QUE TEM A SEGUINTE LEI DE FORMACAO: O
-        // PRIMEIRO E SEGUNDO NUMEROS
-        // DA SEQUENCIA SÃO 1. A PARTIR DO TERCEIRO TERMO, CADA TERMO DA
-        // SEQUENCIA É DADO
-        // PELA SOMA DOS OUTROS DOIS ANTERIORES. OBSERVE QUE SENDO O METODO
-        // RECURSIVO, O FIBONACCI DOS NUMEROS ANTERIORES TAMBEM VAO SER
-        // IMPRESSOS
         return result;
     }
 
     public int countNotNull(Object[] array) {
-        int result = 0;
+        return countNotNull(array, array.length - 1);
         // TODO IMPLEMENTE AQUI O CODIGO QUE CONTA (USANDO RECURSAO) A
         // QUANTIDADE DE ELEMENTOS NAO NULOS
         // DE UM ARRAY DE OBJETOS RECEBIDO COMO PARAMETRO
-        return result;
+//        return result;
     }
+    
+    private int countNotNull(Object[] array, int indice) {
+        int resultado = 0;
+        if (indice >= 0) {
+            if (array[indice] != null) {
+                resultado ++;
+            }
+            return resultado + countNotNull(array, indice - 1);
+        }
+        return resultado;
+    }
+
+    
 
     public long potenciaDe2(int expoente) {
         long result = 1;
@@ -48,10 +47,6 @@ public class MetodosRecursivos {
             return result;
         }
         result = 2 * potenciaDe2(expoente - 1);
-
-        // TODO IMPLEMENTE (USANDO RECURSAO) O CODIGO PARA PRODUZIR A N-ESIMA
-        // POTENCIA
-        // DE 2
         return result;
     }
 
@@ -63,9 +58,6 @@ public class MetodosRecursivos {
         }else {
             result = progressaoAritmetica(termoInicial + razao, razao, n - 1);
         }
-        // TODO IMPLEMENTE SEU CODIGO (USANDO RECURSAO) DE ENCONTRAR O n-ESIMO
-        // TERMO
-        // DA PROGRESSAO ARITMETICA, DADO O TERMO INICIAL E A RAZAO
         return result;
     }
 
@@ -77,10 +69,6 @@ public class MetodosRecursivos {
         }else {
             result = progressaoGeometrica(termoInicial * razao, razao, n - 1);
         }
-        
-        // TODO IMPLEMENTE SEU CODIGO (USANDO RECURSAO) DE ENCONTRAR O n-ESIMO
-        // TERMO
-        // DA PROGRESSAO GEOMETRICA, DADO O TERMO INICIAL E A RAZAO
         return result;
     }
 }
