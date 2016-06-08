@@ -1,0 +1,12 @@
+package algoritmos;
+
+public class Ordenador<E> {
+    public void bubbleSort(E[] lista) {
+        
+    }
+    
+    
+    public void imprimeLisa(E[] lista) {
+        
+    }
+}
