@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="TestSortingAlunoT1" project="Roteiro-OrdenacaoPorComparacao-I-environment-T1_T2" tests="4" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="sorting.test.TestSortingAlunoT1" time="0.007">
-    <testcase name="testBidirectionalBubblesort" classname="sorting.test.TestSortingAlunoT1" time="0.002"/>
-    <testcase name="testSelectionsort" classname="sorting.test.TestSortingAlunoT1" time="0.002"/>
-    <testcase name="testBubblesort" classname="sorting.test.TestSortingAlunoT1" time="0.002"/>
-    <testcase name="testInsertionsort" classname="sorting.test.TestSortingAlunoT1" time="0.001"/>
-  </testsuite>
-</testrun>

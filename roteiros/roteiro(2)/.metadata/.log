@@ -1,0 +1,31 @@
+!SESSION 2016-06-08 17:17:15.335 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -data /home/gersonsales/github/leda/LEDA/roteiros/roteiro(2) -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:17:47.212
+!MESSAGE Failure to transfer br.edu.ufcg.ccc:leda-compactor-tool:1.0.0-SNAPSHOT/maven-metadata.xml from http://web.cloud.lsd.ufcg.edu.br:44174/nexus/content/repositories/br.edu.ufcg was cached in the local repository, resolution will not be reattempted until the update interval of ufcg-maven2 has elapsed or updates are forced. Original error: Could not transfer metadata br.edu.ufcg.ccc:leda-compactor-tool:1.0.0-SNAPSHOT/maven-metadata.xml from/to ufcg-maven2 (http://web.cloud.lsd.ufcg.edu.br:44174/nexus/content/repositories/br.edu.ufcg): web.cloud.lsd.ufcg.edu.br: unknown error
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:17:52.799
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:17:52.812
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:17:52.840
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:17:52.852
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:18:08.030
+!MESSAGE Failure to transfer br.edu.ufcg.ccc:leda-compactor-tool:1.0.0-SNAPSHOT/maven-metadata.xml from http://web.cloud.lsd.ufcg.edu.br:44174/nexus/content/repositories/br.edu.ufcg was cached in the local repository, resolution will not be reattempted until the update interval of ufcg-maven2 has elapsed or updates are forced. Original error: Could not transfer metadata br.edu.ufcg.ccc:leda-compactor-tool:1.0.0-SNAPSHOT/maven-metadata.xml from/to ufcg-maven2 (http://web.cloud.lsd.ufcg.edu.br:44174/nexus/content/repositories/br.edu.ufcg): web.cloud.lsd.ufcg.edu.br: unknown error
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:18:08.562
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-06-08 17:18:08.568
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
