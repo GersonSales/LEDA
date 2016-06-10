@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import sorting.AbstractSorting;
 import sorting.divideAndConquer.MergeSort;
+import sorting.divideAndConquer.QuickSort;
 
 public class StudentSortingTest {
 

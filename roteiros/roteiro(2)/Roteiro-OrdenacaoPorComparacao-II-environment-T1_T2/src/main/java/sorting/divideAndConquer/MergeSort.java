@@ -15,47 +15,50 @@ public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
     @SuppressWarnings("unchecked")
     @Override
     public void sort(T[] array, int leftIndex, int rightIndex) {
-        arrayAuxiliar = ((T[]) new Comparable[array.length]);
-        dividirArray(array, leftIndex, rightIndex);
+        this.arrayAuxiliar = (T[]) new Comparable[rightIndex + 1];
+        dividir(array, leftIndex, rightIndex);
     }
 
-    private void dividirArray(T[] array, int inicio, int fim) {
-        if (inicio < fim) {
-            int meio = inicio + (fim - inicio) / 2;
-            dividirArray(array, inicio, meio);
-            dividirArray(array, meio + 1, fim);
-            ordenaArray(array, inicio, meio, fim);
+    private void dividir(T[] array, int leftIndex, int rightIndex) {
+        if (leftIndex < rightIndex) {
+            int meio = leftIndex + (rightIndex - leftIndex) / 2;
+            dividir(array, leftIndex, meio);
+            dividir(array, meio + 1, rightIndex);
+            ordenar(array, leftIndex, meio, rightIndex);
         }
-
     }
 
-    private void ordenaArray(T[] array, int inicio, int meio, int fim) {
-        for (int i = inicio; i <= fim; i++) {
+    private void ordenar(T[] array, int leftIndex, int meio, int rightIndex) {
+        for (int i = leftIndex; i <= rightIndex; i++) {
             arrayAuxiliar[i] = array[i];
         }
-
-        int i = inicio;
+        
+        int i = leftIndex;
         int j = meio + 1;
-        int k = inicio;
-
-        while (i <= meio && j <= fim) {
-
+        int k = leftIndex;
+        
+        while (i <= meio && j <= rightIndex) {
             if (arrayAuxiliar[i].compareTo(array[j]) <= 0) {
                 array[k] = arrayAuxiliar[i];
                 i++;
-            } else {
+            }else {
                 array[k] = arrayAuxiliar[j];
                 j++;
             }
             k++;
         }
-
+        
+        
         while (i <= meio) {
             array[k] = arrayAuxiliar[i];
-            i ++;
+            i++;
             k++;
-            
         }
-
+        
+        
+        
+        // TODO Auto-generated method stub
+        
     }
+
 }
