@@ -22,3 +22,7 @@
 2016-06-11 01:57:32,803 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(3)/Roteiro-OrdenacaoTempoLinear-Countingsort-environment/src/main/resources
 2016-06-11 01:57:32,805 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-06-11 01:57:32,805 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(3)/Roteiro-OrdenacaoTempoLinear-Countingsort-environment/src/test/resources
+2016-06-14 22:50:14,749 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-14 22:50:14,913 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(3)/Roteiro-OrdenacaoTempoLinear-Countingsort-environment/src/main/resources
+2016-06-14 22:50:14,921 [Worker-3] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-06-14 22:50:14,921 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsales/github/leda/LEDA/roteiros/roteiro(3)/Roteiro-OrdenacaoTempoLinear-Countingsort-environment/src/test/resources

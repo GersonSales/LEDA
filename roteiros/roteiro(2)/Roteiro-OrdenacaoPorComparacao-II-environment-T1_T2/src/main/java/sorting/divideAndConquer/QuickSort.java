@@ -1,7 +1,5 @@
 package sorting.divideAndConquer;
 
-import java.util.Arrays;
-
 import sorting.AbstractSorting;
 
 /**
@@ -16,78 +14,39 @@ public class QuickSort<T extends Comparable<T>> extends AbstractSorting<T> {
 
     @Override
     public void sort(T[] array, int leftIndex, int rightIndex) {
-        int particao = particao(array, leftIndex, rightIndex);
-        if (leftIndex < particao - 1) {
-            sort(array, leftIndex, particao - 1);
-        }
+        if (array == null || array.length == 0) return;
+        if (leftIndex > rightIndex) return; 
         
-        if (rightIndex > particao + 1) {
-            sort(array, particao + 1, rightIndex);
-        }
-    }
-    
-    private int particao(T[] array, int leftIndex, int rightIndex) {
         int i = leftIndex;
-        int p = leftIndex;
+        T p = array[leftIndex + (rightIndex - leftIndex) / 2];
         int j = rightIndex;
-        
-        while(i != j) {
-            while (array[p].compareTo(array[j]) < 0) {
-                j--;
-            }
-            while (array[p].compareTo(array[i]) > 0) {
+
+        while (i <= j) {
+
+            while (array[i].compareTo(p) < 0) {
                 i++;
             }
-            
-            if (array[p].compareTo(array[i]) < 0) {
-                sorting.Util.swap(array, p, i);
-                p = i;
-            }
-            
-            if (array[p].compareTo(array[j]) > 0) {
-                sorting.Util.swap(array, p, j);
-                p = j;
+
+            while (array[j].compareTo(p) > 0) {
+                j--;
             }
 
-            
+            if (i <= j) {
+                sorting.Util.swap(array, i, j);
+                i++;
+                j--;
+            }
+        }
+        
+        if (leftIndex < j) {
+            sort(array, leftIndex, j);
+        }
+        
+        if (i < rightIndex) {
+            sort(array, i, rightIndex);
             
         }
 
-        
-        
-        
-        return p;
     }
-    
-//        int particao = particao(array, leftIndex, rightIndex);
-//        if (leftIndex < particao - 1)
-//            sort(array, leftIndex, particao - 1);
-//        if (particao < rightIndex)
-//            sort(array, particao, rightIndex);
-//
-//    }
-//
-//    private int particao(T[] arr, int left, int right) {
-//        int i = left, j = right;
-//        T tmp;
-//        T pivot = arr[(left + right) / 2];
-//
-//        while (i <= j) {
-//            while (arr[i].compareTo(pivot) < 0)
-//                i++;
-//            while (arr[j].compareTo(pivot) > 0)
-//                j--;
-//            if (i <= j) {
-//                tmp = arr[i];
-//                arr[i] = arr[j];
-//                arr[j] = tmp;
-//                i++;
-//                j--;
-//            }
-//        }
-//
-//        return i;
-//    }
-
 
 }

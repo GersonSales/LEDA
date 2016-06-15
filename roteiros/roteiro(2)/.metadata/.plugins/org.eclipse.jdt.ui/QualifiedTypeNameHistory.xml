@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="sorting.divideAndConquer.QuickSort"/>
 <fullyQualifiedTypeName name="java.math.RoundingMode"/>
+<fullyQualifiedTypeName name="sorting.Util"/>
 </qualifiedTypeNameHistroy>
