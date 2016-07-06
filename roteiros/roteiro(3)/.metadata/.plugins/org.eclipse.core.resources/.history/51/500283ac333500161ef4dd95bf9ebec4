@@ -1,0 +1,26 @@
+package sorting.test;
+
+import java.util.Scanner;
+
+public class TesteF {
+    public static void main(String[] args) {
+        Scanner leitor = new Scanner(System.in);
+        
+        System.out.print("Digite a opcao1: ");
+        int opcao1 = leitor.nextInt();
+        
+        System.out.print("Digite a opcao2: ");
+        int opcao2 = leitor.nextInt();
+        leitor.nextLine();
+        
+        System.out.println("Opcao1: " + opcao1);
+        System.out.println("Opcao2: " + opcao2);
+
+        
+
+        
+        
+    }
+}
+
+
