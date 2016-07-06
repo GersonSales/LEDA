@@ -1,2 +1,3 @@
 # Labortório de Estrutura de Dados e Algoritmos
-##LEDA
+
+Repositório destinado à armazenar estruturas e algoritmos desenvolvidos em LEDA.
