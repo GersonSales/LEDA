@@ -10,6 +10,7 @@ import sorting.AbstractSorting;
 import sorting.simpleSorting.BubbleSort;
 import sorting.simpleSorting.InsertionSort;
 import sorting.simpleSorting.SelectionSort;
+import sorting.variationsOfBubblesort.BidirectionalBubbleSort;
 
 public class StudentSortingTest {
 
@@ -37,7 +38,7 @@ public class StudentSortingTest {
 	 */
 	private void getImplementation() {
 		//TODO O aluno deve instanciar sua implementação abaixo ao invés de null 
-		this.implementation = new InsertionSort<Integer>();
+		this.implementation = new BidirectionalBubbleSort<Integer>();
 	}
 
 	public void populaVetorTamanhoPar(Integer[] arrayPadrao){

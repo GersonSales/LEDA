@@ -9,7 +9,7 @@
 	<name>Submissao de roteiro</name>
 
 <properties>
-	<submission.url>http://web.cloud.lsd.ufcg.edu.br:44174/submission/uploadRoteiro</submission.url>
+	<submission.url>http://web.cloud.lsd.ufcg.edu.br:44174/submission/submitRoteiro</submission.url>
 </properties>
 
 	<pluginRepositories>
@@ -68,10 +68,10 @@
 							<goal>compact</goal>
 						</goals>
 						<configuration>
-							<matricula>INSIRA NEU NUMERO DE MATRICULA</matricula>
+							<matricula>114210216</matricula>
 							<semestre>2016.1</semestre>
-							<turma>0X</turma>
-							<roteiro>R0X-0X</roteiro>
+							<turma>01</turma>
+							<roteiro>R01-01</roteiro>
 							<url>${submission.url}</url>
 						</configuration>
 					</execution>
@@ -91,7 +91,7 @@
 						</goals>
 						<configuration>
 							<!-- MODIFIQUE O ATRIBUTO ABAIXO PARA false CASO VOCE NAO QUEIRA GERAR O GRAFICO DOS ALGORITMOS -->
-							<generateGraph>true</generateGraph>
+							<generateGraph>false</generateGraph>
 							<!-- INSIRA OS NOMES COMPLETOS DAS CLASSES A SEREM TESTADAS AQUI (Full 
 								qualified name = nome com o pacote) -->
 							<qualifiedNames>
