@@ -1,0 +1,39 @@
+{
+  "tests": [
+    {
+      "category": "public",
+      "input": "7\n1 5 3 2 88 9 2\n",
+      "output": "n\u00e3o\n"
+    },
+    {
+      "category": "public",
+      "input": "7\n1 5 7 2 88 9 2\n",
+      "output": "sim\n"
+    }
+  ],
+  "5e2206e69931d6eca50b6c12a4ab444c": {
+    "timestamp": "2016-07-08T19:48:25.200670",
+    "feedback": "",
+    "summary": "....F.."
+  },
+  "44e9d31c4b207e92bf6eb3d1c3c9b0ef": {
+    "timestamp": "2016-07-08T19:43:14.343920",
+    "feedback": "",
+    "summary": "....F.."
+  },
+  "filename": "Solucao.java",
+  "tst_files": [],
+  "activity_revision": "1.0.0",
+  "key": "14844436000000",
+  "last_commit": "4001c8cda0f0ee6a2071959c44c6f0ae",
+  "8d760b62056ad6d0a4ba968a0916de2e": {
+    "timestamp": "2016-07-08T19:39:07.727570",
+    "feedback": "",
+    "summary": "eeeeeee"
+  },
+  "4001c8cda0f0ee6a2071959c44c6f0ae": {
+    "timestamp": "2016-07-08T19:52:12.181910",
+    "feedback": "",
+    "summary": "......."
+  }
+}
