@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Extract method &apos;private static void contains(String numero, String sequencia)&apos; from &apos;questoes.Solucao.main()&apos; to &apos;questoes.Solucao&apos;&#x0A;- Original project: &apos;QuestoesTst&apos;&#x0A;- Method name: &apos;contains&apos;&#x0A;- Destination type: &apos;questoes.Solucao&apos;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;contains&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src&lt;questoes{Solucao.java" name="contains" replace="false" selection="201 116" stamp="1468007496406" version="1.0" visibility="2"/>
-</session>
