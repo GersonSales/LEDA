@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="OrdenadorTest" project="algoritmos" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="algoritmos.OrdenadorTest" time="0.001">
+    <testcase name="testel1" classname="algoritmos.OrdenadorTest" time="0.0"/>
+    <testcase name="testel2" classname="algoritmos.OrdenadorTest" time="0.0"/>
+    <testcase name="testel3" classname="algoritmos.OrdenadorTest" time="0.0"/>
+    <testcase name="testel4" classname="algoritmos.OrdenadorTest" time="0.0"/>
+    <testcase name="testel5" classname="algoritmos.OrdenadorTest" time="0.0"/>
+  </testsuite>
+</testrun>

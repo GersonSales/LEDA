@@ -1,12 +1,15 @@
 package algoritmos;
 
+import javax.lang.model.element.QualifiedNameable;
+
 public class Ordenador<E extends Comparable<E>> {
 
     public void ordena(E[] lista) {
         // insertionSort(lista);
         // bubbleSort(lista);
         // selectionSort(lista);
-        mergeSort(lista);
+        quickSort(lista);
+//        mergeSort(lista);
     }
 
     private void bubbleSort(E[] lista) {
@@ -53,59 +56,96 @@ public class Ordenador<E extends Comparable<E>> {
         lista[i] = lista[j];
         lista[j] = aux;
     }
+    
+    private void quickSort(E[] lista) {
+        quickSort(lista, 0, lista.length - 1);
+    }
+    
+    
+    
+    
 
-    private E[] listaAuxiliar;
+    private void quickSort(E[] lista, int inicio, int fim) {
+        if (inicio < fim) {
+            int meio = particiona(lista, inicio, fim);
+            quickSort(lista, inicio, meio - 1);
+            quickSort(lista, meio + 1, fim);
+        }
+        
+        
+        // TODO Auto-generated method stub
+        
+    }
 
-    @SuppressWarnings("unchecked")
+    private int particiona(E[] lista, int inicio, int fim) {
+        E pivot = lista[inicio];
+        int i = inicio;
+        
+        
+        for (int j = inicio + 1; j <= fim; j ++) {
+            if (lista[j].compareTo(pivot) < 0) {
+                i++;
+                troca(lista, i, j);
+            }
+        }
+        
+        lista[inicio] = lista[i];
+        lista[i] = pivot;
+        
+        
+        return i;
+    }
+
     private void mergeSort(E[] lista) {
-        this.listaAuxiliar = (E[]) new Comparable[lista.length];
         mergeSort(lista, 0, lista.length - 1);
     }
 
     private void mergeSort(E[] lista, int inicio, int fim) {
         if (inicio < fim) {
-        
-        int meio = inicio + (fim - inicio) / 2;
-        mergeSort(lista, inicio, meio);
-        mergeSort(lista, meio + 1, fim);
-
-        ordena(lista, inicio, meio, fim);
+            int meio = inicio + (fim - inicio) / 2;
+            mergeSort(lista, inicio, meio);
+            mergeSort(lista, meio + 1, fim);
+            ordena(lista, inicio, meio, fim);
         }
-
+        
     }
 
-    private void ordena(E[] lista, int inicio, int fim, int meio) {
-
+    @SuppressWarnings("unchecked")
+    private void ordena(E[] lista, int inicio, int meio, int fim) {
+        E[] listaAux = (E[]) new Comparable[fim + 1];
         for (int i = inicio; i <= fim; i++) {
-            listaAuxiliar[i] = lista[i];
+            listaAux[i] = lista[i]; 
         }
-
+        
         int i = inicio;
         int j = meio + 1;
         int k = inicio;
-
+        
         while (i <= meio && j <= fim) {
-            if (listaAuxiliar[i].compareTo(lista[j]) <= 0) {
-                lista[k] = listaAuxiliar[i];
+            if (listaAux[i].compareTo(listaAux[j]) < 0) {
+                lista[k] = listaAux[i];
                 i++;
-            } else {
-                lista[k] = listaAuxiliar[j];
+            }else {
+                lista[k] = listaAux[j];
                 j++;
             }
-
+            
             k++;
         }
-
+        
+        
         while (i <= meio) {
-            lista[k] = listaAuxiliar[i];
+            lista[k] = listaAux[i];
             i++;
             k++;
-
         }
-    }
-
-    public E[] merge(E[] lista1, E[] lista2) {
-        return null;
+        
+        while (j <= fim) {
+            lista[k] = listaAux[j];
+            j++;
+            k++;
+        }
+        
     }
 
     public void imprimeLista(E[] lista) {

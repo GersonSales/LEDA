@@ -58,11 +58,5 @@ public class OrdenadorTest {
         Assert.assertArrayEquals(l5D, l5O);
     }
     
-    @Test
-    public void testemerge() {
-        Integer[] resultado = {1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 5, 6, 7, 8, 9};
-        Assert.assertArrayEquals(ordenador.merge(l1O, l2O), resultado);
-
-    }
 
 }
