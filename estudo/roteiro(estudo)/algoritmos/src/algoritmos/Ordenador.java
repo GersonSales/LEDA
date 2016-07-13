@@ -5,10 +5,10 @@ import javax.lang.model.element.QualifiedNameable;
 public class Ordenador<E extends Comparable<E>> {
 
     public void ordena(E[] lista) {
-        // insertionSort(lista);
+         insertionSort(lista);
         // bubbleSort(lista);
         // selectionSort(lista);
-        quickSort(lista);
+//        quickSort(lista);
 //        mergeSort(lista);
     }
 

@@ -1,62 +1,96 @@
 package algoritmos;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Arrays;
+import java.util.Random;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class OrdenadorTest {
 
-    private Ordenador<Integer> ordenador;
-
-    private Integer[] l1D = { 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-    private Integer[] l1O = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-    private Integer[] l2D = { 1, 2, 3, 1, 2, 3, 1, 2, 3 };
-    private Integer[] l2O = { 1, 1, 1, 2, 2, 2, 3, 3, 3 };
-
-    private Integer[] l3D = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-    private Integer[] l3O = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-
-    private Integer[] l4D = {};
-    private Integer[] l4O = {};
-
-    private Integer[] l5D = { 0 };
-    private Integer[] l5O = { 0 };
+    Random randomer;
+    Ordenador<Integer> ordenador;
+    
 
     @Before
     public void setUp() throws Exception {
-        this.ordenador = new Ordenador<>();
-    }
-
-    @Test
-    public void testel1() {
-        ordenador.ordena(l1D);
-        Assert.assertArrayEquals(l1D, l1O);
-    }
-
-    @Test
-    public void testel2() {
-        ordenador.ordena(l2D);
-        Assert.assertArrayEquals(l2D, l2O);
-    }
-
-    @Test
-    public void testel3() {
-        ordenador.ordena(l3D);
-        Assert.assertArrayEquals(l3D, l3O);
-    }
-
-    @Test
-    public void testel4() {
-        ordenador.ordena(l4D);
-        Assert.assertArrayEquals(l4D, l4O);
-    }
-
-    @Test
-    public void testel5() {
-        ordenador.ordena(l5D);
-        Assert.assertArrayEquals(l5D, l5O);
+        randomer = new Random();
+        ordenador = new Ordenador<>();
+        iniciaTestes();
     }
     
+    
+
+
+    private Integer[] gerador() {
+        int tamanho = randomer.nextInt(10);
+        Integer[] lista = new Integer[tamanho];
+        for (int i = 0; i < tamanho; i ++) {
+            lista[i] = randomer.nextInt(100);
+        }
+        
+        return lista;
+    }
+    
+    private void logger(String texto) {
+        try {
+            File diretorio = new File("arquivo.txt");
+            if (!(diretorio.exists())) {
+                diretorio.mkdirs();
+            }
+
+            File arquivo = new File("" + "arquivo.txt");
+            FileWriter fluxoSaida = new FileWriter(arquivo, true);
+            BufferedWriter escritor = new BufferedWriter(fluxoSaida);
+
+            fluxoSaida.write(texto + "\n");
+
+            escritor.close();
+
+        } catch (Exception erro) {
+            System.out.println(erro.getMessage());
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    @Test
+    public void iniciaTestes() {
+        while (true) 
+            teste(gerador());
+        
+    }
+    
+    public void teste(Integer[] lista) {
+        String listaTS = Arrays.toString(lista);
+        
+        Integer[] auxiliar = Arrays.copyOf(lista, lista.length);
+        
+        Arrays.sort(auxiliar);
+        ordenador.ordena(lista);
+        
+        try {
+            Assert.assertArrayEquals(auxiliar, lista);
+            System.out.println("Teste x: Sucesso");
+        }catch (Throwable erro) {
+            System.out.println("Teste x: Falha");
+            logger("Entrada: \n" + listaTS + "\n\nEsperado: \n" + Arrays.toString(auxiliar) + "\n\nObtido:\n" + Arrays.toString(lista));
+            logger("\n<----------------------------------------------------------------------------------->\n\n");
+            throw erro;
+            
+        }
+        
+        
+        
+    }
 
 }
