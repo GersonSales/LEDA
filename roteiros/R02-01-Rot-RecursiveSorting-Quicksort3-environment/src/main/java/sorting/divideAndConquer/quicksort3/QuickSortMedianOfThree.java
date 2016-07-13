@@ -18,7 +18,52 @@ import sorting.AbstractSorting;
 public class QuickSortMedianOfThree<T extends Comparable<T>> extends AbstractSorting<T>{
     
 	public void sort(T[] array, int leftIndex, int rightIndex){
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		divide(array, leftIndex, rightIndex);
+	}                                                                                                                                                                    
+
+	private void divide(T[] array, int leftIndex, int rightIndex) {
+		if (leftIndex < rightIndex) {
+			int med = leftIndex + (rightIndex - leftIndex) / 2;
+			mediana(array, leftIndex, med, rightIndex);
+			util.Util.swap(array, med, rightIndex - 1);
+			
+			int pivo = particiona(array, leftIndex + 1, rightIndex - 1);
+			divide(array, leftIndex, pivo -1);
+			divide(array, pivo + 1, rightIndex);
+
+		}
+		
+	}
+
+	private int particiona(T[] array, int leftIndex, int rightIndex) {
+		T pivo = array[leftIndex];
+		int i = leftIndex;
+		
+		for (int j = leftIndex + 1; j <= rightIndex; j++) {
+			if (array[j].compareTo(pivo) < 0) {
+				i++;
+				util.Util.swap(array, i, j);
+			}
+		}
+		
+		array[leftIndex] = array[i];
+		array[i] = pivo;
+				
+		return i;
+	}
+
+	private void mediana(T[] array, int leftIndex, int med, int rightIndex) {
+		if (array[leftIndex].compareTo(array[rightIndex]) > 0) {
+			util.Util.swap(array, leftIndex, rightIndex);
+		}
+		
+		if (array[med].compareTo(array[rightIndex]) > 0) {
+			util.Util.swap(array, med, rightIndex);
+		}
+		
+		if (array[leftIndex].compareTo(array[med]) > 0) {
+			util.Util.swap(array, leftIndex, med);
+		}
+		
 	}
 }
