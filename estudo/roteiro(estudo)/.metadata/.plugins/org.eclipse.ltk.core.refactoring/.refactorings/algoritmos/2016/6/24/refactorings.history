@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename method &apos;algoritmos.Ordenador.meuBubble(...)&apos; to &apos;bubbleSort&apos;&#x0A;- Original project: &apos;algoritmos&apos;&#x0A;- Original element: &apos;algoritmos.Ordenador.meuBubble(...)&apos;&#x0A;- Renamed element: &apos;algoritmos.Ordenador.bubbleSort(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;meuBubble&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;algoritmos{Ordenador.java[Ordenador~meuBubble~\[QE;" name="bubbleSort" references="true" stamp="1465312123984" version="1.0"/>
-</session>
