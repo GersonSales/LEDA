@@ -12,7 +12,8 @@ public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
 
 	@Override
 	public void sort(T[] array,int leftIndex, int rightIndex) {
-		divide(array, leftIndex, rightIndex);
+	    if (validaArray(array, leftIndex, rightIndex))
+	        divide(array, leftIndex, rightIndex);
 	}
 	
 	
@@ -24,6 +25,19 @@ public class MergeSort<T extends Comparable<T>> extends AbstractSorting<T> {
 			ordena(array, leftIndex, med, rightIndex);
 		}
 	}
+	
+    private boolean validaArray(T[] array, int limEsquerdo, int limDireito) {
+        if (limDireito < limEsquerdo) return false;
+        if (limEsquerdo < 0) return false;
+        if (limDireito > array.length) return false;
+        if (array.length < 2) return false;
+        
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == null) return false;
+        }
+        
+        return true;
+    }
 
 
 

@@ -18,8 +18,8 @@ import sorting.AbstractSorting;
 public class QuickSortMedianOfThree<T extends Comparable<T>> extends AbstractSorting<T>{
     
 	public void sort(T[] array, int leftIndex, int rightIndex){
-	    validaArray(array, leftIndex, rightIndex);
-		divide(array, leftIndex, rightIndex);
+	    if (validaArray(array, leftIndex, rightIndex))
+	        divide(array, leftIndex, rightIndex);
 	}                                                                                                                                                                    
 
 	private void divide(T[] array, int leftIndex, int rightIndex) {
