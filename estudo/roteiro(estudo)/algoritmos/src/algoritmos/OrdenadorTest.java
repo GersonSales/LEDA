@@ -13,37 +13,35 @@ import org.junit.Test;
 public class OrdenadorTest {
 
     Random randomer;
-    Ordenador<Integer> ordenador;
-    
+    private Ordenador<Integer> ordenador;
+    private int qtdTestes;
 
     @Before
     public void setUp() throws Exception {
+        this.qtdTestes = 0;
         randomer = new Random();
-        ordenador = new Ordenador<>();
-        iniciaTestes();
+        this.ordenador = new Ordenador<>();
     }
-    
-    
-
 
     private Integer[] gerador() {
-        int tamanho = randomer.nextInt(10);
+        int tamanho = randomer.nextInt(20);
+        // tamanho = tamanho == 0 ? 1 : tamanho;
         Integer[] lista = new Integer[tamanho];
-        for (int i = 0; i < tamanho; i ++) {
+        for (int i = 0; i < tamanho; i++) {
             lista[i] = randomer.nextInt(100);
         }
-        
+
         return lista;
     }
-    
+
     private void logger(String texto) {
         try {
-            File diretorio = new File("arquivo.txt");
+            File diretorio = new File("log");
             if (!(diretorio.exists())) {
                 diretorio.mkdirs();
             }
 
-            File arquivo = new File("" + "arquivo.txt");
+            File arquivo = new File("log/" + "arquivo.txt");
             FileWriter fluxoSaida = new FileWriter(arquivo, true);
             BufferedWriter escritor = new BufferedWriter(fluxoSaida);
 
@@ -54,43 +52,96 @@ public class OrdenadorTest {
         } catch (Exception erro) {
             System.out.println(erro.getMessage());
         }
-        
-        
-        
+
     }
-    
-    
-    
-    
-    
+
+    public void testeTeste() {
+        Integer[] lista = gerador();
+        String listaOriginal = Arrays.toString(lista);
+        Integer[] listaAuxiliar = Arrays.copyOf(lista, lista.length);
+
+        int tamanho = lista.length;
+        int leftIndex = randomer.nextInt(tamanho == 0 ? 1 : tamanho);
+        int rightIndex = randomer.nextInt(tamanho == 0 ? 1 : tamanho);
+
+        try {
+            if (tamanho  > 0)
+                Arrays.sort(listaAuxiliar, leftIndex, rightIndex + 1);
+        } catch (IllegalArgumentException erro) {
+        }
+
+        ordenador.sort(lista, leftIndex, rightIndex);
+
+        try {
+            Assert.assertArrayEquals(lista, listaAuxiliar);
+        } catch (Throwable erro) {
+            logger(listaOriginal, Arrays.toString(listaAuxiliar),
+                    Arrays.toString(lista), leftIndex, rightIndex);
+            throw erro;
+        }
+
+    }
+
     @Test
     public void iniciaTestes() {
-        while (true) 
-            teste(gerador());
-        
+        long inicio = System.currentTimeMillis();
+        try {
+
+            while (System.currentTimeMillis() - inicio < 10000) {
+                qtdTestes++;
+                teste();
+                testeTeste();
+            }
+        } catch (Throwable erro) {
+            throw erro;
+        } finally {
+            logger("Total de testes: " + qtdTestes);
+        }
+
     }
-    
-    public void teste(Integer[] lista) {
+
+    public void teste() {
+        Integer[] lista = gerador();
         String listaTS = Arrays.toString(lista);
-        
+
         Integer[] auxiliar = Arrays.copyOf(lista, lista.length);
-        
+
         Arrays.sort(auxiliar);
-        ordenador.ordena(lista);
-        
+        ordenador.sort(lista, 0, lista.length - 1);
+
         try {
             Assert.assertArrayEquals(auxiliar, lista);
-            System.out.println("Teste x: Sucesso");
-        }catch (Throwable erro) {
-            System.out.println("Teste x: Falha");
-            logger("Entrada: \n" + listaTS + "\n\nEsperado: \n" + Arrays.toString(auxiliar) + "\n\nObtido:\n" + Arrays.toString(lista));
-            logger("\n<----------------------------------------------------------------------------------->\n\n");
+        } catch (Throwable erro) {
+            logger(listaTS, Arrays.toString(auxiliar), Arrays.toString(lista),
+                    0, lista.length - 1);
             throw erro;
-            
         }
-        
-        
-        
+    }
+
+    private void logger(String entrada, String esperado, String obtido,
+            int leftIndex, int rightindex) {
+        String sl = System.getProperty("line.separator");
+        StringBuffer sb = new StringBuffer();
+        sb.append("Teste(" + qtdTestes + ") - leftIndex: " + leftIndex
+                + " rightIndex: " + rightindex);
+        sb.append(sl + sl);
+
+        sb.append("Entrada:  ");
+        sb.append(entrada);
+        sb.append(sl);
+
+        sb.append("Esperado: ");
+        sb.append(esperado);
+        sb.append(sl);
+
+        sb.append("Obtido:   ");
+        sb.append(obtido);
+        sb.append(sl);
+
+        sb.append("<-------------------------------------------->");
+        sb.append(sl);
+
+        logger(sb.toString());
     }
 
 }
