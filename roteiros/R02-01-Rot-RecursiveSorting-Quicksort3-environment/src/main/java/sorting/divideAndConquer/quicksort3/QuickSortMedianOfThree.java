@@ -18,41 +18,54 @@ import sorting.AbstractSorting;
 public class QuickSortMedianOfThree<T extends Comparable<T>> extends AbstractSorting<T>{
     
 	public void sort(T[] array, int leftIndex, int rightIndex){
+	    validaArray(array, leftIndex, rightIndex);
 		divide(array, leftIndex, rightIndex);
 	}                                                                                                                                                                    
 
 	private void divide(T[] array, int leftIndex, int rightIndex) {
 		if (leftIndex < rightIndex) {
-			int med = leftIndex + (rightIndex - leftIndex) / 2;
-			mediana(array, leftIndex, med, rightIndex);
+			int med = (rightIndex + leftIndex) / 2;
+			median(array, leftIndex, med, rightIndex);
 			util.Util.swap(array, med, rightIndex - 1);
 			
-			int pivo = particiona(array, leftIndex + 1, rightIndex - 1);
-			divide(array, leftIndex, pivo -1);
-			divide(array, pivo + 1, rightIndex);
-
+			int pivot = partition(array, leftIndex + 1, rightIndex - 1);
+			divide(array, leftIndex, pivot - 1);
+			divide(array, pivot + 1, rightIndex);
 		}
 		
 	}
 
-	private int particiona(T[] array, int leftIndex, int rightIndex) {
-		T pivo = array[leftIndex];
-		int i = leftIndex;
+	private int partition(T[] array, int leftIndex, int rightIndex) {
+		T pivo = array[leftIndex - 1];
+		int i = leftIndex - 1;
 		
-		for (int j = leftIndex + 1; j <= rightIndex; j++) {
+		for (int j = leftIndex; j <= rightIndex + 1; j++) {
 			if (array[j].compareTo(pivo) < 0) {
 				i++;
 				util.Util.swap(array, i, j);
 			}
 		}
 		
-		array[leftIndex] = array[i];
+		array[leftIndex - 1] = array[i];
 		array[i] = pivo;
 				
 		return i;
 	}
+	
+	   private boolean validaArray(T[] array, int limEsquerdo, int limDireito) {
+	        if (limDireito < limEsquerdo) return false;
+	        if (limEsquerdo < 0) return false;
+	        if (limDireito > array.length) return false;
+	        if (array.length < 2) return false;
+	        
+	        for (int i = 0; i < array.length; i++) {
+	            if (array[i] == null) return false;
+	        }
+	        
+	        return true;
+	    }
 
-	private void mediana(T[] array, int leftIndex, int med, int rightIndex) {
+	private void median(T[] array, int leftIndex, int med, int rightIndex) {
 		if (array[leftIndex].compareTo(array[rightIndex]) > 0) {
 			util.Util.swap(array, leftIndex, rightIndex);
 		}
