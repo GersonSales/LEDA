@@ -1,7 +1,5 @@
 package algoritmos;
 
-import javax.lang.model.element.QualifiedNameable;
-
 public class Ordenador<E extends Comparable<E>> {
 
     public void sort(E[] lista, int leftIndex, int rightIndex) {
@@ -15,7 +13,8 @@ public class Ordenador<E extends Comparable<E>> {
         }
     }
 
-    private void bubbleSort(E[] lista, int leftIndex, int rightIndex) {
+    @SuppressWarnings("unused")
+	private void bubbleSort(E[] lista, int leftIndex, int rightIndex) {
         boolean houveTroca;
         do {
             houveTroca = false;
@@ -29,7 +28,7 @@ public class Ordenador<E extends Comparable<E>> {
             }
         } while (houveTroca);
     }
-
+    @SuppressWarnings("unused")
     private void selectionSort(E[] lista, int leftIndex, int rightIndex) {
         for (int i = leftIndex; i < rightIndex; i++) {
             int menor = i;
@@ -42,6 +41,7 @@ public class Ordenador<E extends Comparable<E>> {
         }
     }
 
+    @SuppressWarnings("unused")
     private void insertionSort(E[] lista, int leftIndex, int rightIndex) {
         for (int i = leftIndex; i <= rightIndex; i++) {
             int elemento = i;
@@ -59,7 +59,7 @@ public class Ordenador<E extends Comparable<E>> {
         lista[i] = lista[j];
         lista[j] = aux;
     }
-
+    @SuppressWarnings("unused")
     private void quickSort(E[] lista, int leftIndex, int rightIndex) {
         if (leftIndex < rightIndex) {
             int meio = particiona(lista, leftIndex, rightIndex);
@@ -87,7 +87,7 @@ public class Ordenador<E extends Comparable<E>> {
 
         return i;
     }
-
+    @SuppressWarnings("unused")
     private void mergeSort(E[] lista, int inicio, int fim) {
         if (inicio < fim) {
             int meio = inicio + (fim - inicio) / 2;
