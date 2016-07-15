@@ -26,7 +26,7 @@ public class Ordenador {
         }
     }
     public static Class[] getClasses(String pckgname) throws ClassNotFoundException {
-        ArrayList<Class> classes=new ArrayList();
+        ArrayList<Class> classes=new ArrayList<>();
         // Get a File object for the package
         File directory=null;
         try {
