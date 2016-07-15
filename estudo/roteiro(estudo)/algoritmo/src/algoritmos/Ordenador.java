@@ -4,17 +4,17 @@ public class Ordenador<E extends Comparable<E>> {
 
     public void sort(E[] lista, int leftIndex, int rightIndex) {
         if (leftIndex < rightIndex) {
-//            insertionSort(lista, leftIndex, rightIndex);
-//            bubbleSort(lista, leftIndex, rightIndex);
-//            selectionSort(lista, leftIndex, rightIndex);
-//            quickSort(lista, leftIndex, rightIndex);
-//            mergeSort(lista, leftIndex, rightIndex);
-            matheus(lista, leftIndex, rightIndex);
+            // insertionSort(lista, leftIndex, rightIndex);
+            // bubbleSort(lista, leftIndex, rightIndex);
+            // selectionSort(lista, leftIndex, rightIndex);
+            // quickSort(lista, leftIndex, rightIndex);
+            // mergeSort(lista, leftIndex, rightIndex);
+//            matheus(lista, leftIndex, rightIndex);
         }
     }
 
     @SuppressWarnings("unused")
-	private void bubbleSort(E[] lista, int leftIndex, int rightIndex) {
+    private void bubbleSort(E[] lista, int leftIndex, int rightIndex) {
         boolean houveTroca;
         do {
             houveTroca = false;
@@ -28,6 +28,7 @@ public class Ordenador<E extends Comparable<E>> {
             }
         } while (houveTroca);
     }
+
     @SuppressWarnings("unused")
     private void selectionSort(E[] lista, int leftIndex, int rightIndex) {
         for (int i = leftIndex; i < rightIndex; i++) {
@@ -59,6 +60,7 @@ public class Ordenador<E extends Comparable<E>> {
         lista[i] = lista[j];
         lista[j] = aux;
     }
+
     @SuppressWarnings("unused")
     private void quickSort(E[] lista, int leftIndex, int rightIndex) {
         if (leftIndex < rightIndex) {
@@ -87,6 +89,7 @@ public class Ordenador<E extends Comparable<E>> {
 
         return i;
     }
+
     @SuppressWarnings("unused")
     private void mergeSort(E[] lista, int inicio, int fim) {
         if (inicio < fim) {
@@ -134,11 +137,52 @@ public class Ordenador<E extends Comparable<E>> {
         }
 
     }
+
+    public void coutingSort(Integer[] lista, int leftIndex, int rightIndex) {
+        Integer[] listaFrequencia = new Integer[lista[getIndiceMaior(lista)]+1];
+        
+        //popular lista frequencia
+        for (int i = 0; i < listaFrequencia.length; i++) {
+            listaFrequencia[i] = 0;
+        }
+        
+        
+        //contador de frequencia
+        for (int i = 0; i < lista.length; i ++) {
+            listaFrequencia[lista[i]]++;
+        }
+        
+        for (int i = 1; i < listaFrequencia.length; i++) {
+            listaFrequencia[i] += listaFrequencia[i - 1];
+        }
+        
+        Integer[] listaFinal = new Integer[lista.length];
+        for (int i = lista.length - 1; i >= 0; i --) {
+            listaFinal[listaFrequencia[lista[i]]-1] = lista[i];
+            listaFrequencia[lista[i]]--;
+        }
+        
+        
+        for (int i = 0; i < lista.length; i ++) {
+            lista[i] = listaFinal[i];
+        }
+        
+    }
+
+    private int getIndiceMaior(Integer[] lista) {
+        return getIndiceMaior(lista, 0, lista.length - 1);
+    }
     
-    
-    
-    
-    public void matheus(E[] lista, int leftIndex, int rightIndex){
+    private int getIndiceMaior(Integer[] lista, int leftIndex, int rightIndex) {
+        int maior = leftIndex;
+        for (int i = leftIndex; i <= rightIndex; i++) {
+            maior = lista[maior].compareTo(lista[i]) < 0 ? i : maior;
+        }
+
+        return maior;
+    }
+
+    public void matheus(E[] lista, int leftIndex, int rightIndex) {
 
         for (int i = leftIndex; i < rightIndex; i++) {
             for (int j = 0; j < rightIndex - 1; j++) {

@@ -83,6 +83,22 @@ public class OrdenadorTest {
     }
 
     @Test
+    public void testeSimples() {
+        Integer[] lista = {9, 8, 7, 6, 5, 5, 4, 0};
+        Integer[] listaAuxiliar = Arrays.copyOf(lista, lista.length);
+        
+        Arrays.sort(listaAuxiliar);
+        ordenador.coutingSort(lista);
+        
+        
+        System.out.println("Lista: " + Arrays.toString(lista));
+        System.out.println("ListaAuxiliar: " + Arrays.toString(listaAuxiliar));
+
+        
+        
+    }
+    
+
     public void iniciaTestes() {
         long inicio = System.currentTimeMillis();
         try {
