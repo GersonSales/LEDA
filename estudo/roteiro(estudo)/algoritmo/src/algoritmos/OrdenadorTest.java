@@ -86,20 +86,23 @@ public class OrdenadorTest {
 
 	}
 
+	@Test
 	public void testeSimples() {
-		Integer[] lista = { 9, 8, 7, 6, 5, 5, 4, 0 };
+		Integer[] lista = { 9 ,5};//9, 8, 7, 6, 5, 5, 4, 0 , -1, -5};
 		System.out.println("Lista:    " + Arrays.toString(lista));
 		Integer[] listaAuxiliar = Arrays.copyOf(lista, lista.length);
+		
+		int leftIndex = 0;
+		int rightIndex = lista.length - 1;
 
-		Arrays.sort(listaAuxiliar, 4, lista.length);
-//		ordenador.coutingSortG(lista, 4, lista.length - 1);
+		Arrays.sort(listaAuxiliar, leftIndex, rightIndex + 1);
+		ordenador.extendedCountingSort(lista, leftIndex, rightIndex);
 
 		System.out.println("Esperado: " + Arrays.toString(listaAuxiliar));
 		System.out.println("Obtido:   " + Arrays.toString(lista));
 
 	}
 	
-	@Test
 	public void iniciaTestes() {
 		long inicio = System.currentTimeMillis();
 		try {

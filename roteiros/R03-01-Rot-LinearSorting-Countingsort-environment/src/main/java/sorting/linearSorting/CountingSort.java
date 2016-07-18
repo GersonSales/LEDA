@@ -12,28 +12,28 @@ public class CountingSort extends AbstractSorting<Integer> {
 
 	@Override
 	public void sort(Integer[] array, int leftIndex, int rightIndex) {
-		if (!validaArray(array, leftIndex, rightIndex)) return;
-		
-		int[] frequencia = new int[array[getIndiceMaior(array, leftIndex, rightIndex)] + 1];
+		if (validaArray(array, leftIndex, rightIndex)) {
 
-		for (int i = leftIndex; i <= rightIndex; i++) {
-			frequencia[(int) array[i]]++;
+			int[] frequencia = new int[array[getIndiceMaior(array, leftIndex, rightIndex)] + 1];
+
+			for (int i = leftIndex; i <= rightIndex; i++) {
+				frequencia[(int) array[i]]++;
+			}
+
+			for (int i = 1; i < frequencia.length; i++) {
+				frequencia[i] += frequencia[i - 1];
+			}
+
+			Integer[] arrayFinal = new Integer[(rightIndex + 1) - leftIndex];
+
+			for (int i = rightIndex; i >= leftIndex; i--) {
+				arrayFinal[--frequencia[(int) array[i]]] = array[i];
+			}
+
+			for (int i = leftIndex; i <= rightIndex; i++) {
+				array[i] = arrayFinal[i - leftIndex];
+			}
 		}
-
-		for (int i = 1; i < frequencia.length; i++) {
-			frequencia[i] += frequencia[i - 1];
-		}
-
-		Integer[] arrayFinal = new Integer[(rightIndex + 1) - leftIndex];
-
-		for (int i = rightIndex; i >= leftIndex; i--) {
-			arrayFinal[--frequencia[(int) array[i]]] = array[i];
-		}
-
-		for (int i = leftIndex; i <= rightIndex; i++) {
-			array[i] = arrayFinal[i - leftIndex];
-		}
-
 	}
 
 	private boolean validaArray(Integer[] array, int leftIndex, int rightIndex) {

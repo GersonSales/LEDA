@@ -18,3 +18,5 @@ Total de testes: 1 | Tempo total: 0s
 ==========================================
 Total de testes: 1235181 | Tempo total: 10s
 ==========================================
+Total de testes: 1 | Tempo total: 39s
+==========================================

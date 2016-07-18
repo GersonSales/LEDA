@@ -6,7 +6,7 @@ public class Ordenador<E extends Comparable<E>> {
 
 	public void sort(E[] array, int leftIndex, int rightIndex) {
 		if (leftIndex < rightIndex) {
-			coutingSortG(array, leftIndex, rightIndex);
+			extendedCountingSort((Integer[]) array, leftIndex, rightIndex);
 		}
 	}
 
@@ -134,6 +134,52 @@ public class Ordenador<E extends Comparable<E>> {
 
 	}
 
+	public void extendedCountingSort(Integer[] array, int leftIndex, int rightIndex) {
+		int menor = min(array, leftIndex, rightIndex);
+		if (menor < 0)
+			for (int i = leftIndex; i <= rightIndex; i++) {
+				array[i] += Math.abs(menor);
+			}
+
+		int maior = max(array, leftIndex, rightIndex);
+		int diferenca = maior - Math.abs(menor);
+
+		int[] frequencia = new int[diferenca + 1];
+
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			frequencia[array[i] - diferenca - 1]++;
+		}
+
+		for (int i = 0 + 1; i < frequencia.length; i++) {
+			frequencia[i] += frequencia[i - 1];
+		}
+
+		Integer[] arrayFinal = new Integer[rightIndex - leftIndex + 1];
+
+		for (int i = rightIndex; i >= leftIndex; i--) {
+			arrayFinal[--frequencia[array[i] - diferenca]] = array[i];
+
+		}
+
+		for (int i = 0; i < arrayFinal.length; i++) {
+			array[i + leftIndex] = arrayFinal[i];
+		}
+
+		if (menor < 0)
+			for (int i = leftIndex; i <= rightIndex; i++) {
+				array[i] -= Math.abs(menor);
+			}
+
+	}
+
+	private int min(Integer[] array, int leftIndex, int rightIndex) {
+		Integer menor = array[leftIndex];
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			menor = menor.compareTo(array[i]) > 0 ? array[i] : menor;
+		}
+		return menor;
+	}
+
 	@SuppressWarnings("unchecked")
 	public void coutingSort(E[] lista, int leftIndex, int rightIndex) {
 		Integer[] listaFrequencia = new Integer[(Integer) (lista[getIndiceMaior(lista, leftIndex, rightIndex)]) + 1];
@@ -164,6 +210,15 @@ public class Ordenador<E extends Comparable<E>> {
 
 	}
 
+	private Integer max(Integer[] array, int leftIndex, int rightIndex) {
+		Integer maior = array[leftIndex];
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			maior = maior.compareTo(array[i]) < 0 ? array[i] : maior;
+		}
+		return maior;
+
+	}
+
 	private int getIndiceMaior(E[] lista) {
 		return getIndiceMaior(lista, 0, lista.length - 1);
 	}
@@ -176,31 +231,30 @@ public class Ordenador<E extends Comparable<E>> {
 
 		return maior;
 	}
-	
-	
+
 	@SuppressWarnings("unchecked")
 	private void coutingSortG(E[] array, int leftIndex, int rightIndex) {
-		
-		int[] frequencia = new int[(int)array[getIndiceMaior(array, leftIndex, rightIndex)] + 1];
-		
+
+		int[] frequencia = new int[(int) array[getIndiceMaior(array, leftIndex, rightIndex)] + 1];
+
 		for (int i = leftIndex; i <= rightIndex; i++) {
-			frequencia[(int)array[i]] ++; 
+			frequencia[(int) array[i]]++;
 		}
-		
+
 		for (int i = 1; i < frequencia.length; i++) {
 			frequencia[i] += frequencia[i - 1];
 		}
-		
-		E[] arrayFinal = (E[])new Comparable[(rightIndex + 1) - leftIndex];
-		
-		for (int i = rightIndex; i >= leftIndex; i-- ) {
-			arrayFinal[--frequencia[(int)array[i]]]= array[i];
+
+		E[] arrayFinal = (E[]) new Comparable[(rightIndex + 1) - leftIndex];
+
+		for (int i = rightIndex; i >= leftIndex; i--) {
+			arrayFinal[--frequencia[(int) array[i]]] = array[i];
 		}
-		
+
 		for (int i = leftIndex; i <= rightIndex; i++) {
 			array[i] = arrayFinal[i - leftIndex];
 		}
-		
+
 	}
 
 	public void matheus(E[] lista, int leftIndex, int rightIndex) {
