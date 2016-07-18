@@ -2,3 +2,19 @@ Total de testes: 662045 | Tempo total: 10s
 ==========================================
 Total de testes: 931152 | Tempo total: 10s
 ==========================================
+Total de testes: 111534 | Tempo total: 1s
+==========================================
+Total de testes: 1270018 | Tempo total: 10s
+==========================================
+Teste(1) - leftIndex: 0 rightIndex: 7
+
+Entrada:  [54, 46, 80, 49, 70, 27, 54, 33]
+Esperado: [27, 33, 46, 49, 54, 54, 70, 80]
+Obtido:   [70, 54, 54, 80, null, null, null, null]
+
+Total de testes: 1 | Tempo total: 0s
+==========================================
+Total de testes: 1 | Tempo total: 0s
+==========================================
+Total de testes: 1235181 | Tempo total: 10s
+==========================================

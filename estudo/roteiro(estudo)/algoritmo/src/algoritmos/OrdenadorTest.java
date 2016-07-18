@@ -59,7 +59,8 @@ public class OrdenadorTest {
 
 	}
 
-	public void testeTeste() {
+	
+	private void testeTeste() {
 		Integer[] lista = gerador();
 		String listaOriginal = Arrays.toString(lista);
 		Integer[] listaAuxiliar = Arrays.copyOf(lista, lista.length);
@@ -87,16 +88,17 @@ public class OrdenadorTest {
 
 	public void testeSimples() {
 		Integer[] lista = { 9, 8, 7, 6, 5, 5, 4, 0 };
+		System.out.println("Lista:    " + Arrays.toString(lista));
 		Integer[] listaAuxiliar = Arrays.copyOf(lista, lista.length);
 
 		Arrays.sort(listaAuxiliar, 4, lista.length);
-		ordenador.coutingSort(lista, 4, lista.length - 1);
+//		ordenador.coutingSortG(lista, 4, lista.length - 1);
 
-		System.out.println("Lista: " + Arrays.toString(lista));
-		System.out.println("ListaAuxiliar: " + Arrays.toString(listaAuxiliar));
+		System.out.println("Esperado: " + Arrays.toString(listaAuxiliar));
+		System.out.println("Obtido:   " + Arrays.toString(lista));
 
 	}
-
+	
 	@Test
 	public void iniciaTestes() {
 		long inicio = System.currentTimeMillis();
@@ -118,7 +120,7 @@ public class OrdenadorTest {
 
 	}
 
-	public void teste() {
+	private void teste() {
 		Integer[] lista = gerador();
 		String listaTS = Arrays.toString(lista);
 

@@ -1,16 +1,12 @@
 package algoritmos;
 
+import java.util.Arrays;
+
 public class Ordenador<E extends Comparable<E>> {
 
-	public void sort(E[] lista, int leftIndex, int rightIndex) {
+	public void sort(E[] array, int leftIndex, int rightIndex) {
 		if (leftIndex < rightIndex) {
-//			insertionSort(lista, leftIndex, rightIndex);
-//			bubbleSort(lista, leftIndex, rightIndex);
-//			selectionSort(lista, leftIndex, rightIndex);
-//			quickSort(lista, leftIndex, rightIndex);
-			mergeSort(lista, leftIndex, rightIndex);
-//			coutingSort(lista, leftIndex, rightIndex);
-			// matheus(lista, leftIndex, rightIndex);
+			coutingSortG(array, leftIndex, rightIndex);
 		}
 	}
 
@@ -179,6 +175,32 @@ public class Ordenador<E extends Comparable<E>> {
 		}
 
 		return maior;
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	private void coutingSortG(E[] array, int leftIndex, int rightIndex) {
+		
+		int[] frequencia = new int[(int)array[getIndiceMaior(array, leftIndex, rightIndex)] + 1];
+		
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			frequencia[(int)array[i]] ++; 
+		}
+		
+		for (int i = 1; i < frequencia.length; i++) {
+			frequencia[i] += frequencia[i - 1];
+		}
+		
+		E[] arrayFinal = (E[])new Comparable[(rightIndex + 1) - leftIndex];
+		
+		for (int i = rightIndex; i >= leftIndex; i-- ) {
+			arrayFinal[--frequencia[(int)array[i]]]= array[i];
+		}
+		
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			array[i] = arrayFinal[i - leftIndex];
+		}
+		
 	}
 
 	public void matheus(E[] lista, int leftIndex, int rightIndex) {
