@@ -8,28 +8,39 @@ class Solucao {
         Scanner sc = new Scanner(System.in);
 
         int[] sequencia = toArray(sc.nextLine());
-        ordena(sequencia);
+        
+        
+        particiona(sequencia);
         imprimeArray(sequencia);
 
         sc.close();
     }
 
-    private static void ordena(int[] sequencia) {
-        sort(sequencia, 0, sequencia.length - 1);
-    }
+    private static void particiona(int[] array) {
+    	int pivo = array.length/2;
+    	int i = 0;
+    	int j = array.length - 1;
+    	
+    	while (i < j) {
+    		if (array[j] < pivo) {
+    			troca(array, j, pivo);
+    			pivo = j;
+    			array[j] = pivo;
+    		}else {
+    			j--;
+    		}
+    		
+    		if (array[i] > pivo) {
+    			troca(array, i, pivo);
+    			pivo = i;
+    		}else {
+    			i++;
+    		}
+    	}
+    			
+	}
 
-    public static void sort(int[] vetor, int inicio, int fim) {
-        if (inicio > fim)
-            return;
-        if (vetor[inicio] > vetor[fim]) {
-            troca(vetor, inicio, fim);
-        }
-
-        sort(vetor, inicio + 1, fim + 1);
-
-    }
-
-    private static void imprimeArray(int[] sequencia) {
+	private static void imprimeArray(int[] sequencia) {
         StringBuffer resultado = new StringBuffer();
         for (int i : sequencia) {
             resultado.append(i + " ");
