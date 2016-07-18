@@ -1,9 +1,6 @@
 package questoes;
 
-import java.util.Arrays;
 import java.util.Scanner;
-
-import javax.naming.LimitExceededException;
 
 class Solucao {
 
