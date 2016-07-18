@@ -1,4 +1,4 @@
-package algoritmos;
+package atividade.extra;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -13,14 +13,14 @@ import org.junit.Test;
 public class OrdenadorTest {
 
 	Random randomer;
-	private Ordenador<Integer> ordenador;
+	private Sorting<Integer> ordenador;
 	private int qtdTestes;
 
 	@Before
 	public void setUp() throws Exception {
 		this.qtdTestes = 0;
 		randomer = new Random();
-		this.ordenador = new Ordenador<>();
+		this.ordenador = new MergeSort<>();
 	}
 
 	private Integer[] gerador() {
@@ -90,7 +90,7 @@ public class OrdenadorTest {
 		Integer[] listaAuxiliar = Arrays.copyOf(lista, lista.length);
 
 		Arrays.sort(listaAuxiliar, 4, lista.length);
-		ordenador.coutingSort(lista, 4, lista.length - 1);
+//		ordenador.coutingSort(lista, 4, lista.length - 1);
 
 		System.out.println("Lista: " + Arrays.toString(lista));
 		System.out.println("ListaAuxiliar: " + Arrays.toString(listaAuxiliar));
