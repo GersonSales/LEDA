@@ -6,7 +6,7 @@ public class Sorting<E extends Comparable<E>> {
 
 	public void sort(E[] array, int leftIndex, int rightIndex) {
 		if (leftIndex < rightIndex) {
-			extendedCountingSort((Integer[])array, leftIndex, rightIndex);
+			extendedCountingSort((Integer[]) array, leftIndex, rightIndex);
 		}
 	}
 
@@ -134,21 +134,28 @@ public class Sorting<E extends Comparable<E>> {
 
 	}
 
-    private boolean validaArray(Integer[] array, int leftIndex, int rightIndex) {
-        if (rightIndex < leftIndex) return false;
-        if (leftIndex < 0) return false;
-        if (rightIndex > array.length) return false;
-        if (array.length < 2) return false;
-        
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == null) return false;
-        }
-        
-        return true;
-    }
+	private boolean validaArray(Integer[] array, int leftIndex, int rightIndex) {
+		if (rightIndex < leftIndex)
+			return false;
+		if (leftIndex < 0)
+			return false;
+		if (rightIndex > array.length)
+			return false;
+		if (array.length < 2)
+			return false;
+
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == null)
+				return false;
+		}
+
+		return true;
+	}
+
 	public void extendedCountingSort(Integer[] array, int leftIndex, int rightIndex) {
-		if (!validaArray(array, leftIndex, rightIndex)) return;
-		
+		if (!validaArray(array, leftIndex, rightIndex))
+			return;
+
 		int menor = min(array, leftIndex, rightIndex);
 		int menorAbs = Math.abs(menor);
 		if (menor < 0) {
@@ -182,10 +189,19 @@ public class Sorting<E extends Comparable<E>> {
 			array[i + leftIndex] = arrayFinal[i];
 		}
 
-		if (menor < 2)
+		if (menor < 0)
 			for (int i = leftIndex; i <= rightIndex; i++) {
 				array[i] -= Math.abs(menor);
 			}
+
+	}
+
+	private Integer max(Integer[] array, int leftIndex, int rightIndex) {
+		Integer maior = array[leftIndex];
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			maior = maior.compareTo(array[i]) < 0 ? array[i] : maior;
+		}
+		return maior;
 
 	}
 
@@ -224,15 +240,6 @@ public class Sorting<E extends Comparable<E>> {
 		for (int i = leftIndex; i <= rightIndex; i++) {
 			lista[i] = (E) listaFinal[i];
 		}
-
-	}
-
-	private Integer max(Integer[] array, int leftIndex, int rightIndex) {
-		Integer maior = array[leftIndex];
-		for (int i = leftIndex; i <= rightIndex; i++) {
-			maior = maior.compareTo(array[i]) < 0 ? array[i] : maior;
-		}
-		return maior;
 
 	}
 

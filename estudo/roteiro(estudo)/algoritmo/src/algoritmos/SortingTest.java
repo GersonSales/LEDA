@@ -9,6 +9,7 @@ import java.util.Random;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.internal.ArrayComparisonFailure;
 
 public class SortingTest {
 
@@ -17,12 +18,13 @@ public class SortingTest {
 
 	private final String EXEC_RESULT_DIRECTORY = "statistics";
 	private final String EXEC_RESULT_FILE_NAME = "execResult";
-	
-	private final int TEST_TIME = 3;//in seconds
+
+	private final int TEST_TIME = 3;// in seconds
 
 	Random randomer;
-	private Sorting<Integer> sorting;// PUT YOUR SORTING CLASS HERE.
+	private ExtendedCountingSort sorting;// PUT YOUR SORTING CLASS HERE.
 	private int qtdTests;
+	private boolean success;
 
 	private Integer[] arrayGenerator() {
 		int length = randomer.nextInt(20);
@@ -46,7 +48,7 @@ public class SortingTest {
 
 	@Test
 	public void start() {
-		execResultWriter("------------------BEGIN-------------------");
+		execResultWriter("---------------------BEGIN----------------------");
 		execResultWriter(sorting.getClass().getSimpleName());
 		
 		long begin = System.currentTimeMillis();
@@ -56,15 +58,19 @@ public class SortingTest {
 				simpleInput();
 				indexhandler();
 			}
+			success = true;
 		} catch (Throwable error) {
+			success = false;
 			logger(error);
 			throw error;
 		} finally {
 			execResultWriter("Total of tests: " + qtdTests + " | ", false);
-			execResultWriter("Total time: " + ((System.currentTimeMillis() - begin) / 1000) + "s");
-			execResultWriter("===================END====================");
+			execResultWriter("Total time: " + ((System.currentTimeMillis() - begin) / 1000) + "s |", false);
+			execResultWriter("("+ (success ? "SUCCESS" : "FAIL") + ")");
+			execResultWriter("======================END=======================");
 		}
 	}
+
 
 	private void logger(Throwable error) {
 		textWriter(LOG_DIRECTORY, LOG_FILE_NAME, error.toString(), true);
@@ -110,16 +116,21 @@ public class SortingTest {
 		try {
 			if (length > 0)
 				Arrays.sort(assistArray, leftIndex, rightIndex + 1);
-		} catch (Exception erro) {
+		} catch (Throwable erro) {
 			logger(erro);
 		}
 
-		sorting.sort(array, leftIndex, rightIndex);
-
 		try {
+			sorting.sort(array, leftIndex, rightIndex);
 			Assert.assertArrayEquals(array, assistArray);
-		} catch (Throwable erro) {
+
+		} catch (ArrayComparisonFailure error) {
+
 			execResult(arrayToString, Arrays.toString(assistArray), Arrays.toString(array), leftIndex, rightIndex);
+			throw error;
+
+		} catch (Throwable erro) {
+			execResult(arrayToString, Arrays.toString(assistArray), erro.toString(), leftIndex, rightIndex);
 			throw erro;
 		}
 
@@ -129,22 +140,27 @@ public class SortingTest {
 	public void setUp() {
 		this.qtdTests = 0;
 		randomer = new Random();
-		this.sorting = new Sorting<>();
+		this.sorting = new ExtendedCountingSort();
 	}
 
 	private void simpleInput() {
 		Integer[] array = arrayGenerator();
-		String arraytoString = Arrays.toString(array);
+		String arrayToString = Arrays.toString(array);
 
 		Integer[] assistArray = Arrays.copyOf(array, array.length);
 
 		Arrays.sort(assistArray);
-		sorting.sort(array, 0, array.length - 1);
-
 		try {
+			sorting.sort(array, 0, array.length - 1);
+
 			Assert.assertArrayEquals(assistArray, array);
+		} catch (ArrayComparisonFailure error) {
+
+			execResult(arrayToString, Arrays.toString(assistArray), Arrays.toString(array), 0, array.length - 1);
+			throw error;
+
 		} catch (Throwable erro) {
-			execResult(arraytoString, Arrays.toString(assistArray), Arrays.toString(array), 0, array.length - 1);
+			execResult(arrayToString, Arrays.toString(assistArray), erro.toString(), 0, array.length - 1);
 			throw erro;
 		}
 	}
@@ -158,7 +174,7 @@ public class SortingTest {
 		int rightIndex = array.length - 1;
 
 		Arrays.sort(assistArray, leftIndex, rightIndex + 1);
-		sorting.extendedCountingSort(array, leftIndex, rightIndex);
+		// sorting.extendedCountingSort(array, leftIndex, rightIndex);
 
 		System.out.println("Expected: " + Arrays.toString(assistArray));
 		System.out.println("Obtained: " + Arrays.toString(array));
