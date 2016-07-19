@@ -103,3 +103,12 @@ SelectionSort 2766 46000
 InsertionSort 2172 46000
 QuickSort 167 46000
 MergeSort 543 46000
+alg time sample
+SelectionSort 546 21000
+InsertionSort 973 21000
+QuickSort 101 21000
+MergeSort 282 21000
+SelectionSort 586 22000
+InsertionSort 857 22000
+QuickSort 33 22000
+MergeSort 218 22000
