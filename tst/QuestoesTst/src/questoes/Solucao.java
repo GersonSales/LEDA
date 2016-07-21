@@ -4,87 +4,74 @@ import java.util.Scanner;
 
 class Solucao {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-		int[] array = toArray(sc.nextLine());
-		int[] index = toArray(sc.nextLine());
-		int i = index[0];
-		int j = index[1];
+        int[] array = toArray(sc.nextLine());
+        int[] index = toArray(sc.nextLine());
+        int i = index[0];
+        int j = index[1];
 
-		int lessThani = counter(array, i);
-		int lessThanj = counter(array, i);
+        int mqi = contaMenores(array, 0, i);
+        int mqj = contaMenores(array, 0, j);
 
-		int middle = i + (j - i) / 2;
+        int meio = (array.length - 1) / 2;
 
-		lessThani = middle - lessThani;
-		lessThanj = middle - lessThanj;
+        int deim = diferenca(mqi, meio);
+        int dejm = diferenca(mqj, meio);
+        
+        System.out.println(deim < dejm ? i : j);
+        sc.close();
+    }
 
-		System.out.println(min(lessThani, lessThanj));
+    private static int diferenca(int mqi, int meio) {
+        int maior = mqi >= meio ? mqi : meio;
+        int menor = mqi < meio ? mqi : meio;
+        return maior - menor;
 
-		sc.close();
-	}
+    }
 
-	private static int min(int lessThani, int lessThanj) {
-		return lessThani <= lessThanj ? lessThani : lessThanj;
-	}
+    private static int contaMenores(int[] array, int left, int indice) {
+        int contador = 0;
+        for (int i = left; i < indice; i++) {
+            if (array[i] < array[indice]) {
+                contador++;
+            }
+        }
 
-	private static int counter(int[] array, int index) {
-		int count = 0;
-		for (int i = 0; i < array.length; i++) {
-			if (array[index] > array[i])
-				count++;
-		}
-		return count;
-	}
+        return contador;
+    }
 
-	private static void particiona(int[] array) {
-		int pivo = array.length / 2;
-		int i = 0;
-		int j = array.length - 1;
+    private static int partition(int[] array, int left, int right) {
+        if (left > right) {
+            int pivot = array[left];
+            int i = left;
+            for (int j = i + 1; j < right; j++) {
+                if (j < pivot) {
+                    i++;
+                    swap(array, i, j);
+                }
+            }
+            swap(array, i, pivot);
+            return i;
+        } else {
+            return -1;
+        }
+    }
 
-		while (i < j) {
-			if (array[j] < pivo) {
-				troca(array, j, pivo);
-				pivo = j;
-				array[j] = pivo;
-			} else {
-				j--;
-			}
+    private static void swap(int[] array, int i, int j) {
+        int aux = array[i];
+        array[i] = array[j];
+        array[j] = aux;
+    }
 
-			if (array[i] > pivo) {
-				troca(array, i, pivo);
-				pivo = i;
-			} else {
-				i++;
-			}
-		}
-
-	}
-
-	private static void imprimeArray(int[] sequencia) {
-		StringBuffer resultado = new StringBuffer();
-		for (int i : sequencia) {
-			resultado.append(i + " ");
-		}
-
-		resultado.deleteCharAt(resultado.length() - 1);
-		System.out.println(resultado);
-	}
-
-	private static void troca(int[] array, int i, int j) {
-		int aux = array[i];
-		array[i] = array[j];
-		array[j] = aux;
-	}
-
-	private static int[] toArray(String sequencia) {
-		String[] sequenciaArray = sequencia.split(" ");
-		int[] sequenciaInt = new int[sequenciaArray.length];
-		for (int i = 0; i < sequenciaInt.length; i++) {
-			sequenciaInt[i] = Integer.valueOf(sequenciaArray[i]);
-		}
-		return sequenciaInt;
-	}
+    private static int[] toArray(String sequencia) {
+        String[] sequenciaArray = sequencia.split(" ");
+        int[] sequenciaInt = new int[sequenciaArray.length];
+        for (int i = 0; i < sequenciaInt.length; i++) {
+            sequenciaInt[i] = Integer.valueOf(sequenciaArray[i]);
+        }
+        return sequenciaInt;
+    }
 
 }
