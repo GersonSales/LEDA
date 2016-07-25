@@ -46,7 +46,7 @@ public class SortingTest {
 		textWriter(EXEC_RESULT_DIRECTORY, EXEC_RESULT_FILE_NAME, execResult, nextLine);
 	}
 
-	@Test
+//	@Test
 	public void start() {
 		execResultWriter("---------------------BEGIN----------------------");
 		execResultWriter(sorting.getClass().getSimpleName());

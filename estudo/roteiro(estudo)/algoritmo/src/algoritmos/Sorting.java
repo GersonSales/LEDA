@@ -6,7 +6,7 @@ public class Sorting<E extends Comparable<E>> {
 
 	public void sort(E[] array, int leftIndex, int rightIndex) {
 		if (leftIndex < rightIndex) {
-			extendedCountingSort((Integer[]) array, leftIndex, rightIndex);
+			selectionSortR(array, leftIndex, rightIndex);
 		}
 	}
 
@@ -293,6 +293,38 @@ public class Sorting<E extends Comparable<E>> {
 			}
 		}
 
+	}
+
+	public static void main(String[] args) {
+		Sorting<Integer> implementation = new Sorting<>();
+
+		Integer[] array = { 3, 2, 1, 1, 2, 5, 2, 1, 1, 4, 54, 9, -1, -2 };
+
+		implementation.sort(array, 0, array.length - 1);
+
+		System.out.println(Arrays.toString(array));
+	}
+
+	private void selectionSortR(E[] array, int leftIndex, int rightIndex) {
+		if (leftIndex < rightIndex) {
+			troca(array, leftIndex, buscaMenor(array, leftIndex, rightIndex, leftIndex));
+			selectionSortR(array, leftIndex + 1, rightIndex);
+		}
+	}
+	
+	private int buscaMenor(E[] array, int leftIndex, int rightIndex, int indiceMenor) {
+		if (leftIndex <= rightIndex) {
+			if (array[leftIndex].compareTo(array[indiceMenor]) < 0) {
+				return buscaMenor(array, leftIndex + 1, rightIndex, leftIndex);
+			}else{
+				return buscaMenor(array, leftIndex + 1, rightIndex, indiceMenor);
+				
+			}
+		}
+		
+		
+		
+		return indiceMenor;
 	}
 
 	public void imprimeLista(E[] lista) {
