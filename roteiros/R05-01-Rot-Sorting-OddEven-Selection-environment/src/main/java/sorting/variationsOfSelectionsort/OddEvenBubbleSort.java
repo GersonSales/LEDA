@@ -1,4 +1,4 @@
-package sorting.variationsOfBubblesort;
+package sorting.variationsOfSelectionsort;
 
 import java.util.Arrays;
 
