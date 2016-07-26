@@ -4,10 +4,65 @@ import java.util.Arrays;
 
 public class Sorting<E extends Comparable<E>> {
 
+	private int divider = 1;
+	private int mudule = 10;
+
 	public void sort(E[] array, int leftIndex, int rightIndex) {
 		if (leftIndex < rightIndex) {
-			selectionSortR(array, leftIndex, rightIndex);
+			radix(array, leftIndex, rightIndex);
 		}
+	}
+
+	public static void main(String[] args) {
+		Sorting<Integer> sorting = new Sorting<>();
+
+		Integer[] array2 = {12763781, 12651, 123123, 1, 123, 12, 1, 0, 1254, 0, 2, 1, 3, 144, 132 };
+
+		sorting.sort(array2, 0, array2.length - 1);
+
+		System.out.println(Arrays.toString(array2));
+
+	}
+
+	private void radix(E[] array, int leftIndex, int rightIndex) {
+
+		E greater = array[leftIndex];
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			if (array[i].compareTo(greater) > 0) {
+				greater = array[i];
+			}
+		}
+
+		int length = greater.toString().length();
+
+		for (int i = 0; i < length; i++) {
+			coutingRadix(array, leftIndex, rightIndex);
+			divider *= 10;
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	private void coutingRadix(E[] array, int leftIndex, int rightIndex) {
+		int[] couting = new int[10];
+
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			couting[(((Integer) array[i]) / divider) % mudule]++;
+		}
+
+		for (int i = 1; i < couting.length; i++) {
+			couting[i] += couting[i - 1];
+		}
+
+		E[] result = (E[]) new Comparable[array.length];
+
+		for (int i = rightIndex; i >= leftIndex; i--) {
+			result[--couting[(((Integer) array[i]) / divider) % mudule]] = array[i];
+		}
+
+		for (int i = leftIndex; i <= rightIndex; i++) {
+			array[i] = result[i];
+		}
+
 	}
 
 	@SuppressWarnings("unused")
@@ -295,35 +350,23 @@ public class Sorting<E extends Comparable<E>> {
 
 	}
 
-	public static void main(String[] args) {
-		Sorting<Integer> implementation = new Sorting<>();
-
-		Integer[] array = { 3, 2, 1, 1, 2, 5, 2, 1, 1, 4, 54, 9, -1, -2 };
-
-		implementation.sort(array, 0, array.length - 1);
-
-		System.out.println(Arrays.toString(array));
-	}
-
 	private void selectionSortR(E[] array, int leftIndex, int rightIndex) {
 		if (leftIndex < rightIndex) {
 			troca(array, leftIndex, buscaMenor(array, leftIndex, rightIndex, leftIndex));
 			selectionSortR(array, leftIndex + 1, rightIndex);
 		}
 	}
-	
+
 	private int buscaMenor(E[] array, int leftIndex, int rightIndex, int indiceMenor) {
 		if (leftIndex <= rightIndex) {
 			if (array[leftIndex].compareTo(array[indiceMenor]) < 0) {
 				return buscaMenor(array, leftIndex + 1, rightIndex, leftIndex);
-			}else{
+			} else {
 				return buscaMenor(array, leftIndex + 1, rightIndex, indiceMenor);
-				
+
 			}
 		}
-		
-		
-		
+
 		return indiceMenor;
 	}
 
