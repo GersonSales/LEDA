@@ -16,7 +16,6 @@ public class SelectionSort<E extends Comparable<E>> extends AbstractSorting<E> {
 			util.Util.swap(array, leftIndex, selectionAssist(array, leftIndex, rightIndex));
 			selectionSort(array, leftIndex + 1, rightIndex);
 		}
-
 	}
 
 	private int selectionAssist(E[] array, int leftIndex, int rightIndex) {

@@ -36,3 +36,11 @@ Total of tests: 2017 | Total time: 3s |(SUCCESS)
 BubbleSort
 Total of tests: 1880 | Total time: 3s |(SUCCESS)
 ======================END=======================
+---------------------BEGIN----------------------
+BubbleSort
+Total of tests: 1795 | Total time: 3s |(SUCCESS)
+======================END=======================
+---------------------BEGIN----------------------
+QuickSort
+Total of tests: 1828 | Total time: 3s |(SUCCESS)
+======================END=======================

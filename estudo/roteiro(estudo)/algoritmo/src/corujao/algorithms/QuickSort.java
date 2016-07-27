@@ -16,16 +16,16 @@ public class QuickSort<E extends Comparable<E>> extends AbstractSorting<E> {
 			int pivot = partition(array, leftIndex, rightIndex);
 			quickSort(array, leftIndex, pivot - 1);
 			quickSort(array, pivot + 1, rightIndex);
-
 		}
+
 	}
 
 	private int partition(E[] array, int leftIndex, int rightIndex) {
-
 		E pivot = array[leftIndex];
 		int i = leftIndex;
+
 		for (int j = leftIndex + 1; j <= rightIndex; j++) {
-			if (array[j].compareTo(pivot) <= 0) {
+			if (array[j].compareTo(pivot) < 0) {
 				i++;
 				util.Util.swap(array, i, j);
 			}
@@ -33,6 +33,7 @@ public class QuickSort<E extends Comparable<E>> extends AbstractSorting<E> {
 
 		array[leftIndex] = array[i];
 		array[i] = pivot;
+
 		return i;
 	}
 

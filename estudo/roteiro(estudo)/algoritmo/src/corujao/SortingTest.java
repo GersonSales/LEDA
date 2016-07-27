@@ -12,6 +12,7 @@ import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;
 
 import corujao.algorithms.BubbleSort;
+import corujao.algorithms.QuickSort;
 
 public class SortingTest {
 
@@ -32,7 +33,7 @@ public class SortingTest {
 	public void setUp() {
 		this.qtdTests = 0;
 		randomer = new Random();
-		this.sorting = new BubbleSort<>();
+		this.sorting = new QuickSort<>();
 	}
 
 	private Integer[] arrayGenerator() {
