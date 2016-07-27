@@ -16,3 +16,23 @@ Obtained: java.lang.ArrayIndexOutOfBoundsException: 0
 
 Total of tests: 14 | Total time: 0s |(FAIL)
 ======================END=======================
+---------------------BEGIN----------------------
+Sorting
+Total of tests: 2055 | Total time: 3s |(SUCCESS)
+======================END=======================
+---------------------BEGIN----------------------
+BubbleSort
+Total of tests: 2091 | Total time: 3s |(SUCCESS)
+======================END=======================
+---------------------BEGIN----------------------
+BubbleSort
+Total of tests: 2028 | Total time: 3s |(SUCCESS)
+======================END=======================
+---------------------BEGIN----------------------
+BubbleSort
+Total of tests: 2017 | Total time: 3s |(SUCCESS)
+======================END=======================
+---------------------BEGIN----------------------
+BubbleSort
+Total of tests: 1880 | Total time: 3s |(SUCCESS)
+======================END=======================
