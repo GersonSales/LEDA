@@ -13,6 +13,7 @@ import org.junit.internal.ArrayComparisonFailure;
 
 import corujao.algorithms.BubbleSort;
 import corujao.algorithms.QuickSort;
+import corujao.algorithms.TwoPivotsQuickSort;
 
 public class SortingTest {
 
@@ -33,7 +34,7 @@ public class SortingTest {
 	public void setUp() {
 		this.qtdTests = 0;
 		randomer = new Random();
-		this.sorting = new QuickSort<>();
+		this.sorting = new TwoPivotsQuickSort<>();
 	}
 
 	private Integer[] arrayGenerator() {

@@ -10,6 +10,7 @@ import corujao.algorithms.BubbleSort;
 import corujao.algorithms.InsertionSort;
 import corujao.algorithms.QuickSort;
 import corujao.algorithms.SelectionSort;
+import corujao.algorithms.TwoPivotsQuickSort;
 
 
 public class StudentSortingTest {
@@ -38,7 +39,7 @@ public class StudentSortingTest {
 	 */
 	private void getImplementation() {
 		//TODO O aluno deve instanciar sua implementação abaixo ao invés de null 
-		this.implementation = new QuickSort<>();
+		this.implementation = new TwoPivotsQuickSort<>();
 	}
 
 	public void populaVetorTamanhoPar(Integer[] arrayPadrao){
