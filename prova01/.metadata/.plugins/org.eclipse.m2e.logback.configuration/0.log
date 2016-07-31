@@ -1,0 +1,20 @@
+2016-07-27 16:01:55,179 [Worker-12] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.edu.ufcg.ccc:submission:1.0 @ /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/pom.xml.
+2016-07-27 16:02:25,291 [Worker-12] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PP1-01-Prova-QuicksortComMediana-environment/src/main/java
+2016-07-27 16:02:25,294 [Worker-12] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PP1-01-Prova-QuicksortComMediana-environment/src/test/java
+2016-07-27 16:02:58,153 [Worker-12] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 92 sec
+2016-07-27 16:02:59,224 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:02:59,227 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/main/resources
+2016-07-27 16:02:59,230 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:02:59,232 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/test/resources
+2016-07-27 16:03:36,694 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:03:36,706 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/main/resources
+2016-07-27 16:03:36,707 [Worker-9] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:03:36,714 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/test/resources
+2016-07-27 16:04:11,452 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:04:11,456 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/main/resources
+2016-07-27 16:04:11,458 [Worker-15] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:04:11,460 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/test/resources
+2016-07-27 16:04:36,782 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:04:36,790 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/main/resources
+2016-07-27 16:04:36,792 [Worker-7] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-07-27 16:04:36,795 [Worker-7] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova01/PP1-01-Prova-QuicksortComMediana-environment/src/test/resources
