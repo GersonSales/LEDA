@@ -15,8 +15,8 @@ public class CircularQueue<T> implements Queue<T> {
 		array = (T[]) new Object[size];
 		SIZE = size - 1;
 		MINIMUM = 0;
-		head = 1;
-		tail = 0;
+		head = 0;
+		tail = -1;
 		elements = 0;
 	}
 
