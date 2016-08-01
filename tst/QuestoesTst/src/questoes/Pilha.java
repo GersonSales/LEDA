@@ -2,11 +2,11 @@ package questoes;
 
 import java.util.Scanner;
 
-class Solucao {
+class Pilha {
     private Integer[] pilha;
     private int topo;
 
-    public Solucao(int tamanho) {
+    public Pilha(int tamanho) {
         this.pilha = new Integer[tamanho];
         this.topo = -1;
     }
@@ -65,14 +65,21 @@ class Solucao {
         do {
             comando = sc.nextLine().split(" ");
 
-            if (comando[0].equalsIgnoreCase("print")) {
+            switch (comando[0]) {
+            case "print":
                 pilha.print();
-            } else if (comando[0].equals("peek")) {
+                break;
+            case "peek":
                 pilha.peek();
-            } else if (comando[0].equals("pop")) {
+                break;
+            case "pop":
                 pilha.pop();
-            } else if (comando[0].equals("push")) {
+                break;
+            case "push":
                 pilha.push(Integer.parseInt(comando[1]));
+                break;
+            default:
+                break;
             }
 
         } while (!comando[0].equals("end"));
