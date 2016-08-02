@@ -11,6 +11,7 @@ public class StackImpl<T> implements Stack<T> {
 
     @SuppressWarnings("unchecked")
     public StackImpl(int size) {
+        size = size < 0 ? 0 : size;
         this.SIZE = size - 1;
         this.BOTTOM = -1;
         array = (T[]) new Object[size];

@@ -11,6 +11,7 @@ public class QueueImpl<T> implements Queue<T> {
 
     @SuppressWarnings("unchecked")
     public QueueImpl(int size) {
+        size = size < 0 ? 0 : size;
         array = (T[]) new Object[size];
         SIZE = size - 1;
         BOTTOM = -1;
@@ -77,5 +78,7 @@ public class QueueImpl<T> implements Queue<T> {
     public String toString() {
         return Arrays.toString(array);
     }
+    
+    
 
 }

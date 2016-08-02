@@ -14,6 +14,7 @@ public class CircularQueue<T> implements Queue<T> {
 
     @SuppressWarnings("unchecked")
     public CircularQueue(int size) {
+        size = size < 0 ? 0 : size;
         array = (T[]) new Object[size];
         SIZE = size;
         MINIMUM = 0;
