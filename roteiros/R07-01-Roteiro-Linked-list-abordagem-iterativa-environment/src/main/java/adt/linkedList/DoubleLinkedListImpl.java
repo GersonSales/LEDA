@@ -1,12 +1,13 @@
 package adt.linkedList;
 
-public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
-		DoubleLinkedList<T> {
+public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements DoubleLinkedList<T> {
 
 	protected DoubleLinkedListNode<T> last;
-	
+
 	@Override
 	public void insertFirst(T element) {
+		DoubleLinkedListNode<T> newHead = new DoubleLinkedListNode<>();
+		newHead.setData(element);
 		// TODO Auto-generated method stub
 		throw new UnsupportedOperationException("Not implemented yet!");
 	}
@@ -31,7 +32,4 @@ public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
 		this.last = last;
 	}
 
-	
-	
-	
 }
