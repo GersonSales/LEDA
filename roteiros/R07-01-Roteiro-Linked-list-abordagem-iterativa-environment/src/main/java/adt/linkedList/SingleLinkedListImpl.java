@@ -53,7 +53,7 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 
 		if (!isEmpty()) {
 			SingleLinkedListNode<T> aux = head;
-			while (!aux.getNext().isNIL()){
+			while (!aux.getNext().isNIL()) {
 				aux = aux.getNext();
 			}
 
@@ -94,7 +94,7 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 			SingleLinkedListNode<T> aux = head;
 
 			int i = 0;
-			while (!aux.isNIL()) {
+			while (aux != null && !aux.isNIL()) {
 				array[i] = aux.getData();
 				aux = aux.getNext();
 				i++;

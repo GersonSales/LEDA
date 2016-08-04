@@ -3,25 +3,46 @@ package adt.linkedList;
 public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements DoubleLinkedList<T> {
 
 	protected DoubleLinkedListNode<T> last;
+	private DoubleLinkedListNode<T> nillNode;
+
+	public DoubleLinkedListImpl() {
+		this.nillNode = new DoubleLinkedListNode<>();
+		this.last = new DoubleLinkedListNode<>();
+		setHead(last);
+	}
 
 	@Override
 	public void insertFirst(T element) {
-		DoubleLinkedListNode<T> newHead = new DoubleLinkedListNode<>();
-		newHead.setData(element);
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		DoubleLinkedListNode<T> newNode = new DoubleLinkedListNode<>(element, nillNode, nillNode);
+		newNode.setNext(getHead());
+		setHead(newNode);
+	}
+
+	@Override
+	public void insert(T element) {
+		DoubleLinkedListNode<T> newNode = new DoubleLinkedListNode<>(element, nillNode, nillNode);
+
+		if (!isEmpty()) {
+			this.last.setNext(newNode);
+			newNode.setPrevious(last);
+			this.last = newNode;
+		}else {
+			setHead(newNode);
+			setLast(newNode);
+			
+		}
+
 	}
 
 	@Override
 	public void removeFirst() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		setHead(getHead().getNext());
 	}
 
 	@Override
 	public void removeLast() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		last = last.getPrevious();
+		last.setNext(nillNode);
 	}
 
 	public DoubleLinkedListNode<T> getLast() {
