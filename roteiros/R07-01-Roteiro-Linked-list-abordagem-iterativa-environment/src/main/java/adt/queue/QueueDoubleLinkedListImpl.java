@@ -5,43 +5,49 @@ import adt.linkedList.DoubleLinkedListImpl;
 
 public class QueueDoubleLinkedListImpl<T> implements Queue<T> {
 
-	
-	protected DoubleLinkedList<T> list;
-	protected int size;
-	
-	public QueueDoubleLinkedListImpl(int size) {
-		this.size = size;
-		this.list = new DoubleLinkedListImpl<T>();
-	}
-	
-	@Override
-	public void enqueue(T element) throws QueueOverflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+    protected DoubleLinkedList<T> list;
+    protected int size;
 
-	@Override
-	public T dequeue() throws QueueUnderflowException {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+    public QueueDoubleLinkedListImpl(int size) {
+        this.size = size;
+        this.list = new DoubleLinkedListImpl<T>();
+    }
 
-	@Override
-	public T head() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+    @Override
+    public void enqueue(T element) throws QueueOverflowException {
+        if (list.size() < size) {
+            list.insert(element);
+        } else {
+            throw new QueueOverflowException();
+        }
+    }
 
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+    @Override
+    public T dequeue() throws QueueUnderflowException {
+        if (list.size() > 0) {
+            DoubleLinkedListImpl<T> localList = (DoubleLinkedListImpl<T>) list;
+            T element = localList.getHead().getData();
+            list.removeFirst();
+            return element;
+        } else {
+            throw new QueueUnderflowException();
+        }
+    }
 
-	@Override
-	public boolean isFull() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+    @Override
+    public T head() {
+        DoubleLinkedListImpl<T> localList = (DoubleLinkedListImpl<T>) list;
+        return localList.getHead().getData();
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+
+    @Override
+    public boolean isFull() {
+        return list.size() == size;
+    }
 
 }
