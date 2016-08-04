@@ -13,16 +13,16 @@ public class StudentQueueTest2 {
 
 	@Before
 	public void setUp() throws QueueOverflowException {
-		queue1 = new QueueImpl<Integer>(6);
+		queue1 = new CircularQueue<Integer>(6);
 		queue1.enqueue(1);
 		queue1.enqueue(2);
 		queue1.enqueue(3);
 
-		queue2 = new QueueImpl<Integer>(2);
+		queue2 = new CircularQueue<Integer>(2);
 		queue2.enqueue(1);
 		queue2.enqueue(2);
 
-		queue3 = new QueueImpl<Integer>(6);
+		queue3 = new CircularQueue<Integer>(6);
 	}
 
 	// MÉTODOS DE TESTE
@@ -31,6 +31,7 @@ public class StudentQueueTest2 {
 		Queue<Integer> q = new QueueImpl<>(0);
 		Assert.assertTrue(q.isEmpty());
 		Assert.assertTrue(q.isFull());
+		System.out.println(q.head());
 		try {
 			q.enqueue(1);
 			Assert.fail();
