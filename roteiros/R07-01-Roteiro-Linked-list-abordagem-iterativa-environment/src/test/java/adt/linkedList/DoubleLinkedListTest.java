@@ -31,29 +31,32 @@ public class DoubleLinkedListTest {
 
     @Test
     public void start() {
-        // generalTest();
-        // brutalEnqueueTest();
-        // brutalDequeueTest();
+        generalTest();
+        brutalEnqueueTest();
+        brutalDequeueTest();
         intercalary();
     }
 
     private void generalTest() {
         for (int i = 0; i <= NUMBER_OF_TESTS; i++) {
 
-            switch (randomer.nextInt(5)) {
+            switch (randomer.nextInt(6)) {
             case 0:
                 isEmptyTest();
                 break;
             case 1:
-                // isFullTest();
+                removeLastTest();
                 break;
             case 2:
-                insertTest();
+                removeFirstTest();
                 break;
             case 3:
-                removeTest();
+                insertTest();
                 break;
             case 4:
+                removeTest();
+                break;
+            case 5:
                 headTest();
                 break;
             default:
@@ -69,9 +72,17 @@ public class DoubleLinkedListTest {
                 insertTest();
             }
 
-             if (randomer.nextBoolean()) {
-             removeTest();
-             }
+            if (randomer.nextBoolean()) {
+                removeTest();
+            }
+
+            if (randomer.nextBoolean()) {
+                removeFirstTest();
+            }
+
+            if (randomer.nextBoolean()) {
+                removeLastTest();
+            }
         }
     }
 
@@ -92,6 +103,44 @@ public class DoubleLinkedListTest {
             Integer element = linkedList.get(0);
             Assert.assertEquals(element,
                     myDoubleLinkedList.getHead().getData());
+        }
+    }
+
+    private void removeFirstTest() {
+        if (linkedList.size() > 0) {
+            linkedList.remove(0);
+            myDoubleLinkedList.removeFirst();
+            try {
+                Assert.assertArrayEquals(linkedList.toArray(),
+                        myDoubleLinkedList.toArray());
+
+            } catch (Throwable erro) {
+                System.out
+                        .println("L: " + Arrays.toString(linkedList.toArray()));
+                System.out.println(
+                        "M: " + Arrays.toString(myDoubleLinkedList.toArray()));
+                throw erro;
+            }
+
+        }
+    }
+
+    private void removeLastTest() {
+        if (linkedList.size() > 0) {
+            linkedList.remove(linkedList.size() - 1);
+            myDoubleLinkedList.removeLast();
+            try {
+                Assert.assertArrayEquals(linkedList.toArray(),
+                        myDoubleLinkedList.toArray());
+
+            } catch (Throwable erro) {
+                System.out
+                        .println("L: " + Arrays.toString(linkedList.toArray()));
+                System.out.println(
+                        "M: " + Arrays.toString(myDoubleLinkedList.toArray()));
+                throw erro;
+            }
+
         }
     }
 

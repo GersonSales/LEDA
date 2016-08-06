@@ -35,6 +35,7 @@ public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T>
     public void remove(T element) {
         if (element != null) {
             if (!isEmpty()) {
+                
                 if (getHead().getData().equals(element)) {
                     DoubleLinkedListNode<T> aux = (DoubleLinkedListNode<T>) head
                             .getNext();
