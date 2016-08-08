@@ -1,54 +1,90 @@
 package adt.linkedList;
 
+import java.util.Arrays;
+
 public class RecursiveSingleLinkedListImpl<T> implements LinkedList<T> {
 
 	protected T data;
 	protected RecursiveSingleLinkedListImpl<T> next;
 
 	public RecursiveSingleLinkedListImpl() {
-
 	}
 
-	public RecursiveSingleLinkedListImpl(T data,
-			RecursiveSingleLinkedListImpl<T> next) {
+	public RecursiveSingleLinkedListImpl(T data, RecursiveSingleLinkedListImpl<T> next) {
 		this.data = data;
 		this.next = next;
 	}
 
 	@Override
 	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		return size() == 0;
 	}
 
 	@Override
 	public int size() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (!isNil()) {
+			return 1 + getNext().size();
+		} else {
+			return 0;
+		}
 	}
 
 	@Override
 	public T search(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (!isNil()) {
+			if (getData().equals(element)) {
+				return getData();
+			} else {
+				return getNext().search(element);
+			}
+		} else {
+			return null;
+		}
+	}
+
+	private boolean isNil() {
+		return getData() == null;
 	}
 
 	@Override
 	public void insert(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (isNil()) {
+			setData(element);
+			setNext(new RecursiveSingleLinkedListImpl<T>());
+		} else {
+			getNext().insert(element);
+		}
+	}
+
+	@Override
+	public String toString() {
+		if (!isNil()) {
+			return getData().toString() + getNext();
+		} else {
+			return "NIL";
+		}
+
 	}
 
 	@Override
 	public void remove(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (!isNil()) {
+			if (getData().equals(element)) {
+				setData(getNext().getData());
+				setNext(getNext().getNext());
+			} else {
+				getNext().remove(element);
+			}
+		} else
+			return;
 	}
 
 	@Override
 	public T[] toArray() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		@SuppressWarnings("unchecked")
+		T[] result = (T[]) new Object[size()];
+
+		return result;
 	}
 
 	public T getData() {

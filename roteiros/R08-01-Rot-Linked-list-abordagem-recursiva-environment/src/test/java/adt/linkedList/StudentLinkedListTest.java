@@ -18,13 +18,15 @@ public class StudentLinkedListTest {
 		lista1.insert(3);
 		lista1.insert(2);
 		lista1.insert(1);
+		
+
 
 	}
 
 	private void getImplementations() {
 		// TODO O aluno deve ajustar aqui para instanciar sua implementação
-		lista1 = null;
-		lista2 = null;
+		lista1 = new RecursiveSingleLinkedListImpl<>();
+		lista2 = new RecursiveSingleLinkedListImpl<>();
 	}
 
 	@Test
@@ -66,7 +68,7 @@ public class StudentLinkedListTest {
 		lista1.remove(1);
 		Assert.assertEquals(1, lista1.size());
 
-		Assert.assertEquals(3, lista1.size());
+		Assert.assertNotEquals(3, lista1.size());
 		lista1.remove(4);
 		lista1.remove(2);
 		lista1.remove(1);
