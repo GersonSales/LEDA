@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<head/><log>
+<record>
+  <date>2016-08-10T18:13:12.975-0300</date>
+  <logger>GERSON SALES ARAUJO DE FREITAS JUNIOR</logger>
+  <level>FINE</level>
+  <message>File 114210216-GERSON SALES ARAUJO DE FREITAS JUNIOR.zip was received. It was sent by GERSON SALES ARAUJO DE FREITAS JUNIOR from IP 127.0.1.1</message>
+</record>
+</log>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2016-08-10T18:39:57.591-0300</date>
+  <logger>GERSON SALES ARAUJO DE FREITAS JUNIOR</logger>
+  <level>FINE</level>
+  <message>File 114210216-GERSON SALES ARAUJO DE FREITAS JUNIOR.zip was received. It was sent by GERSON SALES ARAUJO DE FREITAS JUNIOR from IP 127.0.1.1</message>
+</record>
