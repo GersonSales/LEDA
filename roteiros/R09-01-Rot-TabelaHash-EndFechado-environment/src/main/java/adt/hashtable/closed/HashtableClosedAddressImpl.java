@@ -94,9 +94,6 @@ public class HashtableClosedAddressImpl<T>
         if (elementIndex != -1) {
             ((List<T>) this.table[elementIndex]).remove(element);
             this.elements--;
-            if (((List<T>) this.table[elementIndex]).size() == 1) {
-                this.COLLISIONS--;
-            }
         }
     }
 
@@ -119,11 +116,13 @@ public class HashtableClosedAddressImpl<T>
     @SuppressWarnings("unchecked")
     @Override
     public int indexOf(T element) {
-        int elementIndex = getHashIndexOf(element);
+        if (element != null) {
+            int elementIndex = getHashIndexOf(element);
 
-        if (this.table[elementIndex] != null) {
-            return ((List<T>) this.table[elementIndex]).contains(element)
-                    ? elementIndex : -1;
+            if (this.table[elementIndex] != null) {
+                return ((List<T>) this.table[elementIndex]).contains(element)
+                        ? elementIndex : -1;
+            }
         }
 
         return -1;
