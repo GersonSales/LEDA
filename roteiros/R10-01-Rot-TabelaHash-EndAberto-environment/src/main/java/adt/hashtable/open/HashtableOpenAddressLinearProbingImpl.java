@@ -18,12 +18,19 @@ public class HashtableOpenAddressLinearProbingImpl<T extends Storable> extends A
 		}
 
 		if (element != null) {
-			for (int i = 0; i <= elements; i++) {
+
+			for (int i = 0; i < this.table.length; i++) {
 				int elementHash = getHash(element, i);
 				if (isAvaible(elementHash)) {
-					if (!this.table[elementHash].equals(element)) {
+					if (this.table[elementHash] == null) {
 						table[elementHash] = element;
 						elements++;
+					} else {
+						if (!this.table[elementHash].equals(element)) {
+							table[elementHash] = element;
+							elements++;
+
+						}
 					}
 					return;
 				} else {
@@ -48,7 +55,7 @@ public class HashtableOpenAddressLinearProbingImpl<T extends Storable> extends A
 	public void remove(T element) {
 		if (element != null) {
 
-			for (int i = 0; i <= elements; i++) {
+			for (int i = 0; i <= this.table.length; i++) {
 				int elementHash = getHash(element, i);
 				if (this.table[elementHash] != null) {
 					if (this.table[elementHash].equals(element)) {
@@ -60,15 +67,13 @@ public class HashtableOpenAddressLinearProbingImpl<T extends Storable> extends A
 
 		}
 
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
 	public T search(T element) {
 		if (element != null) {
 
-			for (int i = 0; i <= elements; i++) {
+			for (int i = 0; i <= this.table.length; i++) {
 				int elementHash = getHash(element, i);
 				if (this.table[elementHash] != null) {
 					if (this.table[elementHash].equals(element)) {
@@ -86,8 +91,19 @@ public class HashtableOpenAddressLinearProbingImpl<T extends Storable> extends A
 
 	@Override
 	public int indexOf(T element) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		if (element != null) {
+
+			for (int i = 0; i <= this.table.length; i++) {
+				int elementHash = getHash(element, i);
+				if (this.table[elementHash] != null) {
+					if (this.table[elementHash].equals(element)) {
+						return elementHash;
+					}
+				}
+			}
+		}
+		return -1;
+
 	}
 
 }
