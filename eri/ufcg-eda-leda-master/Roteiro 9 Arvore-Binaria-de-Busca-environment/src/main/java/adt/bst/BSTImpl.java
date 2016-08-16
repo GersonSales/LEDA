@@ -150,7 +150,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 		bstImpl.insert(125);
 		bstImpl.insert(175);
 
-		System.out.println(Arrays.toString(bstImpl.order()));
+		System.out.println(Arrays.toString(bstImpl.postOrder()));
 
 		System.out.println("END");
 	}
@@ -167,9 +167,9 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
 	private int order(BTNode<T> node, T[] result, int index) {
 		if (!node.isEmpty()) {
-			int depth = preOrder(node.getLeft(), result, index);
+			int depth = order(node.getLeft(), result, index);
 			result[depth] = node.getData();
-			depth = preOrder(node.getRight(), result, depth + 1);
+			depth = order(node.getRight(), result, depth + 1);
 			return depth;
 
 		} else {
@@ -179,8 +179,25 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
 	@Override
 	public T[] postOrder() {
-		// TODO Auto-generated method stub
-		throw new RuntimeException("Not implemented yet!");
+		@SuppressWarnings("unchecked")
+		T[] result = (T[]) new Comparable[size()];
+
+		postOrder(getRoot(), result, 0);
+
+		return result;
+	}
+
+	private int postOrder(BTNode<T> node, T[] result, int index) {
+		if (!node.isEmpty()) {
+			int depth = postOrder(node.getLeft(), result, index);
+			depth = postOrder(node.getRight(), result, depth);
+			result[depth] = node.getData();
+
+			return depth + 1;
+
+		} else {
+			return index;
+		}
 	}
 
 	/**
