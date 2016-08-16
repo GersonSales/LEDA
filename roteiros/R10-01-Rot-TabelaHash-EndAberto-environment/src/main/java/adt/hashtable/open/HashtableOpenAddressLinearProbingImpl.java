@@ -16,20 +16,22 @@ public class HashtableOpenAddressLinearProbingImpl<T extends Storable>
     @Override
     public void insert(T element) {
 
-        if (isFull()) {
-            throw new HashtableOverflowException();
-        }
+        if (element != null) {
+            if (isFull()) {
+                throw new HashtableOverflowException();
+            }
 
-        if (indexOf(element) < 0) {
-            for (int i = 0; i < this.table.length; i++) {
-                int elementHash = getHash(element, i);
+            if (indexOf(element) < 0) {
+                for (int i = 0; i < this.table.length; i++) {
+                    int elementHash = getHash(element, i);
 
-                if (isAvaible(elementHash)) {
-                    this.table[elementHash] = element;
-                    this.elements++;
-                    return;
-                } else {
-                    this.COLLISIONS++;
+                    if (isAvaible(elementHash)) {
+                        this.table[elementHash] = element;
+                        this.elements++;
+                        return;
+                    } else {
+                        this.COLLISIONS++;
+                    }
                 }
             }
         }
