@@ -72,11 +72,10 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 	}
 
 	private BTNode<T> maximum(BTNode<T> node) {
-		if (node.isEmpty()) {
-			return node.getParent();
-		} else {
+		if (!node.isEmpty()) {
 			return maximum(node.getRight());
 		}
+		return node.getParent();
 	}
 
 	@Override
@@ -85,17 +84,16 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 	}
 
 	private BTNode<T> minimum(BTNode<T> node) {
-		if (node.isEmpty()) {
-			return node.getParent();
-		} else {
-			return maximum(node.getLeft());
+		if (!node.isEmpty()) {
+			return minimum(node.getLeft());
 		}
+		return node.getParent();
 	}
 
 	@Override
 	public BSTNode<T> sucessor(T element) {
 		BSTNode<T> node = search(element);
-		BSTNode<T> sucessor = (BSTNode<T>) smallestNode(node.getRight());
+		BSTNode<T> sucessor = (BSTNode<T>) minimum(node.getRight());
 		return (BSTNode<T>) (sucessor.equals(node) ? node.getParent() : sucessor);
 	}
 
@@ -107,41 +105,117 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 				return smallestElementParent(element, node.getParent());
 			}
 		}
-		return null;
-	}
-
-	private BTNode<T> smallestNode(BTNode<T> node) {
-		if (!node.isEmpty()) {
-			return smallestNode(node.getLeft());
-		} else {
-			return node.getParent();
-		}
+		return element;
 	}
 
 	@Override
 	public BSTNode<T> predecessor(T element) {
 
 		BSTNode<T> node = search(element);
-		BSTNode<T> sucessor = (BSTNode<T>) smallestNode(node.getRight());
-		if (sucessor.isEmpty()) {
-			return (BSTNode<T>) sucessor.getParent();
-		} else {
-			return node;
-		}
+		if (node.getLeft().isEmpty()) {
 
-		// BSTNode<T> node = search(element);
-		// return (BSTNode<T>) (node == null ? node :
-		// smallestNode(node.getLeft()));
+			BSTNode<T> smallest = search(smallestElementParent(element, node));
+
+			if (isParent(node, smallest.getRight())) {
+				return smallest;
+			} else {
+				return null;
+			}
+		} else {
+			return (BSTNode<T>) maximum(node.getLeft());
+		}
+	}
+
+	private boolean isParent(BTNode<T> node, BTNode<T> supposed) {
+		if (node != null) {
+			if (node.equals(supposed)) {
+				return true;
+			}
+			return isParent(node.getParent(), supposed);
+
+		}
+		return false;
 	}
 
 	@Override
 	public void remove(T element) {
-		remove(element, this.root);
+
+		BTNode<T> node = search(element);
+
+		if (node.equals(getRoot())) {
+			getRoot().setParent(new BSTNode<T>());
+			getRoot().getParent().setLeft(getRoot().getLeft());
+			getRoot().getParent().setRight(getRoot());
+		}
+
+		if (!node.isEmpty()) {
+			if (isLeaf(node)) {
+				removeLeaf(node);
+			} else if (isOlnyChildParent(node)) {
+				removeOnlyChildParent(node);
+			} else if (isTwoChildrenParent(node)) {
+				removeTwoChildrenParent(node);
+			}
+
+		}
+		
+		getRoot().getParent().getRight().setLeft(getRoot().getLeft());
+		setRoot(getRoot().getParent().getRight());
+		
+		getRoot().setParent(null);
 	}
 
-	private void remove(T element, BSTNode<T> node) {
-		// TODO
+	private void setRoot(BTNode<T> newRoot) {
+		this.root = (BSTNode<T>) newRoot;
+	}
 
+	private void removeTwoChildrenParent(BTNode<T> node) {
+		if (isLeftChild(node)) {
+			node.getParent().setLeft(sucessor(node.getData()));
+		} else if (isRightChild(node)) {
+			node.getParent().setRight(sucessor(node.getData()));
+
+		}
+	}
+
+	private boolean isTwoChildrenParent(BTNode<T> node) {
+		return !node.getLeft().isEmpty() && !node.getRight().isEmpty();
+	}
+
+	private void removeOnlyChildParent(BTNode<T> node) {
+		if (isLeftChild(node)) {
+			node.getParent().setLeft(node.getLeft().isEmpty() ? node.getRight() : node.getRight());
+
+		} else if (isRightChild(node)) {
+			node.getParent().setRight(node.getLeft().isEmpty() ? node.getRight() : node.getRight());
+		}
+	}
+
+	private void removeLeaf(BTNode<T> node) {
+		if (isLeftChild(node)) {
+			node.getParent().setLeft(node.getLeft());
+		} else if (isRightChild(node)) {
+			node.getParent().setRight(node.getRight());
+		}
+	}
+
+	private boolean isLeftChild(BTNode<T> node) {
+		return node.getParent().getLeft().equals(node);
+	}
+
+	private boolean isRightChild(BTNode<T> node) {
+		return node.getParent().getRight().equals(node);
+	}
+
+	private boolean isLeaf(BTNode<T> node) {
+		return node.getLeft().isEmpty() && node.getRight().isEmpty();
+	}
+
+	private boolean isOlnyChildParent(BTNode<T> node) {
+		if (node != null) {
+			return node.getLeft().isEmpty() ^ node.getRight().isEmpty();
+		}
+		return true;
 	}
 
 	@Override

@@ -84,13 +84,13 @@ public class StudentBSTTest {
 		assertEquals(null, tree.predecessor(-40));
 		assertEquals(new Integer(-34), tree.sucessor(-40).getData());
 
-		// assertEquals(new Integer(-40), tree.predecessor(-34).getData());TODO
+		assertEquals(new Integer(-40), tree.predecessor(-34).getData());
 		assertEquals(new Integer(0), tree.sucessor(-34).getData());
 
-		// assertEquals(new Integer(-34), tree.predecessor(0).getData());TODO
+		assertEquals(new Integer(-34), tree.predecessor(0).getData());
 		assertEquals(new Integer(2), tree.sucessor(0).getData());
 
-		// assertEquals(new Integer(0), tree.predecessor(2).getData());TODO
+		assertEquals(new Integer(0), tree.predecessor(2).getData());
 		assertEquals(new Integer(5), tree.sucessor(2).getData());
 	}
 
