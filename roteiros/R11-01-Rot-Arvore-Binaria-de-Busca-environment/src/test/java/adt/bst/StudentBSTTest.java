@@ -137,12 +137,16 @@ public class StudentBSTTest {
     public void removedParentTest() {
         fillTree();
 
+        assertEquals(12, tree.size());
+
         tree.remove(76);
         assertEquals(null, tree.search(76).getData());
         assertEquals(new Integer(232), tree.search(23).getRight().getData());
         assertEquals(new Integer(67), tree.search(232).getLeft().getData());
         assertEquals(null, tree.search(232).getRight().getData());
         assertEquals(new Integer(23), tree.search(232).getParent().getData());
+
+        assertEquals(11, tree.size());
 
         tree.remove(232);
         assertEquals(null, tree.search(232).getData());
@@ -151,15 +155,21 @@ public class StudentBSTTest {
         assertEquals(null, tree.search(67).getRight().getData());
         assertEquals(new Integer(23), tree.search(67).getParent().getData());
 
+        assertEquals(10, tree.size());
+
         tree.remove(67);
         assertEquals(null, tree.search(67).getData());
         assertEquals(null, tree.search(23).getRight().getData());
+
+        assertEquals(9, tree.size());
 
         tree.remove(9);
         assertEquals(null, tree.search(9).getData());
         assertEquals(new Integer(12), tree.search(23).getLeft().getData());
         assertEquals(null, tree.search(12).getLeft().getData());
         assertEquals(new Integer(23), tree.search(12).getParent().getData());
+
+        assertEquals(8, tree.size());
 
         tree.remove(23);
         assertEquals(null, tree.search(23).getData());
@@ -168,6 +178,8 @@ public class StudentBSTTest {
         assertEquals(null, tree.search(12).getLeft().getData());
         assertEquals(new Integer(6), tree.search(12).getParent().getData());
 
+        assertEquals(7, tree.size());
+
         tree.remove(-34);
         assertEquals(null, tree.search(-34).getData());
         assertEquals(new Integer(0), tree.search(6).getLeft().getData());
@@ -175,12 +187,16 @@ public class StudentBSTTest {
         assertEquals(new Integer(-40), tree.search(0).getLeft().getData());
         assertEquals(new Integer(6), tree.search(0).getParent().getData());
 
+        assertEquals(6, tree.size());
+
         tree.remove(6);
         assertEquals(null, tree.search(6).getData());
         assertEquals(new Integer(12), tree.getRoot().getData());
         assertEquals(null, tree.search(12).getRight().getData());
         assertEquals(new Integer(0), tree.search(12).getLeft().getData());
         assertEquals(new Integer(12), tree.search(0).getParent().getData());
+
+        assertEquals(5, tree.size());
 
         tree.remove(0);
         assertEquals(null, tree.search(0).getData());
@@ -192,19 +208,48 @@ public class StudentBSTTest {
         assertEquals(new Integer(2), tree.search(-40).getParent().getData());
         assertEquals(new Integer(2), tree.search(5).getParent().getData());
 
-        
-        
-        
+        assertEquals(4, tree.size());
 
+        tree.remove(12);
+        assertEquals(null, tree.search(12).getData());
+        assertEquals(new Integer(2), tree.getRoot().getData());
+        assertEquals(new Integer(-40), tree.search(2).getLeft().getData());
+        assertEquals(new Integer(5), tree.search(2).getRight().getData());
+        assertEquals(new Integer(2), tree.search(-40).getParent().getData());
+        assertEquals(new Integer(2), tree.search(5).getParent().getData());
 
+        assertEquals(3, tree.size());
 
+        tree.remove(tree.getRoot().getData());
+        assertEquals(null, tree.search(2).getData());
+        assertEquals(new Integer(5), tree.getRoot().getData());
+        assertEquals(new Integer(-40), tree.search(5).getLeft().getData());
+        assertEquals(null, tree.search(5).getRight().getData());
+        assertEquals(new Integer(5), tree.search(-40).getParent().getData());
 
+        assertEquals(2, tree.size());
 
+        tree.remove(tree.getRoot().getData());
+        assertEquals(null, tree.search(5).getData());
+        assertEquals(new Integer(-40), tree.getRoot().getData());
+        assertEquals(null, tree.search(-40).getLeft().getData());
+        assertEquals(null, tree.search(-40).getRight().getData());
+        assertEquals(null, tree.search(-40).getParent());
+
+        assertEquals(1, tree.size());
+
+        tree.remove(-40);
+        assertEquals(null, tree.search(-40).getData());
+        assertEquals(null, tree.getRoot().getData());
+        assertEquals(null, tree.getRoot().getLeft());
+        assertEquals(null, tree.getRoot().getRight());
+
+        assertEquals(0, tree.size());
 
     }
 
     @Test
-    public void sizeTest() {
+    public void heightTest() {
         fillTree();
 
         tree.remove(-40);
@@ -230,7 +275,7 @@ public class StudentBSTTest {
     }
 
     @Test
-    public void sucessorTest() {
+    public void predecessorSucessorTest() {
         fillTree();
 
         assertEquals(new Integer(9), tree.sucessor(6).getData());
