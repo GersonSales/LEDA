@@ -29,6 +29,50 @@ public class StudentBSTTest {
     }
 
     @Test
+    public void prePostOrdeTest() {
+        fillTree();// 6, 23, -34, 5, 9, 2, 0, 76, 12, 67, 232, -40
+        assertArrayEquals(
+                new Integer[] { 6, -34, -40, 5, 2, 0, 23, 9, 12, 76, 67, 232 },
+                tree.preOrder());
+
+        assertArrayEquals(
+                new Integer[] { -40, -34, 0, 2, 5, 6, 9, 12, 23, 67, 76, 232 },
+                tree.order());
+
+        assertArrayEquals(
+                new Integer[] { -40, 0, 2, 5, -34, 12, 9, 67, 232, 76, 23, 6 },
+                tree.postOrder());
+
+        tree.remove(6);
+
+        assertArrayEquals(
+                new Integer[] { 9, -34, -40, 5, 2, 0, 23, 12, 76, 67, 232 },
+                tree.preOrder());
+
+        assertArrayEquals(
+                new Integer[] { -40, -34, 0, 2, 5, 9, 12, 23, 67, 76, 232 },
+                tree.order());
+
+        assertArrayEquals(
+                new Integer[] { -40, 0, 2, 5, -34, 12, 67, 232, 76, 23, 9 },
+                tree.postOrder());
+
+        tree.remove(5);
+        tree.remove(23);
+        tree.remove(-34);
+
+        assertArrayEquals(new Integer[] { 9, 0, -40, 2, 67, 12, 76, 232 },
+                tree.preOrder());
+
+        assertArrayEquals(new Integer[] { -40, 0, 2, 9, 12, 67, 76, 232 },
+                tree.order());
+
+        assertArrayEquals(new Integer[] { -40, 2, 0, 12, 232, 76, 67, 9 },
+                tree.postOrder());
+
+    }
+
+    @Test
     public void testInit() {
         assertTrue(tree.isEmpty());
         assertEquals(0, tree.size());
@@ -382,20 +426,19 @@ public class StudentBSTTest {
         assertEquals(1, tree.size());
 
         tree.insert(9);
-        
-        assertEquals(1, tree.height());
-        assertEquals(2, tree.size());
-        
-        tree.insert(10);
-        
-        assertEquals(1, tree.height());
-        assertEquals(2, tree.size());
-        
-        tree.insert(9);
-        
+
         assertEquals(1, tree.height());
         assertEquals(2, tree.size());
 
+        tree.insert(10);
+
+        assertEquals(1, tree.height());
+        assertEquals(2, tree.size());
+
+        tree.insert(9);
+
+        assertEquals(1, tree.height());
+        assertEquals(2, tree.size());
 
     }
 
@@ -403,6 +446,7 @@ public class StudentBSTTest {
     public void invalidInsert() {
         tree.insert(null);
         tree.insert(null);
+        tree.remove(null);
 
         assertEquals(0, tree.size());
         assertEquals(-1, tree.height());

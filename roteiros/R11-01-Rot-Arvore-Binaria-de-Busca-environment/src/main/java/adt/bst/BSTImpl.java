@@ -168,8 +168,10 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
     @Override
     public void remove(T element) {
-        BTNode<T> node = search(element);
-        remove(node);
+        if (element != null) {
+            BTNode<T> node = search(element);
+            remove(node);
+        }
     }
 
     private void remove(BTNode<T> node) {
@@ -285,12 +287,10 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
     private int preOrder(BTNode<T> node, T[] result, int index) {
         if (!node.isEmpty()) {
             result[index] = node.getData();
-            int depth = preOrder(node.getLeft(), result, index + 1);
-            depth = preOrder(node.getRight(), result, depth);
-            return depth;
-        } else {
-            return index;
+            index = preOrder(node.getLeft(), result, index + 1);
+            index = preOrder(node.getRight(), result, index);
         }
+        return index;
     }
 
     @Override
@@ -305,14 +305,11 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
     private int order(BTNode<T> node, T[] result, int index) {
         if (!node.isEmpty()) {
-            int depth = order(node.getLeft(), result, index);
-            result[depth] = node.getData();
-            depth = order(node.getRight(), result, depth + 1);
-            return depth;
-
-        } else {
-            return index;
+            index = order(node.getLeft(), result, index);
+            result[index] = node.getData();
+            index = order(node.getRight(), result, index + 1);
         }
+        return index;
     }
 
     @Override
