@@ -4,6 +4,8 @@ import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.Arrays;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -367,6 +369,94 @@ public class StudentBSTTest {
             tree.remove(tree.getRoot().getData());
             assertEquals(--size, tree.size());
         }
+    }
+
+    @Test
+    public void equalsElementTest() {
+        assertEquals(-1, tree.height());
+        assertEquals(0, tree.size());
+
+        tree.insert(10);
+
+        assertEquals(0, tree.height());
+        assertEquals(1, tree.size());
+
+        tree.insert(9);
+        
+        assertEquals(1, tree.height());
+        assertEquals(2, tree.size());
+        
+        tree.insert(10);
+        
+        assertEquals(1, tree.height());
+        assertEquals(2, tree.size());
+        
+        tree.insert(9);
+        
+        assertEquals(1, tree.height());
+        assertEquals(2, tree.size());
+
+
+    }
+
+    @Test
+    public void invalidInsert() {
+        tree.insert(null);
+        tree.insert(null);
+
+        assertEquals(0, tree.size());
+        assertEquals(-1, tree.height());
+        assertEquals(null, tree.getRoot().getData());
+        assertEquals(null, tree.getRoot().getLeft());
+        assertEquals(null, tree.getRoot().getRight());
+        assertEquals(null, tree.maximum());
+        assertEquals(null, tree.minimum());
+        assertTrue(tree.isEmpty());
+    }
+
+    @Test
+    public void minimumMaximum() {
+        fillTree();// -40 -34 0 2 5 6 9 12 23 67 76 232
+
+        assertEquals(new Integer(-40), tree.minimum().getData());
+        assertEquals(new Integer(232), tree.maximum().getData());
+
+        tree.remove(-40);
+        tree.remove(232);
+
+        assertEquals(new Integer(-34), tree.minimum().getData());
+        assertEquals(new Integer(76), tree.maximum().getData());
+
+        tree.remove(-34);
+        tree.remove(76);
+
+        assertEquals(new Integer(0), tree.minimum().getData());
+        assertEquals(new Integer(67), tree.maximum().getData());
+
+        tree.remove(0);
+        tree.remove(67);
+
+        assertEquals(new Integer(2), tree.minimum().getData());
+        assertEquals(new Integer(23), tree.maximum().getData());
+
+        tree.remove(2);
+        tree.remove(23);
+
+        assertEquals(new Integer(5), tree.minimum().getData());
+        assertEquals(new Integer(12), tree.maximum().getData());
+
+        tree.remove(5);
+        tree.remove(12);
+
+        assertEquals(new Integer(6), tree.minimum().getData());
+        assertEquals(new Integer(9), tree.maximum().getData());
+
+        tree.remove(6);
+        tree.remove(9);
+
+        assertEquals(null, tree.minimum());
+        assertEquals(null, tree.maximum());
+        assertTrue(tree.isEmpty());
     }
 
     @Test
