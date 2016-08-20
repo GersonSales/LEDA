@@ -345,7 +345,8 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
         int result = 0;
         // base case means doing nothing (return 0)
         if (!node.isEmpty()) { // indusctive case
-            result = 1 + size((BSTNode<T>) node.getLeft()) + size((BSTNode<T>) node.getRight());
+            result = 1 + size((BSTNode<T>) node.getLeft())
+                    + size((BSTNode<T>) node.getRight());
         }
         return result;
     }
