@@ -324,15 +324,12 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
     private int postOrder(BTNode<T> node, T[] result, int index) {
         if (!node.isEmpty()) {
-            int depth = postOrder(node.getLeft(), result, index);
-            depth = postOrder(node.getRight(), result, depth);
-            result[depth] = node.getData();
+            index = postOrder(node.getLeft(), result, index);
+            index = postOrder(node.getRight(), result, index);
+            result[index++] = node.getData();
 
-            return depth + 1;
-
-        } else {
-            return index;
         }
+        return index;
     }
 
     /**

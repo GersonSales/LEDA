@@ -70,6 +70,36 @@ public class StudentBSTTest {
         assertArrayEquals(new Integer[] { -40, 2, 0, 12, 232, 76, 67, 9 },
                 tree.postOrder());
 
+        tree.remove(9);
+        tree.remove(67);
+        tree.remove(0);
+
+        assertArrayEquals(new Integer[] { 12, 2, -40, 76, 232 },
+                tree.preOrder());
+
+        assertArrayEquals(new Integer[] { -40, 2, 12, 76, 232 }, tree.order());
+
+        assertArrayEquals(new Integer[] { -40, 2, 232, 76, 12 },
+                tree.postOrder());
+
+        tree.remove(12);
+        tree.remove(76);
+        tree.remove(2);
+
+        assertArrayEquals(new Integer[] { 232, -40 }, tree.preOrder());
+
+        assertArrayEquals(new Integer[] { -40, 232 }, tree.order());
+
+        assertArrayEquals(new Integer[] { -40, 232 }, tree.postOrder());
+
+        tree.remove(-40);
+
+        assertArrayEquals(new Integer[] { 232 }, tree.preOrder());
+
+        assertArrayEquals(new Integer[] { 232 }, tree.order());
+
+        assertArrayEquals(new Integer[] { 232 }, tree.postOrder());
+
     }
 
     @Test
