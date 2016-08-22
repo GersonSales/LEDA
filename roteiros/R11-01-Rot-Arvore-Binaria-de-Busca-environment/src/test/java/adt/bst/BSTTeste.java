@@ -59,7 +59,7 @@ public class BSTTeste {
     @Test
     public void testeRemove2() {
         fillTree();
-        Assert.assertTrue(this.tree.sucessor(232) == null);
+        Assert.assertTrue(this.tree.successor(232) == null);
         this.tree.remove(232);
         assertEquals(null, tree.search(232).getData());
         Assert.assertTrue(this.tree.search(232).getData() == null);
@@ -129,57 +129,57 @@ public class BSTTeste {
     public void testSucessorPredecessor() {
         fillTree();
         Assert.assertEquals(new Integer(9),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(23));
         Assert.assertEquals(new Integer(9),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(67));
         Assert.assertEquals(new Integer(9),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(76));
         Assert.assertEquals(new Integer(9),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(232));
         Assert.assertEquals(new Integer(9),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(9));
         Assert.assertEquals(new Integer(12),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(12));
-        Assert.assertEquals(null, this.tree.sucessor(new Integer(6)));
+        Assert.assertEquals(null, this.tree.successor(new Integer(6)));
 
         this.tree.remove(new Integer(6));
         Assert.assertEquals(new Integer(-34), this.tree.getRoot().getData());
         Assert.assertEquals(new Integer(0),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(0));
         Assert.assertEquals(new Integer(2),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(2));
         Assert.assertEquals(new Integer(5),
-                this.tree.sucessor(this.tree.getRoot().getData()).getData());
+                this.tree.successor(this.tree.getRoot().getData()).getData());
 
         this.tree.remove(new Integer(5));
         Assert.assertEquals(new Integer(-34), this.tree.getRoot().getData());
 
         Assert.assertEquals(null,
-                this.tree.sucessor(this.tree.getRoot().getData()));
+                this.tree.successor(this.tree.getRoot().getData()));
 
         this.tree.remove(new Integer(-40));
         Assert.assertEquals(null,
-                this.tree.sucessor(this.tree.getRoot().getData()));
+                this.tree.successor(this.tree.getRoot().getData()));
 
         this.tree.remove(new Integer(5));
         Assert.assertEquals(null,
-                this.tree.sucessor(this.tree.getRoot().getData()));
+                this.tree.successor(this.tree.getRoot().getData()));
 
     }
 

@@ -103,6 +103,31 @@ public class StudentBSTTest {
     }
 
     @Test
+    public void countingTest() {
+        tree.insert(50);
+        tree.insert(17);
+        tree.insert(9);
+        tree.insert(14);
+        tree.insert(12);
+        tree.insert(23);
+        tree.insert(19);
+        tree.insert(76);
+        tree.insert(54);
+        tree.insert(72);
+        tree.insert(67);
+
+        System.out.println(Arrays.toString(tree.preOrder()));
+        System.out.println(Arrays.toString(tree.order()));
+        System.out.println(Arrays.toString(tree.postOrder()));
+
+        fillTree();
+
+        System.out.println(tree.numberOfLeafs());
+        System.out.println(tree.numberOfGradeOne());
+        System.out.println(tree.numberOfGradeTwo());
+    }
+
+    @Test
     public void testInit() {
         assertTrue(tree.isEmpty());
         assertEquals(0, tree.size());
@@ -121,9 +146,9 @@ public class StudentBSTTest {
         assertEquals(null, tree.minimum());
         assertEquals(null, tree.maximum());
 
-        assertEquals(null, tree.sucessor(12));
-        assertEquals(null, tree.sucessor(-23));
-        assertEquals(null, tree.sucessor(0));
+        assertEquals(null, tree.successor(12));
+        assertEquals(null, tree.successor(-23));
+        assertEquals(null, tree.successor(0));
 
         assertEquals(null, tree.predecessor(12));
         assertEquals(null, tree.predecessor(-23));
@@ -354,40 +379,40 @@ public class StudentBSTTest {
     public void predecessorSucessorTest() {
         fillTree();
 
-        assertEquals(new Integer(9), tree.sucessor(6).getData());
+        assertEquals(new Integer(9), tree.successor(6).getData());
         assertEquals(new Integer(5), tree.predecessor(6).getData());
 
-        assertEquals(new Integer(0), tree.sucessor(-34).getData());
+        assertEquals(new Integer(0), tree.successor(-34).getData());
         assertEquals(new Integer(-40), tree.predecessor(-34).getData());
 
-        assertEquals(new Integer(-34), tree.sucessor(-40).getData());
+        assertEquals(new Integer(-34), tree.successor(-40).getData());
         assertEquals(null, tree.predecessor(-40));
 
-        assertEquals(new Integer(6), tree.sucessor(5).getData());
+        assertEquals(new Integer(6), tree.successor(5).getData());
         assertEquals(new Integer(2), tree.predecessor(5).getData());
 
-        assertEquals(new Integer(5), tree.sucessor(2).getData());
+        assertEquals(new Integer(5), tree.successor(2).getData());
         assertEquals(new Integer(0), tree.predecessor(2).getData());
 
-        assertEquals(new Integer(2), tree.sucessor(0).getData());
+        assertEquals(new Integer(2), tree.successor(0).getData());
         assertEquals(new Integer(-34), tree.predecessor(0).getData());
 
-        assertEquals(new Integer(67), tree.sucessor(23).getData());
+        assertEquals(new Integer(67), tree.successor(23).getData());
         assertEquals(new Integer(12), tree.predecessor(23).getData());
 
-        assertEquals(new Integer(12), tree.sucessor(9).getData());
+        assertEquals(new Integer(12), tree.successor(9).getData());
         assertEquals(new Integer(6), tree.predecessor(9).getData());
 
-        assertEquals(new Integer(23), tree.sucessor(12).getData());
+        assertEquals(new Integer(23), tree.successor(12).getData());
         assertEquals(new Integer(9), tree.predecessor(12).getData());
 
-        assertEquals(new Integer(232), tree.sucessor(76).getData());
+        assertEquals(new Integer(232), tree.successor(76).getData());
         assertEquals(new Integer(67), tree.predecessor(76).getData());
 
-        assertEquals(new Integer(76), tree.sucessor(67).getData());
+        assertEquals(new Integer(76), tree.successor(67).getData());
         assertEquals(new Integer(23), tree.predecessor(67).getData());
 
-        assertEquals(null, tree.sucessor(232));
+        assertEquals(null, tree.successor(232));
         assertEquals(new Integer(76), tree.predecessor(232).getData());
     }
 
@@ -420,16 +445,16 @@ public class StudentBSTTest {
         fillTree(); // -40 -34 0 2 5 6 9 12 23 67 76 232
 
         assertEquals(null, tree.predecessor(-40));
-        assertEquals(new Integer(-34), tree.sucessor(-40).getData());
+        assertEquals(new Integer(-34), tree.successor(-40).getData());
 
         assertEquals(new Integer(-40), tree.predecessor(-34).getData());
-        assertEquals(new Integer(0), tree.sucessor(-34).getData());
+        assertEquals(new Integer(0), tree.successor(-34).getData());
 
         assertEquals(new Integer(-34), tree.predecessor(0).getData());
-        assertEquals(new Integer(2), tree.sucessor(0).getData());
+        assertEquals(new Integer(2), tree.successor(0).getData());
 
         assertEquals(new Integer(0), tree.predecessor(2).getData());
-        assertEquals(new Integer(5), tree.sucessor(2).getData());
+        assertEquals(new Integer(5), tree.successor(2).getData());
     }
 
     @Test

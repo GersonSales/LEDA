@@ -23,7 +23,7 @@ public interface BST<T extends Comparable<T>> extends BT<T> {
 	 * Returns a node containing the successor of the given element in a BST or
 	 * null if it does not exist.
 	 */
-	public BSTNode<T> sucessor(T element);
+	public BSTNode<T> successor(T element);
 
 	/**
 	 * Returns a node containing the predecessor of the given element in a BST

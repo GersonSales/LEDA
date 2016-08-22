@@ -104,7 +104,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
     }
 
     @Override
-    public BSTNode<T> sucessor(T element) {
+    public BSTNode<T> successor(T element) {
         if (element != null) {
             BSTNode<T> node = search(element);
             if (!node.isEmpty()) {
@@ -185,9 +185,28 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
                     removeRightChildParent(node);
                 }
             } else if (isTwoChildrenParent(node)) {
-                removeTwoChildrenParent(node);
+                deleteWithSuccessor(node);
+                // removeTwoChildrenParent(node);
             }
         }
+    }
+
+    private void removeTwoChildrenParent(BTNode<T> node) {
+        BTNode<T> sucessor = successor(node.getData());
+        dataSwapper(node, sucessor);
+        remove(sucessor);
+    }
+
+    private void deleteWithPredecessor(BTNode<T> node) {
+        BTNode<T> predecessor = predecessor(node.getData());
+        dataSwapper(node, predecessor);
+        remove(predecessor);
+    }
+
+    private void deleteWithSuccessor(BTNode<T> node) {
+        BTNode<T> successor = successor(node.getData());
+        dataSwapper(node, successor);
+        remove(successor);
     }
 
     private void removeLeaf(BTNode<T> node) {
@@ -197,10 +216,14 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
     }
 
     private boolean isOlnyChildParent(BTNode<T> node) {
+
         if (node != null) {
+            if (node.isEmpty())
+                return false;
             return node.getLeft().isEmpty() ^ node.getRight().isEmpty();
         }
-        return true;
+
+        return false;
     }
 
     private void removeLeftChildParent(BTNode<T> node) {
@@ -233,12 +256,6 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
         }
     }
 
-    private void removeTwoChildrenParent(BTNode<T> node) {
-        BTNode<T> sucessor = sucessor(node.getData());
-        dataSwapper(node, sucessor);
-        remove(sucessor);
-    }
-
     private void setRoot(BTNode<T> newRoot) {
         this.root = (BSTNode<T>) newRoot;
     }
@@ -262,6 +279,54 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
         getRoot().setParent(null);
 
+    }
+
+    public int numberOfLeafs() {
+        return numberOfLeafs(getRoot());
+    }
+
+    private int numberOfLeafs(BTNode<T> node) {
+        if (node != null) {
+            if (node.isLeaf()) {
+                return 1;
+            } else {
+                return numberOfLeafs(node.getLeft())
+                        + numberOfLeafs(node.getRight());
+            }
+        }
+        return 0;
+    }
+
+    public int numberOfGradeOne() {
+        return numberOfGradeOne(getRoot());
+    }
+
+    private int numberOfGradeOne(BTNode<T> node) {
+        if (node != null) {
+            if (isOlnyChildParent(node)) {
+                return 1 + numberOfGradeOne(node.getLeft())
+                        + numberOfGradeOne(node.getRight());
+            } else {
+                return numberOfGradeOne(node.getLeft())
+                        + numberOfGradeOne(node.getRight());
+            }
+        }
+
+        return 0;
+    }
+
+    public int numberOfGradeTwo() {
+        return numberOfGradeTwo(getRoot());
+    }
+
+    private int numberOfGradeTwo(BTNode<T> node) {
+        if (node != null) {
+            if (isTwoChildrenParent(node)) {
+                return 1 + numberOfGradeTwo(node.getLeft())
+                        + numberOfGradeTwo(node.getRight());
+            }
+        }
+        return 0;
     }
 
     private boolean isLeftChild(BTNode<T> node) {
