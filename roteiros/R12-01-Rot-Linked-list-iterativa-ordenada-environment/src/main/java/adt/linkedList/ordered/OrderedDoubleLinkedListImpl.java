@@ -20,7 +20,7 @@ import adt.linkedList.SingleLinkedListNode;
 public class OrderedDoubleLinkedListImpl<T> extends OrderedSingleLinkedListImpl<T> implements
 		OrderedLinkedList<T>,DoubleLinkedList<T> {
 
-	private DoubleLinkedListNode<T> previous;
+	private DoubleLinkedListNode<T> last;
 
 	public OrderedDoubleLinkedListImpl() {
 		// TODO Auto-generated constructor stub
