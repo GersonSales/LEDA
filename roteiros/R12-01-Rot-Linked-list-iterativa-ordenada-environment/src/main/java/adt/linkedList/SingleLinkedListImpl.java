@@ -48,7 +48,8 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 		if (element == null)
 			return;
 		SingleLinkedListNode<T> newElement = new SingleLinkedListNode<>();
-		SingleLinkedListNode<T> newNode = new SingleLinkedListNode<>(element, newElement);
+		SingleLinkedListNode<T> newNode = new SingleLinkedListNode<>(element,
+				newElement);
 		newNode.setData(element);
 
 		if (!isEmpty()) {
@@ -67,19 +68,23 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 	@Override
 	public void remove(T element) {
 		if (!isEmpty()) {
-			SingleLinkedListNode<T> previous = head;
-			SingleLinkedListNode<T> aux = previous.getNext();
 
-			while (!previous.isNIL() && !previous.getData().equals(element)) {
-				previous = aux;
-				aux = aux.getNext();
+			if (head.getData().equals(element)) {
+				setHead(getHead().getNext());
+			} else {
+
+				SingleLinkedListNode<T> aux = head;
+				SingleLinkedListNode<T> next = aux.getNext();
+
+				while (!next.isNIL() && !next.getData().equals(element)) {
+					aux = next;
+					next = next.getNext();
+				}
+				if (!next.isNIL()) {
+
+					aux.setNext(next.getNext());
+				}
 			}
-
-			if (!previous.isNIL()) {
-				if (!aux.isNIL())
-					previous.setNext(aux.getNext());
-			}
-
 		}
 	}
 

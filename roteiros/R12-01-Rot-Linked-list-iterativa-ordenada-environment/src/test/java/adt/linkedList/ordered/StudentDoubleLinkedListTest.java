@@ -1,5 +1,7 @@
 package adt.linkedList.ordered;
 
+import java.util.Arrays;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,7 +17,7 @@ public class StudentDoubleLinkedListTest extends StudentLinkedListTest {
 
 	@Before
 	public void setUp() throws Exception {
-	    super.setUp();
+		super.setUp();
 		getImplementations();
 
 		// Lista com 3 elementos.
@@ -25,6 +27,63 @@ public class StudentDoubleLinkedListTest extends StudentLinkedListTest {
 
 		// Lista com 1 elemento.
 		lista3.insert(1);
+	}
+
+	@Test
+	public void removeLastTest() {
+		lista2.insertFirst(4);
+		lista2.insertFirst(3);
+		lista2.insertFirst(2);
+		lista2.insertFirst(1);
+		lista2.insertFirst(0);
+
+		Assert.assertArrayEquals(new Integer[] { 0, 1, 2, 3, 4 },
+				lista2.toArray());
+
+		lista2.remove(0);
+
+		Assert.assertArrayEquals(new Integer[] { 1, 2, 3, 4 }, lista2.toArray());
+
+		lista2.remove(1);
+
+		Assert.assertArrayEquals(new Integer[] { 2, 3, 4 }, lista2.toArray());
+		lista2.remove(2);
+
+		Assert.assertArrayEquals(new Integer[] { 3, 4 }, lista2.toArray());
+		lista2.remove(3);
+
+		Assert.assertArrayEquals(new Integer[] { 4 }, lista2.toArray());
+		lista2.remove(4);
+
+		Assert.assertArrayEquals(new Integer[] {}, lista2.toArray());
+
+		lista2.insertFirst(0);
+		lista2.insertFirst(1);
+		lista2.insertFirst(2);
+		lista2.insertFirst(3);
+		lista2.insertFirst(4);
+
+		Assert.assertArrayEquals(new Integer[] { 4, 3, 2, 1, 0 },
+				lista2.toArray());
+
+		lista2.removeLast();
+
+		Assert.assertArrayEquals(new Integer[] { 4, 3, 2, 1, },
+				lista2.toArray());
+
+		lista2.removeLast();
+
+		Assert.assertArrayEquals(new Integer[] { 4, 3, 2, }, lista2.toArray());
+		lista2.removeLast();
+
+		Assert.assertArrayEquals(new Integer[] { 4, 3 }, lista2.toArray());
+		lista2.removeLast();
+
+		Assert.assertArrayEquals(new Integer[] { 4 }, lista2.toArray());
+		lista2.removeLast();
+
+		Assert.assertArrayEquals(new Integer[] {}, lista2.toArray());
+
 	}
 
 	private void getImplementations() {

@@ -1,5 +1,7 @@
 package adt.linkedList;
 
+import java.util.Arrays;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,6 +24,25 @@ public class StudentDoubleLinkedListTest extends StudentLinkedListTest {
 
 		// Lista com 1 elemento.
 		lista3.insert(1);
+	}
+	
+	@Test
+	public void removeFirstTest() {
+		Assert.assertEquals(0, lista2.size());
+		
+		
+		lista2.insert(0);
+		Assert.assertEquals(1, lista2.size());
+		
+		lista2.remove(0);
+		Assert.assertEquals(0, lista2.size());
+
+		lista2.removeFirst();
+		Assert.assertEquals(0, lista2.size());
+		
+
+		System.out.println(Arrays.toString(lista2.toArray()));
+
 	}
 
 	private void getImplementations() {

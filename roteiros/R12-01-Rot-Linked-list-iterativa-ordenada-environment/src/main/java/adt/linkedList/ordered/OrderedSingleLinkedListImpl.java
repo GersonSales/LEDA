@@ -16,12 +16,19 @@ import adt.linkedList.SingleLinkedListNode;
  *
  * @param <T>
  */
-public class OrderedSingleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
+public class OrderedSingleLinkedListImpl<T extends Comparable<T>> extends SingleLinkedListImpl<T> implements
 		OrderedLinkedList<T> {
 
 	private Comparator<T> comparator;
 
 	public OrderedSingleLinkedListImpl() {
+		this.comparator = new Comparator<T>() {
+
+			@Override
+			public int compare(T o1, T o2) {
+				return o1.compareTo(o2);
+			}
+		};
 		// TODO Auto-generated constructor stub
 		throw new UnsupportedOperationException(
 				"Default constructor is not working yet!");
