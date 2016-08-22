@@ -311,7 +311,6 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
                         + numberOfGradeOne(node.getRight());
             }
         }
-
         return 0;
     }
 
