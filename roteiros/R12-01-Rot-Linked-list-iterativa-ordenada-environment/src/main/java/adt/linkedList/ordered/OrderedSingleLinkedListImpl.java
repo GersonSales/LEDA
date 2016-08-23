@@ -16,45 +16,80 @@ import adt.linkedList.SingleLinkedListNode;
  *
  * @param <T>
  */
-public class OrderedSingleLinkedListImpl<T extends Comparable<T>> extends SingleLinkedListImpl<T> implements
-		OrderedLinkedList<T> {
 
-	private Comparator<T> comparator;
+public class OrderedSingleLinkedListImpl<T> extends SingleLinkedListImpl<T>
+        implements OrderedLinkedList<T> {
 
-	public OrderedSingleLinkedListImpl() {
-		this.comparator = new Comparator<T>() {
+    private Comparator<T> comparator;
 
-			@Override
-			public int compare(T o1, T o2) {
-				return o1.compareTo(o2);
-			}
-		};
-		// TODO Auto-generated constructor stub
-		throw new UnsupportedOperationException(
-				"Default constructor is not working yet!");
-	}
+    @SuppressWarnings("unchecked")
+    public OrderedSingleLinkedListImpl() {
+        this.comparator = (element, otherElement) -> (((Comparable<T>) element)
+                .compareTo(otherElement));
+    }
 
-	public OrderedSingleLinkedListImpl(Comparator<T> comparator) {
-		this.comparator = comparator;
-	}
+    public OrderedSingleLinkedListImpl(Comparator<T> comparator) {
+        this.comparator = comparator;
+    }
 
-	@Override
-	public T minimum() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+    @Override
+    @SuppressWarnings("unchecked")
+    public void insert(T element) {
+        if (element != null) {
+            SingleLinkedListNode<T> newNode = new SingleLinkedListNode<>(
+                    element, getHead());
+            setHead(newNode);
+            SingleLinkedListNode<T> aux = getHead();
+            SingleLinkedListNode<T> next = aux.getNext();
+            while (!next.isNIL() && ((Comparable<T>) aux.getData())
+                    .compareTo(next.getData()) > 0) {
+                dataSwapper(aux, next);
 
-	@Override
-	public T maximum() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
-	}
+            }
 
-	public Comparator<T> getComparator() {
-		return comparator;
-	}
+        }
+    }
 
-	public void setComparator(Comparator<T> comparator) {
-		this.comparator = comparator;
-	}
+    void dataSwapper(SingleLinkedListNode<T> node,
+            SingleLinkedListNode<T> otherNode) {
+        T aux = node.getData();
+        node.setData(otherNode.getData());
+        otherNode.setData(aux);
+    }
+
+    @Override
+    public T minimum() {
+        if (isEmpty()) {
+            return null;
+        }
+        return min(getHead().getData(), toArray()[size() - 1]);
+    }
+
+    @SuppressWarnings("unchecked")
+    private T min(T element, T otherElement) {
+        return ((Comparable<T>) element).compareTo(otherElement) < 0 ? element
+                : otherElement;
+    }
+
+    @SuppressWarnings("unchecked")
+    private T max(T element, T otherElement) {
+        return ((Comparable<T>) element).compareTo(otherElement) > 0 ? element
+                : otherElement;
+    }
+
+    @Override
+    public T maximum() {
+        if (isEmpty()) {
+            return null;
+        }
+        return max(getHead().getData(), toArray()[size() - 1]);
+    }
+
+    public Comparator<T> getComparator() {
+        return comparator;
+    }
+
+    public void setComparator(Comparator<T> comparator) {
+        this.comparator = comparator;
+    }
 }

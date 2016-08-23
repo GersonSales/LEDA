@@ -7,7 +7,6 @@
 	<version>1.0</version>
 	<packaging>jar</packaging>
 	<name>Submissao de roteiro</name>
-
 <pluginRepositories>
 		<pluginRepository>
 			<id>ufcg-maven2</id>
@@ -19,7 +18,6 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -34,8 +32,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.3</version>
 				<configuration>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -82,9 +80,9 @@
 							<goal>compact</goal>
 						</goals>
 						<configuration>
-							<matricula>INSIRA NEU NUMERO DE MATRICULA</matricula>
+							<matricula>114210216</matricula>
 							<semestre>2016.1</semestre>
-							<roteiro>R0X-0X</roteiro>
+							<roteiro>R12-01</roteiro>
 							<url>http://web.cloud.lsd.ufcg.edu.br:44174/submission/submitRoteiro</url>
 						</configuration>
 					</execution>

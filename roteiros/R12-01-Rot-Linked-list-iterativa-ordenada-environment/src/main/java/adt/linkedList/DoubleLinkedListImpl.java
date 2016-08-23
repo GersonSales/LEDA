@@ -1,20 +1,17 @@
 package adt.linkedList;
 
-public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
-		DoubleLinkedList<T> {
+public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T>
+        implements DoubleLinkedList<T> {
 
-	protected DoubleLinkedListNode<T> last;
+    protected DoubleLinkedListNode<T> last;
     private DoubleLinkedListNode<T> nillNode;
 
-	
     public DoubleLinkedListImpl() {
         this.nillNode = new DoubleLinkedListNode<>();
         this.last = new DoubleLinkedListNode<>();
         setHead(last);
     }
-    
-    
-	
+
     @Override
     public void insertFirst(T element) {
         if (element != null) {
@@ -31,13 +28,12 @@ public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
         }
 
     }
-    
-    
+
     @Override
     public void remove(T element) {
         if (element != null) {
             if (!isEmpty()) {
-                
+
                 if (getHead().getData().equals(element)) {
                     DoubleLinkedListNode<T> aux = (DoubleLinkedListNode<T>) head
                             .getNext();
@@ -68,8 +64,6 @@ public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
             }
         }
     }
-    
-    
 
     @Override
     public void insert(T element) {
@@ -110,12 +104,12 @@ public class DoubleLinkedListImpl<T> extends SingleLinkedListImpl<T> implements
         }
     }
 
-	public DoubleLinkedListNode<T> getLast() {
-		return last;
-	}
+    public DoubleLinkedListNode<T> getLast() {
+        return last;
+    }
 
-	public void setLast(DoubleLinkedListNode<T> last) {
-		this.last = last;
-	}
+    public void setLast(DoubleLinkedListNode<T> last) {
+        this.last = last;
+    }
 
 }
