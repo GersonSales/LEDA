@@ -111,8 +111,18 @@ public class OrderedDoubleLinkedListImpl<T>
      */
     @Override
     public void insertFirst(T element) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Not implemented yet!");
+        if (!isEmpty()) {
+            if (getComparator().compare(element, getHead().getData()) < 0) {
+                DoubleLinkedListNode<T> head = (DoubleLinkedListNode<T>) getHead();
+                DoubleLinkedListNode<T> newNode = new DoubleLinkedListNode<>(
+                        element, head, null);
+
+                head.setPrevious(newNode);
+                setHead(newNode);
+            }
+        }else {
+            insert(element);
+        }
     }
 
     @Override
