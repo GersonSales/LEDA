@@ -26,10 +26,8 @@ public class StudentOrderedLinkedListTest {
 
     private void getImplementations() {
         // TODO O aluno deve ajustar aqui para instanciar sua implementação
-        Comparator<Integer> comparador = (element, otherElement) -> element
-                .compareTo(otherElement);
-        lista1 = new OrderedSingleLinkedListImpl<>();
-        lista2 = new OrderedSingleLinkedListImpl<>();
+        lista1 = new OrderedDoubleLinkedListImpl<>();
+        lista2 = new OrderedDoubleLinkedListImpl<>();
     }
 
     @Test

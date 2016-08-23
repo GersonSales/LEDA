@@ -33,7 +33,6 @@ public class OrderedSingleLinkedListImpl<T> extends SingleLinkedListImpl<T>
     }
 
     @Override
-    @SuppressWarnings("unchecked")
     public void insert(T element) {
         if (element != null) {
             SingleLinkedListNode<T> newNode = new SingleLinkedListNode<>(
@@ -41,8 +40,8 @@ public class OrderedSingleLinkedListImpl<T> extends SingleLinkedListImpl<T>
             setHead(newNode);
             SingleLinkedListNode<T> aux = getHead();
             SingleLinkedListNode<T> next = aux.getNext();
-            while (!next.isNIL() && ((Comparable<T>) aux.getData())
-                    .compareTo(next.getData()) > 0) {
+            while (!next.isNIL() && getComparator().compare(aux.getData(),
+                    next.getData()) > 0) {
                 dataSwapper(aux, next);
 
             }
@@ -65,15 +64,13 @@ public class OrderedSingleLinkedListImpl<T> extends SingleLinkedListImpl<T>
         return min(getHead().getData(), toArray()[size() - 1]);
     }
 
-    @SuppressWarnings("unchecked")
     private T min(T element, T otherElement) {
-        return ((Comparable<T>) element).compareTo(otherElement) < 0 ? element
+        return getComparator().compare(element, otherElement) < 0 ? element
                 : otherElement;
     }
 
-    @SuppressWarnings("unchecked")
     private T max(T element, T otherElement) {
-        return ((Comparable<T>) element).compareTo(otherElement) > 0 ? element
+        return getComparator().compare(element, otherElement) > 0 ? element
                 : otherElement;
     }
 

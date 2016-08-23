@@ -35,7 +35,6 @@ public class OrderedDoubleLinkedListImpl<T>
         setHead(last);
     }
 
-    @SuppressWarnings("unchecked")
     @Override
     public void insert(T element) {
         if (element != null) {
@@ -49,13 +48,13 @@ public class OrderedDoubleLinkedListImpl<T>
             SingleLinkedListNode<T> aux = getHead();
             SingleLinkedListNode<T> next = aux.getNext();
 
-            while (!next.isNIL() && ((Comparable<T>) aux.getData())
-                    .compareTo(next.getData()) > 0) {
+            while (!next.isNIL() && getComparator().compare(aux.getData(),
+                    next.getData()) > 0) {
                 dataSwapper(aux, next);
                 aux = next;
                 next = next.getNext();
             }
-            
+
             if (next.isNIL()) {
                 setLast(((DoubleLinkedListNode<T>) next).getPrevious());
             }
