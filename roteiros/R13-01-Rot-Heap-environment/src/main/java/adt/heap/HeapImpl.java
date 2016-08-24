@@ -80,8 +80,25 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 	 * (comparados usando o comparator) elementos na parte de cima da heap.
 	 */
 	private void heapify(int position) {
-		// TODO Implement htis method.
-		throw new UnsupportedOperationException("Not implemented yet!");
+		
+		int max = maxIndex(position, left(position));
+		max = maxIndex(max, right(position));
+
+		if (!getHeap()[position].equals(getHeap()[max])) {
+			util.Util.swap(getHeap(), position, max);
+		} else {
+			heapify(max);
+		}
+	}
+
+	private int maxIndex(int indexOne, int indexTwo) {
+		return getComparator().compare(getHeap()[indexOne],
+				getHeap()[indexTwo]) < 0 ? indexOne : indexTwo;
+
+	}
+
+	private boolean isAValidIndex(int index) {
+		return index >= 0 && index <= size() && getHeap()[index] != null;
 	}
 
 	@Override
@@ -91,8 +108,14 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 			heap = Arrays.copyOf(heap, heap.length + INCREASING_FACTOR);
 		}
 		// /////////////////////////////////////////////////////////////////
+
+		if (element != null) {
+			this.index++;
+			getHeap()[index] = element;
+			heapify(0);
+		}
+
 		// TODO Implemente a insercao na heap aqui.
-		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
@@ -103,14 +126,17 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 
 	@Override
 	public T extractRootElement() {
+		T extractedRood = getHeap()[0];
+		getHeap()[0] = getHeap()[index];
+		index--;
+		return extractedRood;
 		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
 	public T rootElement() {
+		return getHeap()[0];
 		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	@Override
@@ -121,8 +147,8 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 
 	@Override
 	public int size() {
+		return index;
 		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
 	}
 
 	public Comparator<T> getComparator() {
