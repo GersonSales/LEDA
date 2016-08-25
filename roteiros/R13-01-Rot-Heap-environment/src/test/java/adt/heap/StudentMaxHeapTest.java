@@ -13,109 +13,107 @@ import org.junit.Test;
 
 public class StudentMaxHeapTest {
 
-	Heap<Integer> heap;
+    Heap<Integer> heap;
 
-	@Before
-	public void setUp() {
-		// TODO Instancie seu comparator para fazer sua estrutura funcionar como
-		// uma max heap aqui. Use instanciacao anonima da interface
-		// Comparator!!!!
-		Comparator<Integer> comparator = (elementOne,
-				elementTwo) -> (elementOne.compareTo(elementTwo));
-		heap = new HeapImpl<Integer>(comparator);
-	}
+    @Before
+    public void setUp() {
+        // TODO Instancie seu comparator para fazer sua estrutura funcionar como
+        // uma max heap aqui. Use instanciacao anonima da interface
+        // Comparator!!!!
+        Comparator<Integer> comparator = (elementOne,
+                elementTwo) -> (elementOne.compareTo(elementTwo));
+        heap = new HeapImpl<Integer>(comparator);
+    }
 
-	@Test
-	public void testBuild() {
-		heap.buildHeap(new Integer[] { 82, 6, 99, 12, 34, 64, 58, 1 });
+    @Test
+    public void testSort() {
 
-		assertEquals(8, heap.size());
-		assertFalse(heap.isEmpty());
+        assertArrayEquals(new Integer[] { 5, 6, 12, 20, 34, 43, 49, 92 },
+                heap.heapsort(new Integer[] { 34, 92, 5, 12, 49, 20, 43, 6 }));
 
-		verifyHeap(new Integer[] { 99, 12, 82, 6, 34, 64, 58, 1 });
-	}
+        assertEquals(0, heap.size());
+        assertTrue(heap.isEmpty());
 
-	@Test
-	public void testInsert() {
-		heap.insert(8);
-		heap.insert(12);
-		heap.insert(-2);
-		heap.insert(7);
-		heap.insert(8);
-		heap.insert(-5);
-		heap.insert(14);
-		heap.insert(3);
-		heap.insert(-10);
-		heap.insert(0);
+        assertArrayEquals(new Integer[] {}, heap.toArray());
+    }
 
-		assertEquals(10, heap.size());
-		assertFalse(heap.isEmpty());
+    @Test
+    public void testBuild() {
+        heap.buildHeap(new Integer[] { 82, 6, 99, 12, 34, 64, 58, 1 });
 
-		verifyHeap(new Integer[] { 14, 8, 12, 7, 8, -5, -2, 3, -10, 0 });
-	}
+        assertEquals(8, heap.size());
+        assertFalse(heap.isEmpty());
 
-	@Test
-	public void testRemove() {
-		heap.insert(22);
-		heap.insert(45);
-		heap.insert(38);
-		heap.insert(17);
-		heap.insert(40);
-		heap.insert(15);
-		heap.insert(26);
-		heap.insert(79);
-		heap.insert(53);
-		heap.insert(30);
+        verifyHeap(new Integer[] { 99, 12, 82, 6, 34, 64, 58, 1 });
+    }
 
-		assertEquals(new Integer(79), heap.extractRootElement());
-		assertEquals(new Integer(53), heap.extractRootElement());
-		assertEquals(new Integer(45), heap.extractRootElement());
-		assertEquals(new Integer(40), heap.extractRootElement());
-		assertEquals(new Integer(38), heap.extractRootElement());
+    @Test
+    public void testInsert() {
+        heap.insert(8);
+        heap.insert(12);
+        heap.insert(-2);
+        heap.insert(7);
+        heap.insert(8);
+        heap.insert(-5);
+        heap.insert(14);
+        heap.insert(3);
+        heap.insert(-10);
+        heap.insert(0);
 
-		assertEquals(5, heap.size());
-		assertFalse(heap.isEmpty());
+        assertEquals(10, heap.size());
+        assertFalse(heap.isEmpty());
 
-		// verifyHeap(new Integer[] { 22, 17, 15, 26, 30 });TODO
-	}
+        verifyHeap(new Integer[] { 14, 8, 12, 7, 8, -5, -2, 3, -10, 0 });
+    }
 
-	@Test
-	public void testSort() {
-		assertArrayEquals(new Integer[] { 5, 6, 12, 20, 34, 43, 49, 92 },
-				heap.heapsort(new Integer[] { 34, 92, 5, 12, 49, 20, 43, 6 }));
+    @Test
+    public void testRemove() {
+        heap.insert(22);
+        heap.insert(45);
+        heap.insert(38);
+        heap.insert(17);
+        heap.insert(40);
+        heap.insert(15);
+        heap.insert(26);
+        heap.insert(79);
+        heap.insert(53);
+        heap.insert(30);
 
-		assertEquals(0, heap.size());
-		assertTrue(heap.isEmpty());
+        assertEquals(new Integer(79), heap.extractRootElement());
+        assertEquals(new Integer(53), heap.extractRootElement());
+        assertEquals(new Integer(45), heap.extractRootElement());
+        assertEquals(new Integer(40), heap.extractRootElement());
+        assertEquals(new Integer(38), heap.extractRootElement());
 
-		assertArrayEquals(new Integer[] {}, heap.toArray());
-	}
+        assertEquals(5, heap.size());
+        assertFalse(heap.isEmpty());
 
-	private void verifyHeap(Integer[] expected) {
-		boolean isHeap = true;
+        // verifyHeap(new Integer[] { 22, 17, 15, 26, 30 });TODO
+    }
 
-		Comparable<Integer>[] original = heap.toArray();
+    private void verifyHeap(Integer[] expected) {
+        boolean isHeap = true;
 
-		System.out.println("Output:   " + Arrays.toString(original));
-		System.out.println("Expected: " + Arrays.toString(expected));
+        Comparable<Integer>[] original = heap.toArray();
 
-		Arrays.sort(expected);
-		Arrays.sort(original);
+        Arrays.sort(expected);
+        Arrays.sort(original);
 
-		if (Arrays.equals(expected, original) == false)
-			isHeap = false;
+        if (Arrays.equals(expected, original) == false)
+            isHeap = false;
 
-		original = heap.toArray();
+        original = heap.toArray();
 
-		for (int i = 0; i < original.length; i++) {
-			if (2 * i + 1 < original.length
-					&& original[i].compareTo((Integer) original[2 * i + 1]) < 0)
-				isHeap = false;
-			if (2 * i + 2 < original.length
-					&& original[i].compareTo((Integer) original[2 * i + 2]) < 0)
-				isHeap = false;
-		}
+        for (int i = 0; i < original.length; i++) {
+            if (2 * i + 1 < original.length
+                    && original[i].compareTo((Integer) original[2 * i + 1]) < 0)
+                isHeap = false;
+            if (2 * i + 2 < original.length
+                    && original[i].compareTo((Integer) original[2 * i + 2]) < 0)
+                isHeap = false;
+        }
 
-		assertTrue(isHeap);
-	}
+        assertTrue(isHeap);
+    }
 
 }
