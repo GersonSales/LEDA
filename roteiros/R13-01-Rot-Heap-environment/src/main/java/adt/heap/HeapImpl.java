@@ -3,8 +3,6 @@ package adt.heap;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import util.Util;
-
 /**
  * O comportamento de qualquer heap é definido pelo heapify. Neste caso o
  * heapify dessa heap deve comparar os elementos e colocar o maior sempre no
@@ -66,7 +64,8 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 	@Override
 	public T[] toArray() {
 		@SuppressWarnings("unchecked")
-		T[] resp = Util.makeArray(index + 1);
+		T[] resp = (T[]) new Comparable[(index + 1)];// Util.makeArray(index +
+														// 1);
 		for (int i = 0; i <= index; i++) {
 			resp[i] = this.heap[i];
 		}
@@ -80,25 +79,39 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 	 * (comparados usando o comparator) elementos na parte de cima da heap.
 	 */
 	private void heapify(int position) {
-		
-		int max = maxIndex(position, left(position));
-		max = maxIndex(max, right(position));
+		heapify(getHeap(), position);
 
-		if (!getHeap()[position].equals(getHeap()[max])) {
-			util.Util.swap(getHeap(), position, max);
-		} else {
-			heapify(max);
+	}
+
+	private void heapify(T[] array, int position) {
+		if (isAValidIndex(position)) {
+			int max = position;
+
+			if (isAValidIndex(left(position))) {
+				max = maxIndex(array, position, left(position));
+
+				if (isAValidIndex(right(position))) {
+					max = maxIndex(array, max, right(position));
+				}
+			}
+
+			if (position <= index) {
+				if (getComparator().compare(array[position], array[max]) < 0) {
+					util.Util.swap(array, position, max);
+					heapify(max);
+				}
+			}
 		}
 	}
 
-	private int maxIndex(int indexOne, int indexTwo) {
-		return getComparator().compare(getHeap()[indexOne],
-				getHeap()[indexTwo]) < 0 ? indexOne : indexTwo;
+	private int maxIndex(T[] array, int indexOne, int indexTwo) {
+		return getComparator().compare(array[indexOne], array[indexTwo]) > 0
+				? indexOne : indexTwo;
 
 	}
 
 	private boolean isAValidIndex(int index) {
-		return index >= 0 && index <= size() && getHeap()[index] != null;
+		return index >= 0 && index <= this.index && getHeap()[index] != null;
 	}
 
 	@Override
@@ -112,25 +125,38 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 		if (element != null) {
 			this.index++;
 			getHeap()[index] = element;
-			heapify(0);
+			putInCorrectPosition(index);
 		}
 
 		// TODO Implemente a insercao na heap aqui.
 	}
 
+	private void putInCorrectPosition(int index) {
+		if (getComparator().compare(getHeap()[index],
+				getHeap()[parent(index)]) > 0) {
+			util.Util.swap(getHeap(), index, parent(index));
+			putInCorrectPosition(parent(index));
+		}
+	}
+
 	@Override
 	public void buildHeap(T[] array) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		this.heap = array;
+		this.index = array.length - 1;
+		for (int i = (array.length / 2); i >= 0; i--) {
+			heapify(array, i);
+
+		}
+
 	}
 
 	@Override
 	public T extractRootElement() {
-		T extractedRood = getHeap()[0];
+		T extractedRoot = getHeap()[0];
 		getHeap()[0] = getHeap()[index];
 		index--;
-		return extractedRood;
-		// TODO Auto-generated method stub
+		heapify(0);
+		return extractedRoot;
 	}
 
 	@Override
@@ -141,13 +167,22 @@ public class HeapImpl<T extends Comparable<T>> implements Heap<T> {
 
 	@Override
 	public T[] heapsort(T[] array) {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Not implemented yet!");
+		Comparator<T> backup = getComparator();
+		this.comparator = (o1, o2) -> (o2.compareTo(o1));
+
+		buildHeap(array);
+		for (int i = 0; i < array.length; i++) {
+			array[0] = extractRootElement();
+		}
+
+		this.comparator = backup;
+
+		return array;
 	}
 
 	@Override
 	public int size() {
-		return index;
+		return index + 1;
 		// TODO Auto-generated method stub
 	}
 
