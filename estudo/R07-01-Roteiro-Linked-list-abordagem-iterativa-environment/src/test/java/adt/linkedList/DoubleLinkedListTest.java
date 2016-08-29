@@ -42,13 +42,13 @@ public class DoubleLinkedListTest {
 
 			switch (randomer.nextInt(6)) {
 			case 0:
-				// isEmptyTest();
+				isEmptyTest();
 				break;
 			case 1:
-				// removeLastTest();
+				removeLastTest();
 				break;
 			case 2:
-				// removeFirstTest();
+				removeFirstTest();
 				break;
 			case 3:
 				insertTest();
@@ -57,7 +57,7 @@ public class DoubleLinkedListTest {
 				removeTest();
 				break;
 			case 5:
-				// headTest();
+				headTest();
 				break;
 			default:
 				break;
@@ -157,16 +157,20 @@ public class DoubleLinkedListTest {
 	}
 
 	private void removeTest() {
-		Integer object = (Integer) randomer.nextInt(1);
+		Integer object = (Integer) randomer.nextInt(ELEMENTS_RANGE);
 		linkedList.remove(object);
 		myDoubleLinkedList.remove(object);
-		System.out
-				.println("Expected : " + Arrays.toString(linkedList.toArray()));
-		System.out.println(
-				"output:    " + Arrays.toString(myDoubleLinkedList.toArray()));
+		
+		try {
+			Assert.assertArrayEquals(linkedList.toArray(),
+					myDoubleLinkedList.toArray());
 
-		Assert.assertArrayEquals(linkedList.toArray(),
-				myDoubleLinkedList.toArray());
+		} catch (Throwable erro) {
+			System.out.println("Expected: " + Arrays.toString(linkedList.toArray()));
+			System.out.println(
+					"output:   " + Arrays.toString(myDoubleLinkedList.toArray()));
+			throw erro;
+		}
 
 	}
 

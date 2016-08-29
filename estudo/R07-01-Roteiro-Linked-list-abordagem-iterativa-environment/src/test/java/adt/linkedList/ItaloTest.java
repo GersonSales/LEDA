@@ -246,7 +246,7 @@ public class ItaloTest {
 		list.remove(3);
 		Assert.assertTrue(list.last.getData() == 1);
 		Assert.assertTrue(list.head.getData() == 1);
-		// Assert.assertTrue(list.last.previous.getData() == null);TODO
+		Assert.assertTrue(list.last.previous.getData() == null);
 		Assert.assertTrue(list.head.next.getData() == null);
 
 		list.remove(1);
@@ -382,7 +382,7 @@ public class ItaloTest {
 		list.removeFirst();
 		Assert.assertTrue(list.head.getData() == 1);
 		Assert.assertTrue(list.head.next.getData() == 0);
-		// Assert.assertTrue(list.last.previous.previous.getData() == null);TODO
+		Assert.assertTrue(list.last.previous.previous.getData() == null);
 
 		Assert.assertTrue(list.size() == 2);
 
@@ -438,7 +438,7 @@ public class ItaloTest {
 		list.removeLast();
 		Assert.assertTrue(list.last.getData() == 2);
 		Assert.assertTrue(list.last.next.getData() == null);
-		// Assert.assertTrue(list.last.previous.getData() == null);TODO
+		Assert.assertTrue(list.last.previous.getData() == null);
 
 		list.removeLast();
 		Assert.assertTrue(list.last.getData() == null);
