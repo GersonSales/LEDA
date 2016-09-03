@@ -1,5 +1,8 @@
 package adt.bst;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import adt.bt.BTNode;
 
 public class SimpleBSTManipulationImpl<T extends Comparable<T>> implements SimpleBSTManipulation<T> {
@@ -63,6 +66,7 @@ public class SimpleBSTManipulationImpl<T extends Comparable<T>> implements Simpl
 	}
 
 	private T orderStatistic(BTNode<T> node, int k, int count) {
+		
 		if (!node.isEmpty()) {
 			if (k == count) {
 				return node.getData();
@@ -70,17 +74,13 @@ public class SimpleBSTManipulationImpl<T extends Comparable<T>> implements Simpl
 				if (!node.getRight().isEmpty()) {
 					return orderStatistic(minimum(node.getRight()), k, count + 1);
 				}
-				if (node.getParent().getData().compareTo(node.getData()) > 0)
-					return orderStatistic(node.getParent(), k, count + 1);
-				else
-					return orderStatistic(node.getParent().getParent(), k, count + 1);
-
+				return orderStatistic(node.getParent(), k, count + 1);
 			}
 
 		}
 		return null;
 	}
-
+	
 	private BTNode<T> minimum(BTNode<T> node) {
 		if (!node.isEmpty()) {
 			return minimum(node.getLeft());
