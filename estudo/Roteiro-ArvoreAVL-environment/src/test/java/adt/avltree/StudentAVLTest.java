@@ -2,6 +2,8 @@ package adt.avltree;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,7 +16,7 @@ public class StudentAVLTest {
 
 	private void fillTree() {
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 1; i < 11; i++) {
 			tree.insert(i);
 		}
 	}
@@ -85,6 +87,52 @@ public class StudentAVLTest {
 	}
 
 	@Test
+	public void insertTest() {
+		fillTree();
+
+		assertEquals(new Integer(4), tree.getRoot().getData());// node
+		assertEquals(null, tree.search(4).getParent());// parent
+		assertEquals(new Integer(2), tree.search(4).getLeft().getData());// leftNode
+		assertEquals(new Integer(8), tree.search(4).getRight().getData());// rightNode
+
+		assertEquals(new Integer(4), tree.search(2).getParent().getData());// parent
+		assertEquals(new Integer(1), tree.search(2).getLeft().getData());// leftNode
+		assertEquals(new Integer(3), tree.search(2).getRight().getData());// rightNode
+
+		assertEquals(new Integer(2), tree.search(1).getParent().getData());// parent
+		assertEquals(null, tree.search(1).getLeft().getData());// leftNode
+		assertEquals(null, tree.search(1).getRight().getData());// rightNode
+
+		assertEquals(new Integer(2), tree.search(3).getParent().getData());// parent
+		assertEquals(null, tree.search(3).getLeft().getData());// leftNode
+		assertEquals(null, tree.search(3).getRight().getData());// rightNode
+
+		assertEquals(new Integer(4), tree.search(8).getParent().getData());// parent
+		assertEquals(new Integer(6), tree.search(8).getLeft().getData());// leftNode
+		assertEquals(new Integer(9), tree.search(8).getRight().getData());// rightNode
+
+		assertEquals(new Integer(8), tree.search(6).getParent().getData());// parent
+		assertEquals(new Integer(5), tree.search(6).getLeft().getData());// leftNode
+		assertEquals(new Integer(7), tree.search(6).getRight().getData());// rightNode
+
+		assertEquals(new Integer(6), tree.search(5).getParent().getData());// parent
+		assertEquals(null, tree.search(5).getLeft().getData());// leftNode
+		assertEquals(null, tree.search(5).getRight().getData());// rightNode
+
+		assertEquals(new Integer(6), tree.search(7).getParent().getData());// parent
+		assertEquals(null, tree.search(7).getLeft().getData());// leftNode
+		assertEquals(null, tree.search(7).getRight().getData());// rightNode
+
+		assertEquals(new Integer(8), tree.search(9).getParent().getData());// parent
+		assertEquals(null, tree.search(9).getLeft().getData());// leftNode
+		assertEquals(new Integer(10), tree.search(9).getRight().getData());// rightNode
+
+		assertEquals(new Integer(9), tree.search(10).getParent().getData());// parent
+		assertEquals(null, tree.search(10).getLeft().getData());// leftNode
+		assertEquals(null, tree.search(10).getRight().getData());// rightNode
+	}
+
+	@Test
 	public void unsortedBalancingTes() {
 
 		tree.insert(36);
@@ -142,7 +190,7 @@ public class StudentAVLTest {
 		assertEquals(new Integer(65), tree.search(63).getParent().getData());
 		assertEquals(new Integer(68), tree.search(74).getParent().getData());
 		assertEquals(new Integer(72), tree.search(74).getLeft().getData());
-		assertEquals(new Integer(65), tree.search(36	).getRight().getData());
+		assertEquals(new Integer(65), tree.search(36).getRight().getData());
 	}
 
 	@Test
@@ -217,6 +265,7 @@ public class StudentAVLTest {
 
 		while (!tree.isEmpty()) {
 			tree.remove(tree.getRoot().getData());
+
 			assertEquals(--size, tree.size());
 		}
 	}
@@ -225,27 +274,61 @@ public class StudentAVLTest {
 	public void testHeight() {
 		fillTree();
 
-		Integer[] preOrder = new Integer[] { 3, 1, 0, 2, 7, 5, 4, 6, 8, 9 };
+		Integer[] preOrder = new Integer[] { 4, 2, 1, 3, 8, 6, 5, 7, 9, 10 };
 		assertArrayEquals(preOrder, tree.preOrder());
-		assertEquals(3, tree.height());
-
-		tree.remove(0);
-		assertEquals(3, tree.height());
-
-		tree.remove(2);
 		assertEquals(3, tree.height());
 
 		tree.remove(1);
 		assertEquals(3, tree.height());
-		Integer[] preOrder2 = new Integer[] { 7, 5, 3, 4, 6, 8, 9 };
+
+		tree.remove(3);
+		assertEquals(3, tree.height());
+
+		tree.remove(2);
+		assertEquals(3, tree.height());
+		Integer[] preOrder2 = new Integer[] { 8, 6, 4, 5, 7, 9, 10 };
+
 		assertArrayEquals(preOrder2, tree.preOrder());
 	}
 
 	@Test
 	public void testRemove() {
 		fillTree();
-		// tente remover elementos e verificar se as rotacoes produzem uma AVL
-		// correta
+		tree.remove(new Integer(6));
+
+		assertEquals(new Integer(8), tree.search(7).getParent().getData());// parent
+		assertEquals(new Integer(7), tree.search(5).getParent().getData());// parent
+		assertEquals(new Integer(7), tree.search(8).getLeft().getData());// leftNode
+
+		tree.remove(new Integer(7));
+		assertEquals(new Integer(8), tree.search(5).getParent().getData());// parent
+		assertEquals(new Integer(5), tree.search(8).getLeft().getData());// leftNode
+
+		tree.remove(new Integer(5));
+		assertEquals(new Integer(9), tree.search(8).getParent().getData());// parent
+		assertEquals(new Integer(4), tree.search(9).getParent().getData());// parent
+		assertEquals(new Integer(8), tree.search(9).getLeft().getData());// leftNode
+		assertEquals(new Integer(10), tree.search(9).getRight().getData());// rightNode
+
+		tree.remove(new Integer(3));
+		tree.remove(new Integer(1));
+		tree.remove(new Integer(2));
+
+		assertEquals(new Integer(4), tree.search(8).getParent().getData());// parent
+		assertEquals(new Integer(9), tree.search(4).getParent().getData());// parent
+		assertEquals(null, tree.search(9).getParent());// parent
+		assertEquals(new Integer(9), tree.search(10).getParent().getData());// parent
+
+		assertEquals(null, tree.search(8).getLeft().getData());// leftNode
+		assertEquals(null, tree.search(4).getLeft().getData());// leftNode
+		assertEquals(new Integer(4), tree.search(9).getLeft().getData());// leftNode
+		assertEquals(null, tree.search(10).getLeft().getData());// leftNode
+
+		assertEquals(null, tree.search(8).getRight().getData());// rightNode
+		assertEquals(new Integer(8), tree.search(4).getRight().getData());// rightNode
+		assertEquals(new Integer(10), tree.search(9).getRight().getData());// rightNode
+		assertEquals(null, tree.search(10).getRight().getData());// rightNode
+
 	}
 
 	@Test

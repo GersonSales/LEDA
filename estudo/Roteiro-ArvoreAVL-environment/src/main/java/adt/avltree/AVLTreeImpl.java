@@ -14,13 +14,17 @@ public class AVLTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
 	public void insert(T element) {
 		super.insert(element);
 		BTNode<T> newNode = search(element);
-		rebalance(newNode);
+		rebalanceUp(newNode);
 	}
 
 	@Override
 	public void remove(T element) {
-		// TODO Auto-generated method stub
-		throw new RuntimeException("Not implemented yet!");
+		BTNode<T> nodeToBalance = search(element);
+		super.remove(element);
+		rebalanceUp(nodeToBalance);
+
+		if (nodeToBalance.isEmpty())
+			rebalanceUp(nodeToBalance.getParent());
 	}
 
 	// AUXILIARY
@@ -35,31 +39,29 @@ public class AVLTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
 
 	// AUXILIARY
 	protected void rebalance(BSTNode<T> node) {
-		rebalance((BTNode<T>) node);
+		if (node != null && !node.isEmpty()) {
+			rebalance((BTNode<T>) node);
+		}
 	}
 
 	private void rebalance(BTNode<T> node) {
-		if (node != null && !node.isEmpty()) {
-			if (isBalanced(node)) {
-				rebalance(node.getParent());
-			} else {
-				if (isRightDisbalanced(node)) {
-					if (isLeftTilt(node.getRight())) {
-						rightRotation(node.getRight());
-						leftRotation(node);
-					} else {
-						leftRotation(node);
-					}
-
-				} else if (isLeftDisbalanced(node)) {
-					if (isRightTilt(node.getLeft())) {
-						leftRotation(node.getLeft());
-						rightRotation(node);
-					} else {
-						rightRotation(node);
-					}
-
+		if (!isBalanced(node)) {
+			if (isRightDisbalanced(node)) {
+				if (isLeftTilt(node.getRight())) {
+					rightRotation(node.getRight());
+					leftRotation(node);
+				} else {
+					leftRotation(node);
 				}
+
+			} else if (isLeftDisbalanced(node)) {
+				if (isRightTilt(node.getLeft())) {
+					leftRotation(node.getLeft());
+					rightRotation(node);
+				} else {
+					rightRotation(node);
+				}
+
 			}
 		}
 	}
@@ -87,13 +89,21 @@ public class AVLTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
 
 	// AUXILIARY
 	protected void rebalanceUp(BSTNode<T> node) {
-		// TODO Auto-generated method stub
-		throw new RuntimeException("Not implemented yet!");
+		rebalance((BTNode<T>) node);
+	}
+
+	private void rebalanceUp(BTNode<T> node) {
+		if (node != null && !node.isEmpty()) {
+			rebalance(node);
+			rebalanceUp(node.getParent());
+		}
 	}
 
 	// AUXILIARY
 	protected void leftRotation(BSTNode<T> node) {
-		leftRotation((BTNode<T>) node);
+		if (node != null && !node.isEmpty()) {
+			leftRotation((BTNode<T>) node);
+		}
 	}
 
 	private void leftRotation(BTNode<T> node) {
@@ -121,7 +131,9 @@ public class AVLTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
 
 	// AUXILIARY
 	protected void rightRotation(BSTNode<T> node) {
-		rightRotation((BTNode<T>) node);
+		if (node != null && !node.isEmpty()) {
+			rightRotation((BTNode<T>) node);
+		}
 	}
 
 	private void rightRotation(BTNode<T> node) {
