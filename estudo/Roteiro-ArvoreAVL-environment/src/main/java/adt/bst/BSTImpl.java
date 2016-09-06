@@ -245,7 +245,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 		otherNode.setData(aux);
 	}
 
-	private boolean isTwoChildParent(BTNode<T> node) {
+	protected boolean isTwoChildParent(BTNode<T> node) {
 		return isLeftChildParent(node) && isRightChildParent(node);
 	}
 

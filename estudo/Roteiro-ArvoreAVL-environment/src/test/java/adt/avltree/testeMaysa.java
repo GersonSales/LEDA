@@ -444,9 +444,12 @@ public class testeMaysa {
 
 		myAVL.remove(13);
 
-		System.out.println(Arrays.toString(myAVL.preOrder()));
-		System.out.println(Arrays.toString(myAVL.order()));
-		System.out.println(Arrays.toString(myAVL.postOrder()));
+		// System.out.println(Arrays.toString(myAVL.preOrder()));
+		// System.out.println(Arrays.toString(myAVL.order()));
+		// System.out.println(Arrays.toString(myAVL.postOrder()));
+
+		System.out.println("Expected: " + Arrays.toString(postOrder));
+		System.out.println("actuals:  " + Arrays.toString(myAVL.postOrder()));
 
 		assertArrayEquals(preOrder, myAVL.preOrder());
 		assertArrayEquals(order, myAVL.order());
@@ -761,7 +764,8 @@ public class testeMaysa {
 	protected AVLTree<Integer> tree4;
 	protected AVLTree<Integer> tree5;
 	protected AVLTree<Integer> tree6;
-	protected Integer[] data = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+	protected Integer[] data = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
+			15 };
 	protected static final int SIZE = 10;
 
 	@Before
@@ -787,34 +791,42 @@ public class testeMaysa {
 
 	@Test
 	public void testInsert() {
-		Integer[] preOrder1 = { 10, 4, 2, 1, 3, 7, 5, 6, 8, 9, 13, 11, 12, 14, 15 };
-		assertEquals(Arrays.toString(preOrder1), Arrays.toString(tree1.preOrder()));
+		Integer[] preOrder1 = { 10, 4, 2, 1, 3, 7, 5, 6, 8, 9, 13, 11, 12, 14,
+				15 };
+		assertEquals(Arrays.toString(preOrder1),
+				Arrays.toString(tree1.preOrder()));
 
 		assertEquals("[]", Arrays.toString(tree2.preOrder()));
 
-		Integer[] preOrder2 = { 10, 4, 2, 1, 3, 7, 5, 6, 8, 9, 13, 11, 12, 15, 14, 20, 18, 22 };
+		Integer[] preOrder2 = { 10, 4, 2, 1, 3, 7, 5, 6, 8, 9, 13, 11, 12, 15,
+				14, 20, 18, 22 };
 		tree1.insert(22);
 		tree1.insert(18);
 		tree1.insert(20);
-		assertEquals(Arrays.toString(preOrder2), Arrays.toString(tree1.preOrder()));
+		assertEquals(Arrays.toString(preOrder2),
+				Arrays.toString(tree1.preOrder()));
 	}
 
 	@Test
 	public void testRemove() {
 		// removendo uma folha sem causar rebalanceamento
 		tree1.remove(6);
-		Integer[] preOrder1 = { 10, 4, 2, 1, 3, 7, 5, 8, 9, 13, 11, 12, 14, 15 };
-		assertEquals(Arrays.toString(preOrder1), Arrays.toString(tree1.preOrder()));
+		Integer[] preOrder1 = { 10, 4, 2, 1, 3, 7, 5, 8, 9, 13, 11, 12, 14,
+				15 };
+		assertEquals(Arrays.toString(preOrder1),
+				Arrays.toString(tree1.preOrder()));
 
 		// removendo no com um filho apenas sem causar rebaleanceamento
 		tree1.remove(11);
 		Integer[] preOrder2 = { 10, 4, 2, 1, 3, 7, 5, 8, 9, 13, 12, 14, 15 };
-		assertEquals(Arrays.toString(preOrder2), Arrays.toString(tree1.preOrder()));
+		assertEquals(Arrays.toString(preOrder2),
+				Arrays.toString(tree1.preOrder()));
 
 		// removendo um no com dois filhos que causa um rebalanceamento
 		tree1.remove(13);
 		Integer[] preOrder3 = { 7, 4, 2, 1, 3, 5, 10, 8, 9, 14, 12, 15 };
-		assertEquals(Arrays.toString(preOrder3), Arrays.toString(tree1.preOrder()));
+		assertEquals(Arrays.toString(preOrder3),
+				Arrays.toString(tree1.preOrder()));
 
 		tree2.remove(10);
 		assertEquals("[]", Arrays.toString(tree2.preOrder()));

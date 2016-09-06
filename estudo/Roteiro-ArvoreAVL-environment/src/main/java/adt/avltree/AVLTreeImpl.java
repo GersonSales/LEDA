@@ -20,11 +20,17 @@ public class AVLTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
 	@Override
 	public void remove(T element) {
 		BTNode<T> nodeToBalance = search(element);
-		super.remove(element);
-		rebalanceUp(nodeToBalance);
+		if (!nodeToBalance.isEmpty()) {
+			if (isTwoChildParent(nodeToBalance)) {
+				nodeToBalance = sucessor(element);
+			}
 
-		if (nodeToBalance.isEmpty())
-			rebalanceUp(nodeToBalance.getParent());
+			super.remove(element);
+			rebalanceUp(nodeToBalance);
+
+			if (nodeToBalance.isEmpty())
+				rebalanceUp(nodeToBalance.getParent());
+		}
 	}
 
 	// AUXILIARY
