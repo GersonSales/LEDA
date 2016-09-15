@@ -137,9 +137,9 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
         return null;
     }
 
-    private BTNode<T> predecessor(BTNode<T> node, T element) {
+    protected BTNode<T> predecessor(BTNode<T> node, T element) {
         if (!node.isEmpty()) {
-            if (!node.getLeft().isEmpty()) {
+            if (node.getLeft() != null && !node.getLeft().isEmpty()) {
                 return maximum(node.getLeft());
             }
 

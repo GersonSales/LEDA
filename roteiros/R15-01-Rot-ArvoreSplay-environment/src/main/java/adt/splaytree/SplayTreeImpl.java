@@ -7,92 +7,99 @@ import adt.bt.BTNode;
 public class SplayTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
         implements SplayTree<T> {
 
-    // @Override
-    // public void insert(T element) {
-    //
-    // }
-    //
-    // @Override
-    // public void remove(T element) {
-    //
-    // }
+    @Override
+    public void insert(T element) {
+        super.insert(element);
+        splay(super.search(element));
+    }
+
+    @Override
+    public void remove(T element) {
+        BSTNode<T> nodeToremove = super.search(element);
+        if (isValidNode(nodeToremove)) {
+            splay(nodeToremove);
+            splay(predecessor(element));
+            super.remove(nodeToremove);
+        }
+    }
 
     @Override
     public BSTNode<T> search(T element) {
         BSTNode<T> foundNode = super.search(element);
-        if (foundNode.isEmpty()) {
-            foundNode.setData(element);
-            BSTNode<T> nodeToSplay = predecessor(element);
-            nodeToSplay = nodeToSplay == null ? sucessor(element) : nodeToSplay;
 
-            foundNode.setData(null);
-
-            splay(nodeToSplay);
-
+        if (isValidNode(foundNode)) {
+            splay(foundNode);
         } else {
-
+//            BSTNode<T> nodeToSplay  = foundNode.getParent();
+//            foundNode.setData(element);
+//            
+//            BSTNode<T> nodeToSplay = predecessor(element);
+//            nodeToSplay = nodeToSplay == null ? sucessor(element) : nodeToSplay;
+//            foundNode.setData(null);
+            splay((BSTNode<T>) foundNode.getParent());
         }
 
         return foundNode;
     }
 
-    private boolean isZigZigRotation(BSTNode<T> node) {
-
-        if (isLeftChild(node)) {
-            return isLeftChild(node.getParent());
-        } else {
-            return isRightChild(node.getParent());
+    @Override
+    public BSTNode<T> predecessor(T element) {
+        if (element != null) {
+            return (BSTNode<T>) predecessor(super.search(element), element);
         }
-    }
-    
-    private boolean isZigZagRotation(BSTNode<T> node) {
-
-        if (isLeftChild(node)) {
-            return isRightChild(node.getParent());
-        } else {
-            return isLeftChild(node.getParent());
-        }
+        return null;
     }
 
     private void splay(BSTNode<T> node) {
-        if (node != null && !node.isEmpty()) {
-            if (node.equals(getRoot())) {
-                return;
-            }
+        if (isValidNode(node)) {
 
-            if (node.getParent().equals(getRoot())) {
-                if (isLeftChild(node)) {
-                    rightRotation(node.getParent());
-                } else {
-                    leftRotation(node.getParent());
-                }
-            } else {
-                
-                if (isZigZigRotation(node)) {
-                    if (isLeftChild(node)) {
-                        rightRotation(node.getParent().getParent());
-                        rightRotation(node.getParent());
-                    }else {
-                        leftRotation(node.getParent().getParent());
-                        leftRotation(node.getParent());
+            if (!isRoot(node)) {
+
+                if (isValidNode((BSTNode<T>) getGrandFather(node))) {
+                    if (isLeftChild(node) && isLeftChild(getFather(node))) {
+                        rightRotation(getGrandFather(node));
+                        rightRotation(getFather(node));
+                    } else if (isRightChild(node)
+                            && isRightChild(getFather(node))) {
+                        leftRotation(getGrandFather(node));
+                        leftRotation(getFather(node));
+                    } else if (isLeftChild(node)
+                            && isRightChild(getFather(node))) {
+                        rightRotation(getFather(node));
+                        leftRotation(getFather(node));
+                    } else if (isRightChild(node)
+                            && isLeftChild(getFather(node))) {
+                        leftRotation(getFather(node));
+                        rightRotation(getFather(node));
                     }
-                }else if (isZigZagRotation(node)) {
-                    
-                    
-                }
-                
-                
 
-                if (isLeftChild(node.getParent())) {
-                    rightRotation(node.getParent().getParent());
                 } else {
-                    leftRotation(node.getParent());
+                    if (isLeftChild(node)) {
+                        rightRotation(getFather(node));
+                    } else {
+                        leftRotation(getFather(node));
+                    }
                 }
+                splay(node);
             }
-        }
 
-        // TODO Implement your code here
-        throw new UnsupportedOperationException("Not impemented yet!");
+        }
+    }
+
+    private BTNode<T> getFather(BSTNode<T> node) {
+        return node.getParent();
+    }
+
+    private BTNode<T> getGrandFather(BSTNode<T> node) {
+        return getFather(node).getParent();
+    }
+
+    private boolean isValidNode(BSTNode<T> node) {
+        return node != null && !node.isEmpty();
+    }
+
+    private boolean isRoot(BSTNode<T> node) {
+        return node.equals(getRoot());
     }
 
     // AUXILIARY

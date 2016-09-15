@@ -27,14 +27,6 @@ public class StudentSplayTreeTest {
         assertEquals(0, splay.size());
         assertEquals(-1, splay.height());
         assertEquals(NIL, splay.getRoot());
-
-        splay.insert(30);
-        splay.insert(10);
-        splay.insert(40);
-        System.out.println(splay.search(11));
-        
-
-        System.out.println(Arrays.toString(splay.preOrder()));
     }
 
     @Test
@@ -69,6 +61,7 @@ public class StudentSplayTreeTest {
         assertEquals(3, splay.size());
         assertArrayEquals(new Integer[] { -100, 5, 120 }, splay.preOrder());
         splay.search(3);
+        System.out.println(Arrays.toString(splay.preOrder()));
         assertArrayEquals(new Integer[] { 5, -100, 120 }, splay.preOrder());
 
         splay.remove(-100);
