@@ -4,6 +4,7 @@ import adt.bt.BTNode;
 
 public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 
+
     protected BSTNode<T> root;
 
     public BSTImpl() {
@@ -165,7 +166,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
         remove(node);
     }
 
-    public void remove(BTNode<T> node) {
+    protected void remove(BTNode<T> node) {
         if (!node.isEmpty()) {
             if (isLeaf(node)) {
                 removeLeaf(node);

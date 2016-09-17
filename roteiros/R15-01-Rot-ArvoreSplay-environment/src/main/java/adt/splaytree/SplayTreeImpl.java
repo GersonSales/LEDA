@@ -16,11 +16,8 @@ public class SplayTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
     @Override
     public void remove(T element) {
         BSTNode<T> nodeToremove = super.search(element);
-        if (isValidNode(nodeToremove)) {
-            splay(nodeToremove);
-            splay(predecessor(element));
-            super.remove(nodeToremove);
-        }
+        super.remove(nodeToremove);
+        splay((BSTNode<T>) nodeToremove.getParent());
     }
 
     @Override
@@ -30,24 +27,11 @@ public class SplayTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
         if (isValidNode(foundNode)) {
             splay(foundNode);
         } else {
-//            BSTNode<T> nodeToSplay  = foundNode.getParent();
-//            foundNode.setData(element);
-//            
-//            BSTNode<T> nodeToSplay = predecessor(element);
-//            nodeToSplay = nodeToSplay == null ? sucessor(element) : nodeToSplay;
-//            foundNode.setData(null);
+
             splay((BSTNode<T>) foundNode.getParent());
         }
 
         return foundNode;
-    }
-
-    @Override
-    public BSTNode<T> predecessor(T element) {
-        if (element != null) {
-            return (BSTNode<T>) predecessor(super.search(element), element);
-        }
-        return null;
     }
 
     private void splay(BSTNode<T> node) {
@@ -55,13 +39,13 @@ public class SplayTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
 
             if (!isRoot(node)) {
 
-                if (isValidNode((BSTNode<T>) getGrandFather(node))) {
+                if (isValidNode((BSTNode<T>) getGrandfather(node))) {
                     if (isLeftChild(node) && isLeftChild(getFather(node))) {
-                        rightRotation(getGrandFather(node));
+                        rightRotation(getGrandfather(node));
                         rightRotation(getFather(node));
                     } else if (isRightChild(node)
                             && isRightChild(getFather(node))) {
-                        leftRotation(getGrandFather(node));
+                        leftRotation(getGrandfather(node));
                         leftRotation(getFather(node));
                     } else if (isLeftChild(node)
                             && isRightChild(getFather(node))) {
@@ -90,7 +74,7 @@ public class SplayTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
         return node.getParent();
     }
 
-    private BTNode<T> getGrandFather(BSTNode<T> node) {
+    private BTNode<T> getGrandfather(BSTNode<T> node) {
         return getFather(node).getParent();
     }
 
