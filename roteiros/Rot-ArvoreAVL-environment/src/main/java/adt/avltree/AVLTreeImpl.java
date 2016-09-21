@@ -113,6 +113,9 @@ public class AVLTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
         }
     }
 
+    // Resolvi não usar os métodos da Util porque não sei quais restrições
+    // serão feitas no carregamento de classes do Maven.
+
     // AUXILIARY
     protected void leftRotation(BSTNode<T> node) {
         if (node != null && !node.isEmpty()) {

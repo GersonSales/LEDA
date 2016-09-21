@@ -53,7 +53,7 @@ public class BSTImpl<T extends Comparable<T>> implements BST<T> {
 				return search(node.getRight(), element);
 			}
 		}
-		return getNilNode();
+		return node;
 	}
 
 	@Override
