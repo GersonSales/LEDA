@@ -70,9 +70,9 @@ public class SplayTreeImpl<T extends Comparable<T>> extends BSTImpl<T>
 
 	@Override
 	public void remove(T element) {
-		BTNode<T> foundNode = super.search(element).getParent();
-		super.remove(element);
-		splay(foundNode);
+		BTNode<T> foundNode = super.search(element);
+		super.remove(foundNode);
+		splay(foundNode.getParent());
 	}
 
 	private void zigZag(BTNode<T> node) {
