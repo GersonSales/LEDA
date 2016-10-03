@@ -1,0 +1,51 @@
+package adt.avltree;
+
+import adt.bst.BSTVerifierImpl;
+import adt.bt.BTNode;
+
+/**
+ * @author Claudio Campelo
+ *
+ * @param <T>
+ */
+public class AVLTreeVerifierImpl<T extends Comparable<T>> extends BSTVerifierImpl<T> implements AVLTreeVerifier<T> {
+
+	private AVLTreeImpl<T> avlTree;
+
+	public AVLTreeVerifierImpl(AVLTree<T> avlTree) {
+		super(avlTree);
+		this.avlTree = (AVLTreeImpl<T>) avlTree;
+	}
+
+	private AVLTreeImpl<T> getAVLTree() {
+		return avlTree;
+	}
+
+	@Override
+	public boolean isAVLTree() {
+		return isAVLTree(getAVLTree().getRoot()) && isBST();
+	}
+
+	private boolean isAVLTree(BTNode<T> node) {
+		if (!node.isEmpty()) {
+			int nodeBalance = calculateBalance(node);
+			if (isBalanced(nodeBalance)) {
+				return isAVLTree(node.getLeft()) && isAVLTree(node.getRight());
+			}
+
+			return false;
+		}
+
+		return true;
+	}
+
+	private boolean isBalanced(int nodeBalance) {
+		return nodeBalance > -2 && nodeBalance < 2;
+	}
+
+	private int calculateBalance(BTNode<T> node) {
+
+		return getAVLTree().calculateBalance((BSTNode<T>) node);
+	}
+
+}

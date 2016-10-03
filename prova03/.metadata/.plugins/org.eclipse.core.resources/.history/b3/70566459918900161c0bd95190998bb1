@@ -1,0 +1,53 @@
+package adt.bst;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import adt.avltree.AVLTreeImpl;
+import adt.avltree.AVLTreeVerifierImpl;
+
+public class BSTVerifierImplTest {
+
+	private BSTImpl<Integer> bst;
+	private AVLTreeImpl<Integer> avl;
+
+	private BSTVerifierImpl<Integer> bstVerifier;
+	private AVLTreeVerifierImpl<Integer> avlVerifier;
+
+	@Before
+	public void setUp() {
+		bst = new BSTImpl<>();
+		avl = new AVLTreeImpl<>();
+
+		bstVerifier = new BSTVerifierImpl<>(bst);
+		avlVerifier = new AVLTreeVerifierImpl<>(avl);
+
+	}
+
+	private void fillBst() {
+		for (int i = 0; i < 1000; i++) {
+			bst.insert(i);
+		}
+	}
+
+	private void fillAvl() {
+		for (int i = 0; i < 10; i++) {
+			avl.insert(i);
+		}
+	}
+
+	@Test
+	public void test1() {
+		fillBst();
+
+		Assert.assertTrue(bstVerifier.isBST());
+		
+		fillAvl();
+		Assert.assertTrue(avlVerifier.isAVLTree());
+		
+		
+
+	}
+
+}

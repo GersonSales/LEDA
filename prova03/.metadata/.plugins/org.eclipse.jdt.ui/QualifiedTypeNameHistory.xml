@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="adt.bst.BSTImpl"/>
+<fullyQualifiedTypeName name="adt.avltree.AVLTreeImpl"/>
+<fullyQualifiedTypeName name="junit.framework.Assert"/>
+<fullyQualifiedTypeName name="org.junit.Assert"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="adt.avltree.AVLTreeVerifierImpl"/>
+<fullyQualifiedTypeName name="adt.bst.BSTVerifierImpl"/>
+</qualifiedTypeNameHistroy>

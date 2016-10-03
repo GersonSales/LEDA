@@ -1,0 +1,138 @@
+package adt.bst;
+
+import java.util.Arrays;
+
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+
+import adt.avltree.AVLTreeImpl;
+import adt.avltree.AVLTreeVerifierImpl;
+
+public class BSTVerifierImplTest {
+
+	private BSTImpl<Integer> bst;
+	private AVLTreeImpl<Integer> avl;
+
+	private BSTVerifierImpl<Integer> bstVerifier;
+	private AVLTreeVerifierImpl<Integer> avlVerifier;
+
+	@Before
+	public void setUp() {
+		bst = new BSTImpl<>();
+		avl = new AVLTreeImpl<>();
+
+		bstVerifier = new BSTVerifierImpl<>(bst);
+		avlVerifier = new AVLTreeVerifierImpl<>(avl);
+
+	}
+
+	private void fillBst() {
+
+		for (int i = 0; i < 1000; i++) {
+			bst.insert((int) (Math.random() * i));
+			if (i % 5 == 0) {
+				bst.remove((int) (Math.random() * i));
+			}
+			
+			Assert.assertTrue(bstVerifier.isBST());
+		}
+	}
+
+	private void fillAvl() {
+
+		for (int i = 0; i < 1000; i++) {
+			avl.insert((int) (Math.random() * i));
+			if (i % 5 == 0) {
+				avl.remove((int) (Math.random() * i));
+			}
+			Assert.assertTrue(avlVerifier.isAVLTree());
+		}
+	}
+
+	@Test
+	public void test1() {
+		fillBst();
+		fillAvl();
+	}
+	
+	@Test
+	public void test2() {
+		bst.insert(1);
+		bst.insert(0);
+		
+		Assert.assertTrue(bstVerifier.isBST());
+		
+		bst.getRoot().getLeft().setData(3);
+		
+		Assert.assertFalse(bstVerifier.isBST());
+		
+		bst.insert(0);
+		
+		Assert.assertFalse(bstVerifier.isBST());
+	}
+	
+	@Test
+	public void test3() {
+		avl.insert(1);
+		avl.insert(0);
+		
+		Assert.assertTrue(avlVerifier.isBST());
+		
+		avl.getRoot().getLeft().setData(3);
+		
+		Assert.assertFalse(avlVerifier.isBST());
+		
+		avl.insert(0);
+		
+		Assert.assertFalse(avlVerifier.isBST());
+		
+	}
+	
+
+	private BSTNode<Integer> getNilNode() {
+		return new BSTNode<>();
+	}
+	
+	@Test
+	public void test4() {
+		avl.getRoot().setData(1);
+		avl.getRoot().setLeft(getNilNode());
+		avl.getRoot().setRight(getNilNode());
+		
+		avl.getRoot().getRight().setData(2);
+		avl.getRoot().getRight().setLeft(getNilNode());
+		avl.getRoot().getRight().setRight(getNilNode());
+		
+
+		avl.getRoot().getRight().getRight().setData(3);
+		avl.getRoot().getRight().getRight().setLeft(getNilNode());
+		avl.getRoot().getRight().getRight().setRight(getNilNode());
+		
+		
+		avl.getRoot().getRight().getRight().getRight().setData(4);
+		avl.getRoot().getRight().getRight().getRight().setLeft(getNilNode());
+		avl.getRoot().getRight().getRight().getRight().setRight(getNilNode());
+		
+		avl.getRoot().getRight().getRight().getRight().getRight().setData(5);
+		avl.getRoot().getRight().getRight().getRight().getRight().setLeft(getNilNode());
+		avl.getRoot().getRight().getRight().getRight().getRight().setRight(getNilNode());
+		
+		System.out.println(Arrays.toString(avl.preOrder()));
+		
+		Assert.assertTrue(avlVerifier.isBST());
+		Assert.assertFalse(avlVerifier.isAVLTree());
+		
+	}
+	
+	@Test
+	public void test5() {
+		avlVerifier = new AVLTreeVerifierImpl<>(null);
+		bstVerifier = new BSTVerifierImpl<>(null);
+		
+		Assert.assertTrue(bstVerifier.isBST());
+				
+		
+	}
+
+}

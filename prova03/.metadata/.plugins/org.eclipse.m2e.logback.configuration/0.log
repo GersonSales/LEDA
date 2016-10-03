@@ -1,0 +1,439 @@
+2016-10-03 14:03:30,961 [Worker-31] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.edu.ufcg.ccc:submission:1.0 @ /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/pom.xml.
+2016-10-03 14:04:15,600 [Worker-31] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PP3-01-Prova-AVLTreeVerifier-environment/src/main/java
+2016-10-03 14:04:15,607 [Worker-31] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /PP3-01-Prova-AVLTreeVerifier-environment/src/test/java
+2016-10-03 14:04:24,346 [Worker-31] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 168 sec
+2016-10-03 14:04:34,147 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:04:34,152 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:04:34,154 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:04:34,157 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:05:27,145 [Worker-34] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment
+2016-10-03 14:05:27,154 [Worker-34] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2016-10-03 14:08:53,576 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:08:53,592 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:08:53,593 [Worker-29] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:08:53,619 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:09:02,333 [Worker-35] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: br.edu.ufcg.ccc:submission:1.0 @ /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/pom.xml.
+2016-10-03 14:09:07,234 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:09:07,241 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:09:07,243 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:09:07,245 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:09:11,729 [Worker-32] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment
+2016-10-03 14:09:11,735 [Worker-32] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2016-10-03 14:09:59,280 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:09:59,333 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:09:59,337 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:09:59,344 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:12:48,452 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:12:48,456 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:12:48,457 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:12:48,460 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:15:02,272 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:15:02,276 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:15:02,278 [Worker-31] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:15:02,281 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:15:04,946 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:15:04,949 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:15:04,950 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:15:04,954 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:17:21,627 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:17:21,631 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:17:21,634 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:17:21,638 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:20:47,693 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:20:47,699 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:20:47,700 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:20:47,706 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:20:50,755 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:20:50,758 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:20:50,761 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:20:50,765 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:21:20,439 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:21:20,442 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:21:20,444 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:21:20,447 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:22:19,746 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:22:19,750 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:22:19,752 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:22:19,756 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:24:15,292 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:24:15,295 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:24:15,296 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:24:15,299 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:24:28,289 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:24:28,292 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:24:28,295 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:24:28,298 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:26:20,691 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:26:20,695 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:26:20,696 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:26:20,699 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:26:41,153 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:26:41,158 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:26:41,161 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:26:41,165 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:27:44,342 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:27:44,346 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:27:44,347 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:27:44,350 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:27:51,789 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:27:51,792 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:27:51,796 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:27:51,800 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:29:06,612 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:29:06,617 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:29:06,618 [Worker-32] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:29:06,623 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:29:12,761 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:29:12,764 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:29:12,767 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:29:12,770 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:29:18,021 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:29:18,024 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:29:18,025 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:29:18,029 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:30:14,857 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:30:14,860 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:30:14,862 [Worker-39] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:30:14,865 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:30:42,667 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:30:42,670 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:30:42,671 [Worker-34] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:30:42,675 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:31:03,299 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:03,302 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:31:03,304 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:03,308 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:31:07,854 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:07,856 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:31:07,857 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:07,861 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:31:18,290 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:18,293 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:31:18,295 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:18,299 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:31:22,049 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:22,053 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:31:22,054 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:22,058 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:31:27,914 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:27,918 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:31:27,920 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:31:27,925 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:34:36,808 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:34:36,812 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:34:36,813 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:34:36,817 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:36:23,239 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:36:23,242 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:36:23,245 [Worker-41] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:36:23,248 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:36:31,941 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:36:31,945 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:36:31,946 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:36:31,950 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:36:50,899 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:36:50,904 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:36:50,907 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:36:50,910 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:37:43,916 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:37:43,921 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:37:43,922 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:37:43,925 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:38:07,418 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:38:07,423 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:38:07,426 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:38:07,430 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:38:15,871 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:38:15,874 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:38:15,875 [Worker-40] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:38:15,879 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:38:21,145 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:38:21,149 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:38:21,151 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:38:21,155 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:40:32,031 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:40:32,034 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:40:32,035 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:40:32,039 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:40:40,933 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:40:40,939 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:40:40,941 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:40:40,944 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:42:16,632 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:16,637 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:42:16,638 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:16,642 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:42:37,903 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:37,908 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:42:37,911 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:37,915 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:42:40,493 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:40,495 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:42:40,496 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:40,501 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:42:45,948 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:45,952 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:42:45,954 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:45,957 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:42:52,709 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:52,714 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:42:52,714 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:52,718 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:42:58,764 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:58,768 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:42:58,770 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:42:58,774 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:43:03,797 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:03,801 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:43:03,802 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:03,806 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:43:07,562 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:07,567 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:43:07,569 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:07,573 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:43:28,862 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:28,866 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:43:28,866 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:28,869 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:43:46,473 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:46,477 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:43:46,478 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:43:46,482 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:44:18,057 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:18,061 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:44:18,062 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:18,067 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:44:21,948 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:21,951 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:44:21,953 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:21,958 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:44:38,068 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:38,072 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:44:38,072 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:38,076 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:44:44,100 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:44,103 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:44:44,105 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:44:44,108 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:45:06,875 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:06,879 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:45:06,879 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:06,882 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:45:26,001 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:26,007 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:45:26,010 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:26,015 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:45:36,356 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:36,359 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:45:36,360 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:36,364 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:45:42,947 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:42,951 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:45:42,953 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:45:42,958 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:46:36,166 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:46:36,170 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:46:36,171 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:46:36,174 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:46:44,545 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:46:44,551 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:46:44,554 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:46:44,560 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:48:09,955 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:48:09,959 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:48:09,960 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:48:09,963 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:48:28,040 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:48:28,043 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:48:28,045 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:48:28,049 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:49:26,705 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:26,709 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:49:26,710 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:26,714 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:49:36,564 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:36,567 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:49:36,569 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:36,573 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:49:41,290 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:41,294 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:49:41,295 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:41,300 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:49:59,793 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:59,798 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:49:59,801 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:49:59,804 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:51:25,254 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:51:25,257 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:51:25,258 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:51:25,262 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:52:09,233 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:52:09,236 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:52:09,238 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:52:09,242 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:52:25,766 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:52:25,770 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:52:25,771 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:52:25,775 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:53:07,787 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:53:07,792 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:53:07,793 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:53:07,797 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:54:10,756 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:10,760 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:54:10,761 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:10,765 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:54:15,417 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:15,420 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:54:15,422 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:15,426 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:54:36,342 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:36,347 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:54:36,348 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:36,352 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:54:51,523 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:51,526 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:54:51,529 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:54:51,533 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:55:33,134 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:33,138 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:55:33,138 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:33,142 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:55:44,526 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:44,529 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:55:44,532 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:44,536 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:55:47,262 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:47,264 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:55:47,265 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:47,269 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:55:50,166 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:50,169 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:55:50,171 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:55:50,175 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:56:29,766 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:56:29,769 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:56:29,770 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:56:29,774 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:56:52,304 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:56:52,307 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:56:52,309 [Worker-37] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:56:52,312 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:57:22,349 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:57:22,353 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:57:22,354 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:57:22,358 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:57:37,848 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:57:37,852 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:57:37,854 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:57:37,858 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:57:40,424 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:57:40,426 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:57:40,427 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:57:40,431 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:58:12,899 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:58:12,903 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:58:12,905 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:58:12,909 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:59:28,026 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:59:28,029 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:59:28,030 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:59:28,034 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 14:59:48,605 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:59:48,609 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 14:59:48,611 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 14:59:48,614 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:00:10,344 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:00:10,348 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:00:10,349 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:00:10,353 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:00:25,470 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:00:25,475 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:00:25,477 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:00:25,481 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:00:50,758 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:00:50,762 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:00:50,763 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:00:50,767 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:01:07,406 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:01:07,411 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:01:07,413 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:01:07,417 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:02:24,518 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:02:24,521 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:02:24,522 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:02:24,526 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:04:23,474 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:04:23,478 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:04:23,480 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:04:23,483 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:04:28,230 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:04:28,233 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:04:28,233 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:04:28,238 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:04:37,840 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:04:37,845 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:04:37,846 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:04:37,850 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:05:18,745 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:05:18,748 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:05:18,749 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:05:18,753 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:05:53,297 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:05:53,301 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:05:53,303 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:05:53,306 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:05:57,825 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:05:57,828 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:05:57,830 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:05:57,835 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:06:25,961 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:06:26,179 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:06:26,225 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:06:26,356 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:08:04,425 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:04,429 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:08:04,432 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:04,438 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:08:24,487 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:24,491 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:08:24,492 [Worker-35] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:24,495 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:08:25,650 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:25,652 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:08:25,654 [Worker-43] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:25,657 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:08:57,846 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:57,851 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:08:57,852 [Worker-45] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:08:57,856 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:09:44,166 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:09:44,170 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:09:44,172 [Worker-38] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:09:44,175 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:10:02,017 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:02,021 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:10:02,021 [Worker-42] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:02,025 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:10:09,094 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:09,098 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:10:09,101 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:09,105 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:10:25,563 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:25,566 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:10:25,567 [Worker-44] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:25,571 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:10:30,941 [Worker-46] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment
+2016-10-03 15:10:30,942 [Worker-46] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B install
+2016-10-03 15:10:46,434 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:46,438 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:10:46,440 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:10:46,444 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:14:38,771 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:14:38,774 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:14:38,776 [Worker-46] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:14:38,779 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
+2016-10-03 15:15:31,037 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:15:31,040 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/main/resources
+2016-10-03 15:15:31,042 [Worker-27] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-10-03 15:15:31,045 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /home/gersonsafj/github/LEDA/prova03/PP3-01-Prova-AVLTreeVerifier-environment/src/test/resources
